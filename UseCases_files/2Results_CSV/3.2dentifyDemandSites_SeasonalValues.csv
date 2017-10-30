@@ -1,0 +1,2 @@
+DatasetAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,NumDemandSites,TotalAnnualNumericCacheCanals, TotalAnnualUseCacheCanals
+"WEAP","USU WEAP Model 2017","Demand site","Flow","SeasonalNumericValues","11","64469.5848459136","168172.70765088074"

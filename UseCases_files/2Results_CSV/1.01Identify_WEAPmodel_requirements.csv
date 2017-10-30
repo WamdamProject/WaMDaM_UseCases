@@ -1,0 +1,128 @@
+ObjectType,ObjectCategoryName,ObjectTypeCV ,AttributeName,AttributeCategoryName,AttributeNameCV 
+"Demand Site","Demand Sites and Catchments","Demand site","Annual Water Use Rate","Water Use","Flow"
+"Demand Site","Demand Sites and Catchments","Demand site","BOD Concentration","Water Quality","Concentration"
+"Demand Site","Demand Sites and Catchments","Demand site","BOD Inflow","Water Quality","Concentration"
+"Demand Site","Demand Sites and Catchments","Demand site","BOD Intensity","Water Quality","Concentration"
+"Demand Site","Demand Sites and Catchments","Demand site","Capital Costs","Cost","Cost"
+"Demand Site","Demand Sites and Catchments","Demand site","Consumption","Water Use",
+"Demand Site","Demand Sites and Catchments","Demand site","DO Concentration","Water Quality","Concentration"
+"Demand Site","Demand Sites and Catchments","Demand site","DO Inflow","Water Quality","Concentration"
+"Demand Site","Demand Sites and Catchments","Demand site","DO Intensity","Water Quality","Concentration"
+"Demand Site","Demand Sites and Catchments","Demand site","Demand Priority","Priority","Priority"
+"Demand Site","Demand Sites and Catchments","Demand site","Fixed Benefits","Cost","Cost"
+"Demand Site","Demand Sites and Catchments","Demand site","Fixed Operating Costs","Cost","Cost"
+"Demand Site","Demand Sites and Catchments","Demand site","Loss Rate","Loss and Reuse",
+"Demand Site","Demand Sites and Catchments","Demand site","Monthly Demand","Water Use","Flow"
+"Demand Site","Demand Sites and Catchments","Demand site","Monthly DemandS","Water Use","Flow"
+"Demand Site","Demand Sites and Catchments","Demand site","Monthly Variation","Water Use",
+"Demand Site","Demand Sites and Catchments","Demand site","Variable Benefits","Cost","Cost"
+"Demand Site","Demand Sites and Catchments","Demand site","Variable Operating Costs","Cost","Cost"
+"Flow requirement","Supply and Resources","Demand site","Capital Costs","Cost","Cost"
+"Flow requirement","Supply and Resources","Demand site","Fixed Benefits","Cost","Cost"
+"Flow requirement","Supply and Resources","Demand site","Fixed Operating Costs","Cost","Cost"
+"Flow requirement","Supply and Resources","Demand site","Minimum Flow Requirement","Water Use","Flow"
+"Flow requirement","Supply and Resources","Demand site","Priority","Water Use","Priority"
+"Flow requirement","Supply and Resources","Demand site","Variable Benefits","Cost","Cost"
+"Flow requirement","Supply and Resources","Demand site","Variable Operating Costs","Cost","Cost"
+"Groundwater","Supply and Resources","Groundwater","BOD Concentration","Water Quality","Concentration"
+"Groundwater","Supply and Resources","Groundwater","Capital Costs","Cost","Cost"
+"Groundwater","Supply and Resources","Groundwater","DO Concentration","Water Quality","Concentration"
+"Groundwater","Supply and Resources","Groundwater","Fixed Benefits","Cost","Cost"
+"Groundwater","Supply and Resources","Groundwater","Fixed Operating Costs","Cost","Cost"
+"Groundwater","Supply and Resources","Groundwater","Initial Storage","Physical","Volume"
+"Groundwater","Supply and Resources","Groundwater","Maximum Withdrawal","Physical","Volume"
+"Groundwater","Supply and Resources","Groundwater","Natural Recharge","Physical","Volume"
+"Groundwater","Supply and Resources","Groundwater","Storage Capacity","Physical","Volume"
+"Groundwater","Supply and Resources","Groundwater","Variable Benefits","Cost","Cost"
+"Groundwater","Supply and Resources","Groundwater","Variable Operating Costs","Cost","Cost"
+"Reservoir","Supply and Resources","Reservoir","Buffer Coefficient","Operation","Coefficient"
+"Reservoir","Supply and Resources","Reservoir","Capital Costs","Cost","Cost"
+"Reservoir","Supply and Resources","Reservoir","DO Concentration","Water Quality","Concentration"
+"Reservoir","Supply and Resources","Reservoir","Electricity Revenue","Cost",
+"Reservoir","Supply and Resources","Reservoir","Elevation-Curve","Physical","Elevation"
+"Reservoir","Supply and Resources","Reservoir","Energy Demand","Hydropower",
+"Reservoir","Supply and Resources","Reservoir","Fixed Benefits","Cost","Cost"
+"Reservoir","Supply and Resources","Reservoir","Fixed Operating Costs","Cost","Cost"
+"Reservoir","Supply and Resources","Reservoir","Generating Efficiency","Hydropower","Factor"
+"Reservoir","Supply and Resources","Reservoir","Hydropower Priority","Hydropower","Priority"
+"Reservoir","Supply and Resources","Reservoir","Initial Storage","Physical","Volume"
+"Reservoir","Supply and Resources","Reservoir","Loss to Groundwater","Physical","Volume"
+"Reservoir","Supply and Resources","Reservoir","Max. Turbine Flow","Hydropower","Flow"
+"Reservoir","Supply and Resources","Reservoir","Maximum Hydraulic Outflow","Physical","Flow"
+"Reservoir","Supply and Resources","Reservoir","Net Evaporation","Physical","Evaporation"
+"Reservoir","Supply and Resources","Reservoir","Observed Volume","Physical","Volume"
+"Reservoir","Supply and Resources","Reservoir","Plant Factor","Hydropower","Factor"
+"Reservoir","Supply and Resources","Reservoir","Priority","Priority","Priority"
+"Reservoir","Supply and Resources","Reservoir","Storage Capacity","Physical","Volume"
+"Reservoir","Supply and Resources","Reservoir","Tailwater Elevation","Hydropower","Elevation"
+"Reservoir","Supply and Resources","Reservoir","Top of Buffer","Operation","Volume"
+"Reservoir","Supply and Resources","Reservoir","Top of Conservation","Operation","Volume"
+"Reservoir","Supply and Resources","Reservoir","Top of Inactive","Operation","Volume"
+"Reservoir","Supply and Resources","Reservoir","Variable Benefits","Cost","Cost"
+"Reservoir","Supply and Resources","Reservoir","Variable Operating Costs","Cost","Cost"
+"Reservoir","Supply and Resources","Reservoir","Volume Elevation Curve","Physical","Reservoir bathymetry curve"
+"Reservoir","Supply and Resources","Reservoir","Volume-Curve","Physical","Volume"
+"Return Flow Link","Supply and Resources","Return flow","Capital Costs","Cost","Cost"
+"Return Flow Link","Supply and Resources","Return flow","Fixed Benefits","Cost","Cost"
+"Return Flow Link","Supply and Resources","Return flow","Fixed Operating Costs","Cost","Cost"
+"Return Flow Link","Supply and Resources","Return flow","Gain from Groundwater","Inflows and Outflows",
+"Return Flow Link","Supply and Resources","Return flow","Loss from System","Inflows and Outflows",
+"Return Flow Link","Supply and Resources","Return flow","Loss to Groundwater","Inflows and Outflows",
+"Return Flow Link","Supply and Resources","Return flow","Return Flow Routing","Inflows and Outflows",
+"Return Flow Link","Supply and Resources","Return flow","Variable Benefits","Cost","Cost"
+"Return Flow Link","Supply and Resources","Return flow","Variable Operating Costs","Cost","Cost"
+"River","Supply and Resources","Stream","BOD Concentration","Water Quality","Concentration"
+"River","Supply and Resources","Stream","Capital Costs","Cost","Cost"
+"River","Supply and Resources","Stream","DO Concentration","Water Quality","Concentration"
+"River","Supply and Resources","Stream","Evaporation","Inflows and Outflows","Length"
+"River","Supply and Resources","Stream","Fixed Benefits","Cost","Cost"
+"River","Supply and Resources","Stream","Fixed Operating Costs","Cost","Cost"
+"River","Supply and Resources","Stream","Groundwater Inflow","Inflows and Outflows","Flow"
+"River","Supply and Resources","Stream","Groundwater Outflow","Inflows and Outflows","Flow"
+"River","Supply and Resources","Stream","Headflow","Inflows and Outflows","Flow"
+"River","Supply and Resources","Stream","Maximum Diversion","Inflows and Outflows","Flow"
+"River","Supply and Resources","Stream","Reach Length","Inflows and Outflows","Length"
+"River","Supply and Resources","Stream","Surface Water Inflow","Inflows and Outflows","Flow"
+"River","Supply and Resources","Stream","Variable Benefits","Cost","Cost"
+"River","Supply and Resources","Stream","Variable Operating Costs","Cost","Cost"
+"River","Supply and Resources","Stream","Water Temperature","Water Quality",
+"Run of the River Hydro",,,"Capital Costs",,
+"Run of the River Hydro",,,"Electricity Revenue",,
+"Run of the River Hydro",,,"Energy Demand",,
+"Run of the River Hydro",,,"Fixed Benefits",,
+"Run of the River Hydro",,,"Fixed Head",,
+"Run of the River Hydro",,,"Fixed Operating Costs",,
+"Run of the River Hydro",,,"Generating Efficiency",,
+"Run of the River Hydro",,,"Hydropower Priority",,
+"Run of the River Hydro",,,"Max Turbine Flow",,
+"Run of the River Hydro",,,"Plant Factor",,
+"Run of the River Hydro",,,"Variable Benefits",,
+"Run of the River Hydro",,,"Variable Operating Costs",,
+"Streamflow gauge","Supply and Resources","Site","BOD Concentration Data","Water Quality","Concentration"
+"Streamflow gauge","Supply and Resources","Site","DO Concentration Data","Water Quality","Concentration"
+"Streamflow gauge","Supply and Resources","Site","Streamflow Data","Inflows and Outflows","Flow"
+"Transmission Link","Supply and Resources","Diversion","Capital Costs","Cost","Cost"
+"Transmission Link","Supply and Resources","Diversion","Fixed Benefits","Cost","Cost"
+"Transmission Link","Supply and Resources","Diversion","Fixed Operating Costs","Cost","Cost"
+"Transmission Link","Supply and Resources","Diversion","Loss from System","Losses",
+"Transmission Link","Supply and Resources","Diversion","Loss to Groundwater","Losses",
+"Transmission Link","Supply and Resources","Diversion","Maximum Flow   Percent of Demand","Linking Rules",
+"Transmission Link","Supply and Resources","Diversion","Maximum Flow   Volume","Linking Rules","Flow"
+"Transmission Link","Supply and Resources","Diversion","Variable Benefits","Cost","Cost"
+"Transmission Link","Supply and Resources","Diversion","Variable Operating Costs","Cost","Cost"
+"Tributary Inflow","Supply and Resources","Headflow","Headflow","Inflows and Outflows","Flow"
+"WEAP Global Attributes",,,"BOD Decrease","Water Quality",
+"WEAP Global Attributes",,,"DO Decrease","Water Quality",
+"WEAP Global Attributes",,,"Definitions","Hydrology/Water Year Method",
+"WEAP Global Attributes",,,"Sqeuence","Hydrology/Water Year Method",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","BOD Concentration","Water Quality",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","BOD Removal","Water Quality",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","Capital Costs","Cost",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","Consumption","Water Quality",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","DO Concentration","Water Quality",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","DO Removal","Water Quality",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","Daily Capacity","Physical",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","Fixed Benefits","Cost",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","Fixed Operating Costs","Cost",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","Variable Benefits","Cost",
+"Wastewater Treatment Plant","Supply and Resources","Wastewater treatment plant","Variable Operating Costs","Cost",
