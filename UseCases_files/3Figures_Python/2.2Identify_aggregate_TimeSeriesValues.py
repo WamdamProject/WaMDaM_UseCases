@@ -128,9 +128,9 @@ layout = dict(
 fig = dict(data=data, layout=layout)
 
 # plot the figure 
-#py.iplot(fig, filename = "UseCase3.2")       
+#py.iplot(fig, filename = "2.2Identify_aggregate_TimeSeriesValues")       
 
 
 ## it can be run from the local machine on Pycharm like this like below
 ## It would also work here offline but in a seperate window  
-plotly.offline.plot(fig, filename = "UseCase3.2")       
+plotly.offline.plot(fig, filename = "2.2Identify_aggregate_TimeSeriesValues")       
