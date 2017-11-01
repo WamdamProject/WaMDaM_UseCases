@@ -9,5 +9,5 @@ Follow these four steps to use WaMDaM and enable its use cases on your data
  
  
  
- ![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseWaMDaM_workflow.jpg)
+ ![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/UseWaMDaM_workflow.jpg)
 
