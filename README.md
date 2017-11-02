@@ -5,7 +5,7 @@ Follow these four steps to use WaMDaM and enable its use cases on your data
  
  
 <p align="center">
-  <img width="704" height="544" src="https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/BearWatershed_Presentation.jpg">
+  <img width="528" height="408" src="https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/BearWatershed_Presentation.jpg">
 </p>
  
  ![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/UseWaMDaM_workflow.jpg)
