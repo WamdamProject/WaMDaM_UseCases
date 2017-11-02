@@ -4,10 +4,12 @@ Demonstrate how WaMDaM enables systematic data query and comparisons across mult
 Follow these four steps to use WaMDaM and enable its use cases on your data      
  
  
+<p align="center">
+  <img  src=" https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/BearWatershed_Presentation.jpg
+.PNG">
+</p>
  
- 
- <img src="https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/BearWatershed_Presentation.jp" width="400" height="400" />
- 
+
  
  ![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/UseWaMDaM_workflow.jpg)
 
