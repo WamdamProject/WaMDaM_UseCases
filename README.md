@@ -8,12 +8,12 @@ Demonstrate how WaMDaM enables systematic data query and comparisons across mult
 4. Python editor like PyCharm or Jyputer to plot results
 
 
-Follow these four steps to use WaMDaM and enable its use cases on your data      
-**1.** populate each of your datas into this empty Excel (.xlsx) workbook, one at a time, which is the generic data importer into WaMDaM
-You can see numerous populated examples here. You may use the data manipulation services to help fit your data into WaMDaM sheets. 
-**2.** Use the WaMDaM Wizard to load each workbook into a SQLite database. 
-**3.** Use the Mozilla SQLite Manager to interact with the WaMDaM database. There are a list of example quries to identify and compare data in WaMDaM. 
-**4.** Use or adapt the example Python scripts that plot some query results. 
+Follow these four steps to use WaMDaM and enable its use cases on your data:        
+1. populate each of your datas into this empty Excel (.xlsx) workbook, one at a time, which is the generic data importer into WaMDaM
+You can see numerous populated examples here. You may use the data manipulation services to help fit your data into WaMDaM sheets.    
+2. Use the WaMDaM Wizard to load each workbook into a SQLite database.    
+3. Use the Mozilla SQLite Manager to interact with the WaMDaM database. There are a list of example quries to identify and compare data in WaMDaM.    
+4. Use or adapt the example Python scripts that plot some query results.     
 
 
  
