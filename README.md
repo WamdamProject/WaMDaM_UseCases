@@ -1,13 +1,24 @@
 # WaMDaM_UseCases
 Demonstrate how WaMDaM enables systematic data query and comparisons across multiple different models and datasets. 
 
+**Download**
+1. Excel Workbook templates to prepare your data into it
+2. WaMDaM Wizard software to load your workbook into SQLite
+3. Mozilla FireFox browser and its SQLite Manager Add-Ons to interact with the database
+4. Python editor like PyCharm or Jyputer to plot results
+
+
 Follow these four steps to use WaMDaM and enable its use cases on your data      
- 
- 
+**1.** populate each of your datas into this empty Excel (.xlsx) workbook, one at a time, which is the generic data importer into WaMDaM
+You can see numerous populated examples here. You may use the data manipulation services to help fit your data into WaMDaM sheets. 
+**2.** Use the WaMDaM Wizard to load each workbook into a SQLite database. 
+**3.** Use the Mozilla SQLite Manager to interact with the WaMDaM database. There are a list of example quries to identify and compare data in WaMDaM. 
+**4.** Use or adapt the example Python scripts that plot some query results. 
+
 
  
  ![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/UseWaMDaM_workflow.jpg)
-**Figure** Flowchart of the steps that users follow to use WaMDaM:  
+**Figure:** Flowchart of the steps that users follow to use WaMDaM   
 
 ### Application: The Bear River Watershed, Utah 
 We demonstrate the WaMDaM design and use cases using twelve data sources and models in the Bear River Watershed which spans three states, Utah, Idaho, and Wyoming (Figure below). The Watershed covers an area 3,300 square miles (8,547 square kilometers) and it is the largest source of water to the Great Salt Lake in Utah. 
@@ -15,5 +26,5 @@ The Watershed has various unique and overlapping available data provided by the 
 
 <p align="center">
   <img width="528" height="408" src="https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/BearWatershed_Presentation.jpg">
-</p>
-**Figure:** The Bear River Watershed in the Western US and example available data sources used to demonstrate WaMDaM 
+</p> 
+**Figure:** The Bear River Watershed in the Western US and example available data sources used to demonstrate WaMDaM     
