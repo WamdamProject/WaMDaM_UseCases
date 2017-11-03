@@ -7,7 +7,7 @@ Follow these four steps to use WaMDaM and enable its use cases on your data
 
  
  ![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/UseWaMDaM_workflow.jpg)
-
+**Figure** Flowchart of the steps that users follow to use WaMDaM:  
 
 ### Application: The Bear River Watershed, Utah 
 We demonstrate the WaMDaM design and use cases using twelve data sources and models in the Bear River Watershed which spans three states, Utah, Idaho, and Wyoming (Figure below). The Watershed covers an area 3,300 square miles (8,547 square kilometers) and it is the largest source of water to the Great Salt Lake in Utah. 
