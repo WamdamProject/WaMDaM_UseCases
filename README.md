@@ -31,8 +31,8 @@ The Watershed has various unique and overlapping available data provided by the 
 **Figure:** The Bear River Watershed in the Western US and example available data sources used to demonstrate WaMDaM     
 
 
-nsing  
-WaM-DaM and materials in this GitHub repository are disturbed under a BSD 3-Clause [LICENSE](/LICENSE). 
+### Licensing  
+WaMDaM and materials in this GitHub repository are disturbed under a BSD 3-Clause [LICENSE](/LICENSE). 
 For alternative licensing arrangements, contact Adel M. Abdallah or David E. Rosenberg directly.    
 
 
