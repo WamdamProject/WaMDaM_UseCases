@@ -2,7 +2,7 @@
 Demonstrate how WaMDaM enables systematic data query and comparisons across multiple different models and datasets. 
 
 **Download**
-1. [Excel Workbook template](/raw/UseCases_files/0WorkbookTemplates/InputData_Template/WaMDaM_InputData_template.xlsm) to prepare your data into it. Each dataset into one workbook
+1. [Excel Workbook template](/raw/master/UseCases_files/0WorkbookTemplates/InputData_Template/WaMDaM_InputData_template.xlsm) to prepare your data into it. Each dataset into one workbook
 2. WaMDaM Wizard software to load your workbook into SQLite
 3. Mozilla FireFox browser and its SQLite Manager Add-Ons to interact with the database
 4. Python editor like PyCharm or Jyputer to plot results
