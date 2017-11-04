@@ -29,3 +29,16 @@ The Watershed has various unique and overlapping available data provided by the 
   <img width="528" height="408" src="/UseCases_files/BearWatershed_Presentation.jpg">
 </p> 
 **Figure:** The Bear River Watershed in the Western US and example available data sources used to demonstrate WaMDaM     
+
+
+nsing  
+WaM-DaM and materials in this GitHub repository are disturbed under a BSD 3-Clause [LICENSE](/LICENSE). 
+For alternative licensing arrangements, contact Adel M. Abdallah or David E. Rosenberg directly.    
+
+
+### Sponsors and Credit  
+WaMDaM and related software development have been developed under funding from several different sources. It was primarily supported by the National Science Foundation <a href="http://www.nsf.gov/awardsearch/showAward?AWD_ID=1135482" target="_blank">CI-Water Project</a> and later from the <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1208732" target="_blank">iUtah Project</a>. 
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.    
+
+WaMDaM has been developed at and also additionally funded by the Utah Water Research Lab at Utah State University, Logan Utah during the period of August, 2012-2017. Thanks to Dr. Steven Burian at the Unviversity of Utah, Salt Lake City Utah for hosting Adel Abdallah as a visiting scholar 2014-2017.  
+
