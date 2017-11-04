@@ -2,7 +2,7 @@
 Demonstrate how WaMDaM enables systematic data query and comparisons across multiple different models and datasets. 
 
 **Download**
-1. Excel Workbook templates to prepare your data into it
+1. [Excel Workbook template](/UseCases_files/0WorkbookTemplates/InputData_Template/WaMDaM_InputData_template.xlsm) to prepare your data into it. Each dataset into one workbook
 2. WaMDaM Wizard software to load your workbook into SQLite
 3. Mozilla FireFox browser and its SQLite Manager Add-Ons to interact with the database
 4. Python editor like PyCharm or Jyputer to plot results
@@ -17,7 +17,7 @@ You can see numerous populated examples here. You may use the data manipulation 
 
 
  
- ![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/UseWaMDaM_workflow.jpg)
+ ![](/UseCases_files/UseWaMDaM_workflow.jpg)
 **Figure:** Flowchart of the steps that users follow to use WaMDaM   
 
 ### Application: The Bear River Watershed, Utah 
@@ -26,6 +26,6 @@ We demonstrate the WaMDaM design and use cases using twelve data sources and mod
 The Watershed has various unique and overlapping available data provided by the three states, the Bear River Commission, national US datasets, and three existing systems models: Wyoming Model which allocates water based on priority for the upper Bear River Basin, the two model versions of the Lower Bear River which also allocate water on priority. Note that when developers organize their model’s input data into WaMDaM, models like the Wyoming model become a new source of data. The datasets and models are an example systems water management data of natural and built water supply and demand, infrastructure connectivity, with different data types, networks and scenarios. 
 
 <p align="center">
-  <img width="528" height="408" src="https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/BearWatershed_Presentation.jpg">
+  <img width="528" height="408" src="/UseCases_files/BearWatershed_Presentation.jpg">
 </p> 
 **Figure:** The Bear River Watershed in the Western US and example available data sources used to demonstrate WaMDaM     
