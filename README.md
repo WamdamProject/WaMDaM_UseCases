@@ -3,7 +3,7 @@ Demonstrate how WaMDaM enables systematic data query and comparisons across mult
 
 **Download**
 1. [Excel Workbook template](https://github.com/WamdamProject/WaMDaM_UseCases/raw/master/UseCases_files/0WorkbookTemplates/InputData_Template/WaMDaM_InputData_template.xlsm) to prepare your data into it. Each dataset into one workbook
-2. WaMDaM Wizard software to load your workbook into SQLite
+2. [WaMDaM Wizard software](https://github.com/WamdamProject/WaMDaM_Wizard#download-the-wizard-gui-for-windows-7-and-10-64-bit-operating-systems) to load your workbook into SQLite  (Windows [7 and 10] 64 bit operating systems)
 3. Mozilla FireFox browser and its SQLite Manager Add-Ons to interact with the database
 4. Python editor like PyCharm or Jyputer to plot results
 
