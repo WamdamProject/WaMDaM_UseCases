@@ -15,10 +15,10 @@ import pandas as pd
 ## read the input data from GitHub csv file which is a direct query output for these queries:
 
 # 4.2MultiAttributeValues.csv
-df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/2Results_CSV/4.2MultiAttributeValues.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/4.2MultiAttributeValues.csv")
 
-# 5.3MergeTimeSeriesValues.sql
-df2 = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/2Results_CSV/4.3MergeTimeSeriesValues.csv")
+# 4.3MergeTimeSeriesValues.sql
+df2 = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/4.3MergeTimeSeriesValues.csv")
 
 
 subsets = df.groupby('ScenarioName')
