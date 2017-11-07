@@ -4,7 +4,7 @@
 
 
 # Adel Abdallah
-# October 30, 2017
+# November 6, 2017
 
 import plotly
 import plotly.plotly as py
@@ -15,7 +15,7 @@ import pandas as pd
 ## read the input data from GitHub csv file which is a direct query output for these queries:
 
 # 4.2MultiAttributeValues.csv
-df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/4.2MultiAttributeValues.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/amabdallah/Demo/master/test.csv?token=ADHha8UgykvaN_YshpOwP9bxj3SfGGTbks5aCjvSwA%3D%3D")
 
 # 4.3MergeTimeSeriesValues.sql
 df2 = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/4.3MergeTimeSeriesValues.csv")
@@ -29,7 +29,7 @@ subsets_settings = {
     'Utah Dams shapefile_as is': { # this oone is the name of subset as it appears in the csv file
         'dash': 'solid',     # this is properity of the line (curve)
         'width':'2',
-        'legend_index': 2,   # to order the legend
+        'legend_index': 1,   # to order the legend
         'mode':'line',
         'legend_name': 'Utah Dams Dataset 2016',  # this is the manual curve name 
          'color':'#f76d5e'
@@ -40,7 +40,7 @@ subsets_settings = {
          'width':'3',
           'mode':'line',
         'legend_index': 3,
-        'legend_name': 'USU WEAP Model 2017',
+        'legend_name': 'USU WEAP Model, 2017',
          'color':'rgb(0,0,0)'
         },
     'UDWR GenRes 2010': {
@@ -48,7 +48,7 @@ subsets_settings = {
         'mode':'line',
         'width':'3',
         'legend_index': 4,
-        'legend_name': 'UDWR GenRes Model 2010',
+        'legend_name': 'UDWR GenRes Model, 2010',
          'color':'#999999'
         },
     'Rwise': {
@@ -56,15 +56,24 @@ subsets_settings = {
         'mode':'line',
         'width':'3',
         'legend_index': 0,
-        'legend_name': 'BOR Water Info. System 2017',
+        'legend_name': 'BOR Water Info. System, 2017',
          'color':'#a50021'
         },
+    'Base case': {
+        'dash': 'solid',
+        'mode':'line+marker',
+        'width':'3',
+        'legend_index': 2,
+        'legend_name': 'BOR Reservoirs Dataset, 2017',
+         'color':'#999999'
+        },    
+    
     'MAX_STOR': {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
-        'legend_index': 4,
-        'legend_name': 'MAX_STOR: US Major Dams 2010',
+        'legend_index': 5,
+        'legend_name': 'MAX_STOR: US Major Dams, 2010',
          'color':'rgb(0, 0, 0)'
 
         },
@@ -72,8 +81,8 @@ subsets_settings = {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
-        'legend_index':5,
-        'legend_name': 'MaxCap: Utah Dams shapefile 2015',
+        'legend_index':6,
+        'legend_name': 'MaxCap: Utah Dams shapefile, 2015',
          'color':'rgb(0, 0, 0)'
 
         },
@@ -81,20 +90,21 @@ subsets_settings = {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
-        'legend_index': 6,
-        'legend_name': 'Storage Capacity: USU WEAP Model 2017',
+        'legend_index': 7,
+        'legend_name': 'Storage Capacity: USU WEAP Model, 2017',
         'color':'rgb(0, 0, 0)'
         },
     'STORG_ACFT': {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
-        'legend_index': 7,
-        'legend_name': 'STORG_ACFT: Utah Dams shapefile',
+        'legend_index': 8,
+        'legend_name': 'STORG_ACFT: Utah Dams shapefile, 2015',
         'color':'rgb(0, 0, 0)'
 
         }
-                }
+
+    }
 
 
 # This dict is used to map legend_name to original subset name
@@ -107,7 +117,7 @@ subsets_settings2 = {
         'legend_index': 3,   # to order the legend
          'mode':'lines+markers',
         'color':'#a50021',
-        'legend_name': 'BOR Water Info. System 2017'  # this is the manual curve name 
+        'legend_name': 'BOR Water Info. System, 2017'  # this is the edited curve name 
                     }
 
 
@@ -124,7 +134,10 @@ for subset in subsets.groups.keys():
                         color =subsets_settings[subset]['color'],
                         width =subsets_settings[subset]['width'],
                         dash=subsets_settings[subset]['dash']
-                                ),                        
+                                ),
+#                     marker = dict(
+#                         size ='15',
+#                         color = '#a50021'),  
                     opacity = 1)
     data.append(s)
 
@@ -161,7 +174,7 @@ MAX_STOR = go.Scatter(
     x=[14440, 14440],
     y=[4540, 4750],
     mode='lines',
-    name='MAX_STOR: US Major Dams 2010',
+    name='MAX_STOR: US Major Dams, 2010',
     hoverinfo='MAX_STOR',
     showlegend=True,
     line=dict(
@@ -178,7 +191,7 @@ MaxCap = go.Scatter(
     x=[15760, 15760],
     y=[4540, 4750],
     mode='lines',
-    name='MaxCap: Utah Dams shapefile 2015',
+    name='MaxCap: Utah Dams shapefile, 2015',
     hoverinfo='MaxCap',
     showlegend=True,
     line=dict(
@@ -195,7 +208,7 @@ StorageCapacity = go.Scatter(
     x=[18684, 18684],
     y=[4540, 4750],
     mode='lines',
-    name='Storage Capacity: USU WEAP Model 2017',
+    name='Storage Capacity: USU WEAP Model, 2017',
     hoverinfo='Storage Capacity',
     showlegend=True,
     line=dict(
@@ -212,7 +225,7 @@ STORG_ACFT = go.Scatter(
     x=[18800, 18800],
     y=[4540, 4750],
     mode='lines',
-    name='STORG_ACFT: Utah Dams shapefile',
+    name='STORG_ACFT: Utah Dams shapefile, 2015',
     hoverinfo='STORG_ACFT',
     showlegend=True,
     line=dict(
