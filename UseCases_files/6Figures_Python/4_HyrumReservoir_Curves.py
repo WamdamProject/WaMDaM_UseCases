@@ -15,7 +15,7 @@ import pandas as pd
 ## read the input data from GitHub csv file which is a direct query output for these queries:
 
 # 4.2MultiAttributeValues.csv
-df = pd.read_csv("https://raw.githubusercontent.com/amabdallah/Demo/master/test.csv?token=ADHha8UgykvaN_YshpOwP9bxj3SfGGTbks5aCjvSwA%3D%3D")
+df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/4.2MultiAttributeValues.csv")
 
 # 4.3MergeTimeSeriesValues.sql
 df2 = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/4.3MergeTimeSeriesValues.csv")
