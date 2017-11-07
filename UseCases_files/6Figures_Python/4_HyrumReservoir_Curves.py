@@ -4,7 +4,7 @@
 
 
 # Adel Abdallah
-# November 6, 2017
+# November 7, 2017
 
 import plotly
 import plotly.plotly as py
@@ -31,7 +31,7 @@ subsets_settings = {
         'width':'2',
         'legend_index': 1,   # to order the legend
         'mode':'line',
-        'legend_name': 'Utah Dams Dataset 2016',  # this is the manual curve name 
+        'legend_name': 'Utah Dams Dataset, 2016',  # this is the manual curve name 
          'color':'#f76d5e'
         },
     
@@ -68,20 +68,31 @@ subsets_settings = {
          'color':'#999999'
         },    
     
-    'MAX_STOR': {
+    'Dead Storage': {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
         'legend_index': 5,
+        'legend_name': 'Dead Storage: BOR Reservoirs, 2017',
+         'color':'rgb(0, 0, 0)'
+
+        },
+    
+    'MAX_STOR': {
+        'dash': 'dash',
+        'mode':'line',
+        'width':'3',
+        'legend_index': 6,
         'legend_name': 'MAX_STOR: US Major Dams, 2010',
          'color':'rgb(0, 0, 0)'
 
         },
+        
     'MaxCap': {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
-        'legend_index':6,
+        'legend_index':7,
         'legend_name': 'MaxCap: Utah Dams shapefile, 2015',
          'color':'rgb(0, 0, 0)'
 
@@ -90,7 +101,7 @@ subsets_settings = {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
-        'legend_index': 7,
+        'legend_index': 8,
         'legend_name': 'Storage Capacity: USU WEAP Model, 2017',
         'color':'rgb(0, 0, 0)'
         },
@@ -98,7 +109,7 @@ subsets_settings = {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
-        'legend_index': 8,
+        'legend_index': 9,
         'legend_name': 'STORG_ACFT: Utah Dams shapefile, 2015',
         'color':'rgb(0, 0, 0)'
 
@@ -169,6 +180,23 @@ data2 = go.Scatter(
 data.append(data2)     
                 
 
+# vertical line dead storage
+DeadStorage = go.Scatter(
+    x=[3012, 3012],
+    y=[4540, 4629.6],
+    mode='lines',
+    name='Dead Storage: BOR Reservoirs, 2017',
+    hoverinfo='Dead Storage: BOR Reservoirs, 2017',
+    showlegend=True,
+    line=dict(
+        shape='vh',
+        width='2',
+        color = '#AAF7FF'
+            )
+                    )
+data.append(DeadStorage)    
+    
+    
 # vertical line2
 MAX_STOR = go.Scatter(
     x=[14440, 14440],
@@ -268,7 +296,7 @@ layout = dict(
         showline=True,
         ),
     legend=dict(
-        x=0.65,y=0.1,
+        x=0.65,y=0.03,
             bordercolor='#00000',
             borderwidth=2    
     ),
@@ -291,4 +319,3 @@ fig = dict(data=data, layout=layout)
 ## it can be run from the local machine on Pycharm like this like below
 ## It would also work here offline but in a seperate window  
 plotly.offline.plot(fig, filename = "4_HyrumReservoir_Curves.py") 
-
