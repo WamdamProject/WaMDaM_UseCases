@@ -13,3 +13,4 @@ DatasetName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,"AttributeName",
 "Watershed Area of Suitable Habitat (WASH) Systems Model","v","Reservoir","j29","Hyrum Reservoir","minstor","Volume","NumericValues","Million cubic meter","5yr","4.2","Watershed Area of Suitable Habitat (WASH) Systems Model"
 "Watershed Area of Suitable Habitat (WASH) Systems Model","v","Reservoir","j29","Hyrum Reservoir","maxstor","Volume","NumericValues","Million cubic meter","5yr","23.04634","Watershed Area of Suitable Habitat (WASH) Systems Model"
 "Watershed Area of Suitable Habitat (WASH) Systems Model","v","Reservoir","j29","Hyrum Reservoir","initSTOR","Volume","NumericValues","Million cubic meter","5yr","10","Watershed Area of Suitable Habitat (WASH) Systems Model"
+Bureau of Reclamation dataset,	Reservoir, Reservoir,Hyrum Reservoir,Hyrum Reservoir,	Dead Storage,	Volume,	NumericValues,	acre-feet,	Base case,	3012, 	Bureau of Reclamation dataset
