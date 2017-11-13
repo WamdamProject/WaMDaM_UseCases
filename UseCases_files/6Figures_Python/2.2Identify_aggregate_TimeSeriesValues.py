@@ -2,7 +2,7 @@
 # plot aggregated to monthly and converted to acre-feet time series data of multiple sources
 
 # Adel Abdallah
-# October 30, 2017
+# November 13, 2017
 
 import plotly
 import plotly.plotly as py
@@ -14,7 +14,7 @@ import pandas as pd
 ## read the input data from GitHub csv file which is a direct query output for this  query:
 # 2.2Identify_aggregate_TimeSeriesValues.csv
 
-df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/2Results_CSV/2.2Identify_aggregate_TimeSeriesValues.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/2.2Identify_aggregate_TimeSeriesValues.csv")
 
 # identify the data for four time series only based on the DatasetAcronym column header 
 column_name = "DatasetAcronym"
@@ -26,7 +26,7 @@ subsets_settings = {
     'UDWRFlowData': {
         'dash': 'solid',
         'legend_index': 0,
-        'legend_name': 'Utah Division of Water Res',
+        'legend_name': 'Utah Division of Water Res.',
         'width':'3',
         'color':'rgb(153, 15, 15)'
         },
@@ -40,7 +40,7 @@ subsets_settings = {
     'IdahoWRA': {
         'dash': 'soild',
         'legend_index': 2,
-        'legend_name': 'Idaho Divison of Water Resource',
+        'legend_name': 'Idaho Department of Water Res.',
         'width':'3',
         'color':'rgb(38, 15, 153)'
         },    
