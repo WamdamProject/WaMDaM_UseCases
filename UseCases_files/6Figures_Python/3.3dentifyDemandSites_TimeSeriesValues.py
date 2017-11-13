@@ -2,7 +2,7 @@
 
 # plot time series data aggregated in space and time from multiple sources
 
-# October 30, 2017
+# November 13, 2017
 # Adel Abdallah
 
 import plotly
@@ -16,7 +16,7 @@ import pandas as pd
 ## read the input data from GitHub csv file which is a direct query output
 #To get the data block (WaterYear,CumulativeAnnual) for each curve, you need to look up two columns:
 #ScenarioName and then AttributeName. So the combination of these two columns will have their separate set of data.
-df = pd.read_csv('https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/2Results_CSV/3.3dentifyDemandSites_TimeSeriesValues.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/3.3dentifyDemandSites_TimeSeriesValues.csv')
 
 subsets = df.groupby('AttributeName')
 
@@ -25,17 +25,17 @@ data = []
 
 # for each subset (curve), set up its legend and line info manually so they can be edited
 subsets_settings = {
-    '11 sites: WEAP Model 2017 (seasonal)': {
+    '11 sites (time series): WEAP Model 2017': {
         'dash': 'solid',
         'legend_index': 0,
-        'legend_name': '<br> 11 sites: WEAP Model 2017 <br> Monthly Demand (seasonal)',
+        'legend_name': '<br> 11 sites (seasonal): WEAP Model 2017 <br> "Monthly Demand" ',
         'width':'3',
         'color':'rgb(41, 10, 216)'
         },      
     'Diversions /surface water': {
         'dash': 'solid',
         'legend_index': 1,
-        'legend_name': '<br> 1 site: WaDE <br> Diversions/surface water',
+        'legend_name': '<br> 1 site (time series): WaDE <br> "Diversions/surface water"',
         'width':'3',
         'color':'rgb(38, 77, 255)'        
         },        
@@ -43,7 +43,7 @@ subsets_settings = {
     'Water Use /surface and ground': {
         'dash': 'solid',
         'legend_index': 2,
-        'legend_name': '<br> 1 site: WaDE  <br> Water Use/surface and ground',
+        'legend_name': '<br> 1 site (time series): WaDE  <br> "Water Use/surface and ground water"',
         'width':'3',
         'color':'rgb(63, 160, 255)'
         },
@@ -51,14 +51,14 @@ subsets_settings = {
     'dReq': { # this one is the name of subset as it appears in the csv file
         'dash': 'solid',     # this is properity of the line (curve)
         'legend_index': 3,   # to order the legend
-        'legend_name': '<br> 5 sites: WASH Model <br> dReq',  # this is the manual curve name 
+        'legend_name': '<br> 5 sites (time series): WASH Model <br> "dReq"',  # this is the manual curve name 
          'width':'3',
         'color':'rgb(114, 217, 255)'
         },
     'Monthly Demand': {
         'dash': 'solid',
         'legend_index': 4,
-        'legend_name': '<br> 1 site: UDWR GenRes 2010 <br> Monthly Demand',
+        'legend_name': '<br> 1 site (time series): UDWR GenRes 2010 <br> "Monthly Demand"',
         'width':'3',
         'color':'rgb(170, 247, 255)'
         },
@@ -95,7 +95,7 @@ horizontal_line = go.Scatter(
     x=[2005, 2016],
     y=[232642.28, 232642.28],
     mode='lines',
-    name = '<br> 11 sites: WEAP Model 2017 <br> Monthly Demand (seasonal)',
+    name = '<br> 11 sites (seasonal): WEAP Model 2017 <br> "Monthly Demand" ',
     hoverinfo='11 sites: WEAP Model 2017',
     showlegend=True,
     line=dict(
