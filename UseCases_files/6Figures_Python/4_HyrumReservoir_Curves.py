@@ -4,7 +4,7 @@
 
 
 # Adel Abdallah
-# November 7, 2017
+# November 13, 2017
 
 import plotly
 import plotly.plotly as py
@@ -61,60 +61,42 @@ subsets_settings = {
         },
     'Base case': {
         'dash': 'solid',
-        'mode':'line+marker',
+        'mode':'lines+markers',
         'width':'3',
         'legend_index': 2,
-        'legend_name': 'BOR Reservoirs Dataset, 2017',
+        'legend_name': 'BOR Reservoirs Dataset, 2006',
          'color':'#999999'
         },    
     
-    'Dead Storage': {
+    'Dead Storage, BOR 2006': {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
         'legend_index': 5,
-        'legend_name': 'Dead Storage: BOR Reservoirs, 2017',
+        'legend_name': 'Dead Storage, BOR 2006',
          'color':'rgb(0, 0, 0)'
 
         },
     
-    'MAX_STOR': {
+    'Live Storage, BOR 2006': {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
         'legend_index': 6,
-        'legend_name': 'MAX_STOR: US Major Dams, 2010',
+        'legend_name': 'Live Storage, BOR 2006',
          'color':'rgb(0, 0, 0)'
 
         },
         
-    'MaxCap': {
+    'Total Storage, BOR 2006': {
         'dash': 'dash',
         'mode':'line',
         'width':'3',
         'legend_index':7,
-        'legend_name': 'MaxCap: Utah Dams shapefile, 2015',
+        'legend_name': 'Total Storage, BOR 2006',
          'color':'rgb(0, 0, 0)'
 
-        },
-    'StorageCapacity': {
-        'dash': 'dash',
-        'mode':'line',
-        'width':'3',
-        'legend_index': 8,
-        'legend_name': 'Storage Capacity: USU WEAP Model, 2017',
-        'color':'rgb(0, 0, 0)'
-        },
-    'STORG_ACFT': {
-        'dash': 'dash',
-        'mode':'line',
-        'width':'3',
-        'legend_index': 9,
-        'legend_name': 'STORG_ACFT: Utah Dams shapefile, 2015',
-        'color':'rgb(0, 0, 0)'
-
         }
-
     }
 
 
@@ -140,6 +122,8 @@ for subset in subsets.groups.keys():
     s = go.Scatter(
                     x=subsets_of_scenario.get_group(name='Volume').Value,
                     y=subsets_of_scenario.get_group(name='Elevation').Value,
+                        mode='lines+markers',
+
                     name = subsets_settings[subset]['legend_name'],
                     line = dict(
                         color =subsets_settings[subset]['color'],
@@ -180,91 +164,58 @@ data2 = go.Scatter(
 data.append(data2)     
                 
 
-# vertical line dead storage
-DeadStorage = go.Scatter(
+# vertical line Dead_Storage
+Dead_Storage = go.Scatter(
     x=[3012, 3012],
-    y=[4540, 4629.6],
+    y=[4540, 4750],
     mode='lines',
-    name='Dead Storage: BOR Reservoirs, 2017',
-    hoverinfo='Dead Storage: BOR Reservoirs, 2017',
+    name='Dead Storage, BOR 2006',
+    hoverinfo='Dead Storage, BOR 2006',
     showlegend=True,
     line=dict(
         shape='vh',
         width='2',
-        color = '#AAF7FF'
+        color = '#72D9FF'
             )
                     )
-data.append(DeadStorage)    
+data.append(Dead_Storage)    
     
     
-# vertical line2
-MAX_STOR = go.Scatter(
+# vertical Live_Storage
+Live_Storage = go.Scatter(
     x=[14440, 14440],
     y=[4540, 4750],
     mode='lines',
-    name='MAX_STOR: US Major Dams, 2010',
-    hoverinfo='MAX_STOR',
+    name='Live Storage, BOR 2006',
+    hoverinfo='Live_Storage',
     showlegend=True,
     line=dict(
         shape='vh',
         width='2',
-        color = '#72d9ff'
+        color = '#3FA0FF'
             )
                     )
-data.append(MAX_STOR)
+data.append(Live_Storage)
 
 
-# vertical line3
-MaxCap = go.Scatter(
+# vertical line Total_Storage
+Total_Storage = go.Scatter(
     x=[15760, 15760],
     y=[4540, 4750],
     mode='lines',
-    name='MaxCap: Utah Dams shapefile, 2015',
-    hoverinfo='MaxCap',
+    name='Total Storage, BOR 2006',
+    hoverinfo='Total Storage, BOR 2006',
     showlegend=True,
     line=dict(
         shape='vh',
         width='2',
-        color = '#3fa0ff'
+        color = '#264DFF'
             )
                     )
-data.append(MaxCap)
+data.append(Total_Storage)
 
 
-# vertical line1
-StorageCapacity = go.Scatter(
-    x=[18684, 18684],
-    y=[4540, 4750],
-    mode='lines',
-    name='Storage Capacity: USU WEAP Model, 2017',
-    hoverinfo='Storage Capacity',
-    showlegend=True,
-    line=dict(
-        shape='vh',
-        width='2',
-        color = '#264dff',
-            )
-                    )
-data.append(StorageCapacity)
-
-
-# vertical line4
-STORG_ACFT = go.Scatter(
-    x=[18800, 18800],
-    y=[4540, 4750],
-    mode='lines',
-    name='STORG_ACFT: Utah Dams shapefile, 2015',
-    hoverinfo='STORG_ACFT',
-    showlegend=True,
-    line=dict(
-        shape='vh',
-        width='2',
-        color = '#290ad8'
-            )
-)
                               
-data.append(STORG_ACFT)
-
 
 # Legend is ordered based on data, so we are sorting the data based 
 # on desired legend order indicarted by the index value entered above
@@ -296,7 +247,7 @@ layout = dict(
         showline=True,
         ),
     legend=dict(
-        x=0.65,y=0.03,
+        x=0.55,y=0.04,
             bordercolor='#00000',
             borderwidth=2    
     ),
