@@ -121,7 +121,6 @@ layout = dict(
 
                 ),
     xaxis = dict(
-        title = "Time (Year)",
         range = ['2003', '2016'],
         ticks='outside',
         tickwidth=0.5,
@@ -136,7 +135,7 @@ layout = dict(
     height=1000,
     margin=go.Margin(
         l=250,
-        b=250       ),
+        b=100       ),
     #paper_bgcolor='rgb(233,233,233)',
     #plot_bgcolor='rgb(233,233,233)',
     font=dict(size=28)
