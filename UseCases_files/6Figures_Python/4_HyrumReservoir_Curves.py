@@ -4,7 +4,7 @@
 
 
 # Adel Abdallah
-# November 13, 2017
+# November 14, 2017
 
 import plotly
 import plotly.plotly as py
@@ -48,7 +48,7 @@ subsets_settings = {
         'mode':'line',
         'width':'3',
         'legend_index': 4,
-        'legend_name': 'UDWR GenRes Model, 2010',
+        'legend_name': 'UDWR WEAP Model, 2010',
          'color':'#999999'
         },
     'Rwise': {
