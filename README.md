@@ -1,6 +1,11 @@
 # WaMDaM_UseCases
 Demonstrate how WaMDaM enables systematic data query and comparisons across multiple different models and datasets. 
 
+ ![](/UseCases_files/UseWaMDaM_workflow.jpg)
+**Figure:** Flowchart of the steps that users follow to use WaMDaM   
+
+
+
 ### Application: The Bear River Watershed, Utah 
 We demonstrate the WaMDaM design and use cases using twelve data sources and models in the Bear River Watershed which spans three states, Utah, Idaho, and Wyoming. The Watershed covers an area 3,300 square miles (8,547 square kilometers) and it is the largest source of water to the Great Salt Lake in Utah.    
 
@@ -54,9 +59,6 @@ What is the inflow and outflow of Hyrum Reservoir, Utah?
 What is the difference in input data between the two scenarios or the Bear River WEAP model?
 
  
- ![](/UseCases_files/UseWaMDaM_workflow.jpg)
-**Figure:** Flowchart of the steps that users follow to use WaMDaM   
-
 
 
 
