@@ -9,8 +9,9 @@ https://www.mozilla.org/en-US/firefox/new/
 
 2.	Install SQLite Manager Add-on to Mozilla Firefox
 https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/    
-<img src="/UseCases_files/3SQLite_database/SQLite_Manager_screenshots/add0.PNG" alt="alt text" align="center" width="450" height="320">   
-
+<p align="center">
+  <img width="528" height="408" src="/UseCases_files/3SQLite_database/SQLite_Manager_screenshots/add0.PNG.jpg">
+</p> 
 3. Customize SQLite Manager button to Firefox     
 <img src="/UseCases_files/3SQLite_database/SQLite_Manager_screenshots//add.PNG" alt="alt text" width="450" height="320">
 
