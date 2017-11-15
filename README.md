@@ -28,7 +28,6 @@ The Watershed has various unique and overlapping available data provided by the 
 <p align="center">
   <img width="528" height="408" src="/UseCases_files/BearWatershed_Presentation.jpg">
 </p> 
-**Figure:** The Bear River Watershed in the Western US and example available data sources used to demonstrate WaMDaM     
 
 
 ### Licensing  
