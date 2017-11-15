@@ -6,7 +6,7 @@ Download the [SQLite](https://github.com/WamdamProject/WaMDaM_UseCases/blob/mast
 Follow the instructions below on how a user can set up a SQLite instance of WaM-DaM and use Mozilla Firefox Manager to visualize and interact with the WaM-DaM database. I explain the how to set up a SQLite database in this YouTube demonstration video. (Coming soon)
 #### Software needed:
 
-1. Download Mozilla Firefox web browser
+1. If you dont already have it, download Mozilla Firefox web browser
 https://www.mozilla.org/en-US/firefox/new/
 
 2.	Install SQLite Manager Add-on to Mozilla Firefox
