@@ -20,13 +20,9 @@ We loaded WaMDaM databsase with twelve data sources and models in the Bear River
 The following presented use cases help users identify and compare two fundamental aspects of water management data: data values with different types and connectivity of scenarios and networks. In the first use case users may identify attributes with available or unavailable data that are needed by a systems model in a study area. In the second to fourth use cases, users may further query one or more available attributes to identify and compare data values across supply, demand, and infrastructure to use as input to a model. In the fifth use case, users may identify inflow and outflow connectivity links to a node of interest. Finally, in the sixth use case, users may compare similarities and differences between network topology, metadata, and data values of two scenarios of the same model. Each use case 1) describes the general problem it addresses, 2) describes the specifics of the case (i.e., location, model, dataset, search parameters), and 3) discusses how the WaMDaM design solves the problem and enables other similar issues to be solved. 
 
 
-**Download**
-1. [Excel Workbook template](https://github.com/WamdamProject/WaMDaM_UseCases/raw/master/UseCases_files/0WorkbookTemplates/InputData_Template/WaMDaM_InputData_template.xlsm) to prepare your data into it. Each dataset into one workbook
-2. [WaMDaM Wizard software](https://github.com/WamdamProject/WaMDaM_Wizard#download-the-wizard-gui-for-windows-7-and-10-64-bit-operating-systems) to load your workbook into SQLite  (Windows [7 and 10] 64 bit operating systems)
-3. Mozilla FireFox browser and its SQLite Manager Add-Ons to interact with the database
-4. Python editor like PyCharm or Jyputer to plot results
-
 ## Use Cases in the Bear River Watershed, Utah 
+
+
 
 **[Use case 1](/UseCases_files/9Discussion/UseCase1.md):** identify data availability for attributes needed by a model in a study area. 
 What attributes that have available data to develop a WEAP and WASH models in the Upper Bear River watershed?
