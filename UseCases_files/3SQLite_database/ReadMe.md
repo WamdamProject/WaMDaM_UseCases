@@ -1,11 +1,9 @@
 ## Execute Use Cases SQL Quries in SQLite Manager 
-Download the [SQLite](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/3SQLite_database/BearRiver_datasets.sqlite?raw=true) file with loaded data for the twelve US and Bear River Watershed datasets 
+Download the [SQLite](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/3SQLite_database/BearRiver_datasets.sqlite?raw=true) file with loaded data for the twelve US and Bear River Watershed datasets [40 MB]
 
 
-## How to connect to SQLite database and run queries using the SQLite Manager Add-on to Mozilla Firefox
-
-We provide the instructions on how a user can set up a SQLite instance of WaM-DaM and use Mozilla Firefox Manager to visualize and interact with the WaM-DaM database. I explain the how to set up a SQLite database in this YouTube demonstration video. if you follow the instructions, the estimated time to setup a SQLite instance and create WaM-DaM blank instance is less than 15 minutes.
-
+## How to connect to SQLite database and run queries using the SQLite Manager Add-on to Mozilla Firefox (less than 10 minutes)
+Follow the instructions below on how a user can set up a SQLite instance of WaM-DaM and use Mozilla Firefox Manager to visualize and interact with the WaM-DaM database. I explain the how to set up a SQLite database in this YouTube demonstration video. (Coming soon)
 #### Software needed:
 
 1. Download Mozilla Firefox web browser
