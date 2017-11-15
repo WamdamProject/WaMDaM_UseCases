@@ -7,14 +7,38 @@ Demonstrate how WaMDaM enables systematic data query and comparisons across mult
 3. Mozilla FireFox browser and its SQLite Manager Add-Ons to interact with the database
 4. Python editor like PyCharm or Jyputer to plot results
 
+## Use Cases in the Bear River Watershed, Utah 
 
-**Follow these four steps to use WaMDaM and enable its use cases on your data:**        
-1. Populate each of your datas into this empty Excel (.xlsx) workbook, one at a time, which is the generic data importer into WaMDaM
-You can see numerous populated examples here. You may use the data manipulation services to help fit your data into WaMDaM sheets.    
-2. Use the WaMDaM Wizard to load each workbook into a SQLite database.    
-3. Use the Mozilla SQLite Manager to interact with the WaMDaM database. There are a list of example quries to identify and compare data in WaMDaM.    
-4. Use or adapt the example Python scripts that plot some query results.     
+**Use case 1:** identify data availability for attributes needed by a model in a study area. 
+What attributes that have available data to develop a WEAP and WASH models in the Upper Bear River watershed?
 
+
+
+
+**Use case 2:** identify and compare time series and seasonal discharge data across data sources. 
+What is the discharge at the node “below Stewart Dam” in Idaho?
+
+
+
+
+**Use case 3:** identify and compare demand data for a site as reported in many sources.
+What is the total agriculture water use or demand in Cache Valley, Utah?
+
+
+
+**Use case 4:** identify and compare infrastructure data across many data sources. 
+What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
+
+
+
+**Use case 5:** identify inflow and outflow into and out of a node water system component and compare them across data sources or models.
+What is the inflow and outflow of Hyrum Reservoir, Utah? 
+
+
+
+
+**Use case 6:** compare differences in network topology and data values between two model scenarios.
+What is the difference in input data between the two scenarios or the Bear River WEAP model?
 
  
  ![](/UseCases_files/UseWaMDaM_workflow.jpg)
@@ -28,6 +52,8 @@ The Watershed has various unique and overlapping available data provided by the 
 <p align="center">
   <img width="528" height="408" src="/UseCases_files/BearWatershed_Presentation.jpg">
 </p> 
+
+
 
 
 ### Licensing  
