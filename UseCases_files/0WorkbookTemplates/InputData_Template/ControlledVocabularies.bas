@@ -78,6 +78,7 @@ Sub ImportCVs()
 
     'Set up links to the vocabulary terms online
     Dim CVWebPath, CVWebAPI, CVWebExtension As String
+    'Access the WaMDaM Controlled Vocabulary Registry
     CVWebPath = "http://vocabulary.wamdam.org/"
     CVWebAPI = "api/v1/"
     CVWebExtension = "/?format=csv"
