@@ -1,6 +1,7 @@
 ## Generic Excek Workbook template for Input Data  
 
 [Excel Workbook ](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/0WorkbookTemplates/InputData_Template/WaMDaM_InputData_template.xlsm?raw=true)  
+![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/0WorkbookTemplates/InputData_Template/template.PNG)
 
 Generally, defining and loading data into a WaMDaM database follows this order.   
 **First** load the controlled vocabulary or leave them blank.   
