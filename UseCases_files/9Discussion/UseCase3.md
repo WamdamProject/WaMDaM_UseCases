@@ -1,9 +1,10 @@
 # Use case 3: identify and compare demand data for a site as reported in many sources.   
 ## What is the total agriculture water use or demand in Cache County, Utah?   
 
-
+### Problem  
 Identifying water use and demand data is probably the most difficult task in populating models with data. Likely in part because the source of data is specific to each study area compared to water supply data that are often available from national or regional sources like USGS and BOR. In Appendix B, we identify nine issues that users need to consider while working with and importing demand data into WaMDaM. They provide a better context to the results of the use case.  
 
+### Solution   
 In the use case query, we aggregated and converted demand values to answer the use case question of how much water demand for agriculture in a geo-spatial boundary for Cache County in Utah, controlled attribute name “flow”, and instance category of “Agriculture”. We aggregated the data within the county for each data source and converted the units to acre-feet (Figure 8). The Figure shows data from four different sources: WEAP and WASH models, and the Water Data Exchange database (WaDE) by the Western States Water Council (http://www.westernstateswater.org/wade/). The comparison here intends to show how WaMDaM enables querying all of them together and what each data source has data for. Users then can make an informed decision to choose the aggregation level or site specific demand data to their own model. Users also could possibly incorporate the total values for two equivalent estimates (two top curves) to test a model sensitivity to different demands.   
 
 
@@ -13,7 +14,10 @@ All these differences are context specific and require knowledge of them before 
 
 ![](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/8Figures_jpg/UseCase3.png)
 
-In addition to demand data, the query also can return water rights data from the WaDE data source under the controlled Object Type “Demand Site” and attribute name of “Flow”. For example, the “WATER RESEARCH LAB. UTAH STATE UNIVERSITY” has two water rights. One of them is 84 AF/Year and 146 cfs for the beneficiary use descriptor value of “Power”. So WaMDaM organizes descriptive and numeric data for water rights. After identifying supply and demand data, the next use case identifies data that describe water infrastructure like reservoir bathymetry curves.      
+In addition to demand data, the query also can return water rights data from the WaDE data source under the controlled Object Type “Demand Site” and attribute name of “Flow”. For example, the “WATER RESEARCH LAB. UTAH STATE UNIVERSITY” has two water rights. One of them is 84 AF/Year and 146 cfs for the beneficiary use descriptor value of “Power”. So WaMDaM organizes descriptive and numeric data for water rights.
+
+### Next  
+After identifying supply and demand data, the next use case identifies data that describe water infrastructure like reservoir bathymetry curves.      
 
 
 
