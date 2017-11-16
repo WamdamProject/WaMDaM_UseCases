@@ -40,7 +40,7 @@ Existing time series data management methods like the Observation Data Model can
 
 With this example to choose a controlled term for the instance name, we recognize that defining a specific and descriptive node or link instance name in a watershed, national, or worldwide could be challenging. This is because of the large number of infrastructure instances that could reach thousands or even millions. So there is a need for a robust method to name and organize a potentially growing controlled instance names. The method could benefit from the USGS convention of naming their gage stations that include the institution, site code, name and nearby town or and state. 
 
-
+### Next   
 This use case demonstrated organizing water supply data, the next use case demonstrates organizing and comparing water demand data from multiple sources. 
 
 
