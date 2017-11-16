@@ -7,17 +7,16 @@ Demonstrate how WaMDaM enables systematic data query and comparisons across mult
 
 
 ### Application: The Bear River Watershed, Utah 
-We demonstrate the WaMDaM design and use cases using twelve data sources and models in the Bear River Watershed which spans three states, Utah, Idaho, and Wyoming. The Watershed covers an area 3,300 square miles (8,547 square kilometers) and it is the largest source of water to the Great Salt Lake in Utah.    
+We demonstrate the WaMDaM design and use cases using twelve data sources and models in the Bear River Watershed which spans three states, Utah, Idaho, and Wyoming. The Watershed covers an area 3,300 square miles (8,547 square kilometers) and it is the largest source of water to the Great Salt Lake in Utah.     
 
-The Watershed has various unique and overlapping available data provided by the three states, the Bear River Commission, national US datasets, and three existing systems models: Wyoming Model which allocates water based on priority for the upper Bear River Basin, the two model versions of the Lower Bear River which also allocate water on priority. Note that when developers organize their model’s input data into WaMDaM, models like the Wyoming model become a new source of data. The datasets and models are an example systems water management data of natural and built water supply and demand, infrastructure connectivity, with different data types, networks and scenarios. 
+The Watershed is an interesting one because it has various unique and overlapping available data provided by the three states, the Bear River Commission, national US datasets, and three existing systems models: BRSDM which allocates water based on priority for the upper Bear River Basin, a WEAP model which allocate water on priority, and a WASH model which allocates water to maximum suitable habitat areas in the Lower Bear River. Note that when developers organize their model’s input data into WaMDaM, models become a new source of data. We select a few locations in the Watershed to demonstrate use cases as each location has data from multiple sources: Stewart Dam site in Idaho, Hyrum Reservoir, Bear River Migratory Bird Refuge, and Cache County in Utah which is a major water use area in the Bear River Watershed.   
 
 <p align="center">
   <img width="528" height="408" src="/UseCases_files/BearWatershed_Presentation.jpg">
 </p> 
 
-We loaded WaMDaM databsase with twelve data sources and models in the Bear River Watershed that spans three states, Utah, Idaho, and Wyoming (Figure 4). The Watershed covers an area 3,300 square miles (8,547 square kilometers) and it is the largest source of water to the Great Salt Lake in Utah. The Watershed is an interesting one because it has various unique and overlapping available data provided by the three states, the Bear River Commission, national US datasets, and three existing systems models: BRSDM which allocates water based on priority for the upper Bear River Basin, a WEAP model which allocate water on priority, and a WASH model which allocates water to maximum suitable habitat areas in the Lower Bear River. Note that when developers organize their model’s input data into WaMDaM, models become a new source of data. We select a few locations in the Watershed to demonstrate use cases as each location has data from multiple sources: Stewart Dam site in Idaho, Hyrum Reservoir, Bear River Migratory Bird Refuge, and Cache County in Utah which is a major water use area in the Bear River Watershed.
 
-The following presented use cases help users identify and compare two fundamental aspects of water management data: data values with different types and connectivity of scenarios and networks. 
+The following presented use cases help users identify and compare two fundamental aspects of water management data: data values with different types and connectivity of scenarios and networks.  
 
 ## Use Cases in the Bear River Watershed, Utah 
 
