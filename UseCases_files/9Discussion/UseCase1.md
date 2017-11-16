@@ -21,4 +21,5 @@ This use case demonstrates how WaMDaM provides a more readily automated and cons
 
 Add link to table
 
+### Next
 This first step searched for input data to models. Next, users can further query specific nodes and attributes like streamflow, demand, reservoir storage, natural and built infrastructure connectivity with the reservoir and prepare it as input to their model as shown in the next use cases
