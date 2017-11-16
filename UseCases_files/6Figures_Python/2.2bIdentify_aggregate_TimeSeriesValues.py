@@ -2,7 +2,7 @@
 # plot aggregated to monthly and converted to acre-feet time series data of multiple sources
 
 # Adel Abdallah
-# November 13, 2017
+# November 16, 2017
 
 import plotly
 import plotly.plotly as py
@@ -134,7 +134,7 @@ layout = dict(
         range = ['1994', '2000']
                 ),
     legend=dict(
-        x=0.5,y=1,
+        x=0.3,y=1,
         bordercolor='#00000',
             borderwidth=2
 
@@ -148,7 +148,7 @@ layout = dict(
     #plot_bgcolor='rgb(233,233,233)',
     
     
-    font=dict( size=28)
+    font=dict( size=35)
              )
              
 # create the figure object            
