@@ -1,4 +1,4 @@
-## Execute Use Cases SQL Quries in SQLite Manager 
+## Download SQLite and Execute Use Cases SQL Queries in SQLite Manager 
 Download the [SQLite](https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/3SQLite_database/BearRiver_datasets.sqlite?raw=true) file with loaded data for the twelve US and Bear River Watershed datasets [40 MB]
 
 
