@@ -3,7 +3,7 @@
 # plot Seasonal data for multiple scenarios
 
 # Adel Abdallah
-# October 30, 2017
+# November 16, 2017
 
 
 import plotly
@@ -14,7 +14,7 @@ import pandas as pd
 
 ## read the input data from GitHub csv file which is a direct query output
 # 3.3Identify_SeasonalValues.csv 
-df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/2Results_CSV/2.3Identify_SeasonalValues.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/2.3Identify_SeasonalValues.csv")
 
 
 #get the many curves by looking under "ScenarioName" column header. 
@@ -109,12 +109,12 @@ layout = dict(
           bordercolor='#00000',
             borderwidth=2
                ),
-    width=1100,
+    width=1200,
     height=800,
     #paper_bgcolor='rgb(233,233,233)',
     #plot_bgcolor='rgb(233,233,233)',
-    margin=go.Margin(l=210,b=100),
-    font=dict(size=28)
+    margin=go.Margin(l=260,b=100),
+    font=dict(size=35)
              )
 # create a figure object
 fig = dict(data=data, layout=layout)
