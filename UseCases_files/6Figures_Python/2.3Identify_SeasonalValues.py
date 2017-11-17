@@ -30,7 +30,7 @@ subsets_settings = {
     'Bear Wet Year Model': {
         'dash': 'solid',
          'mode':'lines+markers',
-        'width':'3',
+        'width':'4',
         'legend_index': 0,
         'legend_name': 'Wet Year Model',
          'color':'rgb(41, 10, 216)'
@@ -38,7 +38,7 @@ subsets_settings = {
 
     'Bear Normal Year Model': { # this oone is the name of subset as it appears in the csv file
         'dash': 'solid',     # this is properity of the line (curve)
-        'width':'3',
+        'width':'4',
         'mode':'lines+markers',
         'legend_index': 1,   # to order the legend
         'legend_name': 'Normal Year Model',  # this is the manual curve name 
@@ -48,7 +48,7 @@ subsets_settings = {
     'Bear Dry Year Model': {
         'dash': 'solid',
         'mode':'lines+markers',
-         'width':'3',
+         'width':'4',
         'legend_index': 2,
         'legend_name': 'Dry Year Model',
          'color':'rgb(63, 160, 255)'
