@@ -4,7 +4,7 @@
 # Then get the percentage of time it exceeds dry and wet years 
 
 # Adel Abdallah
-# October 30, 2017
+# November 16, 2017
 
 
 import plotly
@@ -16,7 +16,7 @@ import pandas as pd
 
 ## read the input data from GitHub csv file which is a direct query output for this  query:
 # 3.2Identify_aggregate_TimeSeriesValues.sql
-df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/2Results_CSV/2.2Identify_aggregate_TimeSeriesValues.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/WamdamProject/WaMDaM_UseCases/master/UseCases_files/5Results_CSV/2.2Identify_aggregate_TimeSeriesValues.csv")
 
 # Convert CalenderYear column data type to datetime
 df['CalenderYear'] = pd.to_datetime(df['CalenderYear'], errors='coerce')
@@ -87,35 +87,37 @@ print lowerthanDry
 UpperthanWet=cdfdata.loc[cdfdata['cumulative_monthly'] >= 17181, 'probability']
 print UpperthanWet
 
-# vertical line3
+# vertical line dry year 
 dry = go.Scatter(
     x=[666, 666 ],
     y=[0, 1],
     mode='lines',
-    name='dry',
+        name='dry',
     hoverinfo='dry',
     showlegend=False,
     line=dict(
         shape='vh',
         width='2',
-        color = '#264cff'
+        dash = 'dash',
+        color = '#3FA0FF'
             )
                     )
 data.append(dry)
 
 
-# vertical line3
+# vertical line wet year 
 wet = go.Scatter(
     x=[17181, 17181],
     y=[0, 1],
     mode='lines',
-    name='wet',
+        name='wet',
     hoverinfo='wet',
     showlegend=False,
     line=dict(
         shape='vh',
+        dash = 'dash',
         width='2',
-        color = '#a50021'
+        color = '#290AD8'
             )
                     )
 data.append(wet)
@@ -145,11 +147,11 @@ layout = go.Layout(
 
              showline=True,
 ),
-    font=dict(size=28,family='arial'),
-    width=1000,
+    font=dict(size=35,family='arial'),
+    width=1100,
     height=800,
     margin=go.Margin(
-        l=150,
+        l=230,
         b=150       ),
     legend=dict(
         x=0.4,y=0.5,
@@ -159,35 +161,35 @@ layout = go.Layout(
     
         annotations=[
         dict(
-            x=8800,
-            y=0.7,
+            x=8000,
+            y=0.6,
             xref='x',
             yref='y',
-            text='Dry year flow season=666 AF/month, <br> 48% of flow is lower than it',
+            text='Dry year <br> flow season=<br>666 AF/month, <br> 48% of flow is <br>lower than it',
             showarrow=False,
 #             arrowhead=7,
 #             ax=0,
 #             ay=-100,
             font=dict(
             family='arial',
-            size=20,
-            color='#264cff'
+            size=35,
+            color='#3FA0FF'
                     )
             ),
                 dict(
-            x=27000,
-            y=0.7,
+            x=24500,
+            y=0.6,
             xref='x',
             yref='y',
-            text='Wet year flow season=17,181 AF/month, <br>3% of flow is higher than it',
+            text='Wet year <br>flow season=<br>17,181 AF/month, <br>3% of flow is <br>higher than it',
             showarrow=False,
 #             arrowhead=7,
 #             ax=0,
 #             ay=-100,
             font=dict(
             family='arial',
-            size=20,
-            color='#a50021'
+            size=35,
+            color='#290AD8'
                     )
             ),
         
