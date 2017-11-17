@@ -2,7 +2,7 @@
 
 # plot time series data aggregated in space and time from multiple sources
 
-# November 13, 2017
+# November 16, 2017
 # Adel Abdallah
 
 import plotly
@@ -138,7 +138,7 @@ layout = dict(
         b=100       ),
     #paper_bgcolor='rgb(233,233,233)',
     #plot_bgcolor='rgb(233,233,233)',
-    font=dict(size=28)
+    font=dict(size=32)
 
 )
 
