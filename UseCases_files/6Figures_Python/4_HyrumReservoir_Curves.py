@@ -4,7 +4,7 @@
 
 
 # Adel Abdallah
-# November 14, 2017
+# November 16, 2017
 
 import plotly
 import plotly.plotly as py
@@ -28,11 +28,11 @@ data = []
 subsets_settings = {
     'Utah Dams shapefile_as is': { # this oone is the name of subset as it appears in the csv file
         'dash': 'solid',     # this is properity of the line (curve)
-        'width':'2',
+        'width':'3',
         'legend_index': 1,   # to order the legend
         'mode':'line',
         'legend_name': 'Utah Dams Dataset, 2016',  # this is the manual curve name 
-         'color':'#f76d5e'
+         'color':'#990F0F'
         },
     
     'USU WEAP Model 2017': {
@@ -41,7 +41,7 @@ subsets_settings = {
           'mode':'line',
         'legend_index': 3,
         'legend_name': 'USU WEAP Model, 2017',
-         'color':'rgb(0,0,0)'
+         'color':'#B26F2C'
         },
     'UDWR GenRes 2010': {
         'dash': 'dash',
@@ -49,7 +49,7 @@ subsets_settings = {
         'width':'3',
         'legend_index': 4,
         'legend_name': 'UDWR WEAP Model, 2010',
-         'color':'#999999'
+         'color':'#E5B17E'
         },
     'Rwise': {
         'dash': 'dash',
@@ -57,7 +57,7 @@ subsets_settings = {
         'width':'3',
         'legend_index': 0,
         'legend_name': 'BOR Water Info. System, 2017',
-         'color':'#a50021'
+         'color':'#E57E7E'
         },
     'Base case': {
         'dash': 'solid',
@@ -65,7 +65,7 @@ subsets_settings = {
         'width':'3',
         'legend_index': 2,
         'legend_name': 'BOR Reservoirs Dataset, 2006',
-         'color':'#999999'
+         'color':'#99540F'
         },    
     
     'Dead Storage, BOR 2006': {
@@ -109,7 +109,7 @@ subsets_settings2 = {
         'dash': 'solid',     # this is properity of the line (curve)
         'legend_index': 3,   # to order the legend
          'mode':'lines+markers',
-        'color':'#a50021',
+        'color':'#E57E7E',
         'legend_name': 'BOR Water Info. System, 2017'  # this is the edited curve name 
                     }
 
@@ -146,11 +146,11 @@ data2 = go.Scatter(
                 name = subsets_settings2['legend_name'],
                 mode='lines+markers',
                 line = dict(
-                    color ='#a50021',
-                    width ='2'),
+                    color ='#E57E7E',
+                    width ='3'),
                 marker = dict(
                 size ='5',
-                color = '#a50021',      
+                color = '#E57E7E',      
 #                 symbol ='square',
 #                         line = dict(
 #                         color = ['rgb(153, 84, 15)'],
@@ -174,7 +174,7 @@ Dead_Storage = go.Scatter(
     showlegend=True,
     line=dict(
         shape='vh',
-        width='2',
+        width='3',
         color = '#72D9FF'
             )
                     )
@@ -191,7 +191,7 @@ Live_Storage = go.Scatter(
     showlegend=True,
     line=dict(
         shape='vh',
-        width='2',
+        width='3',
         color = '#3FA0FF'
             )
                     )
@@ -208,7 +208,7 @@ Total_Storage = go.Scatter(
     showlegend=True,
     line=dict(
         shape='vh',
-        width='2',
+        width='3',
         color = '#264DFF'
             )
                     )
@@ -258,7 +258,7 @@ layout = dict(
         b=150       ),
     #paper_bgcolor='rgb(233,233,233)',
     #plot_bgcolor='rgb(233,233,233)',
-    font=dict(size=28,family='arial'),
+    font=dict(size=32,family='arial'),
 
 
 )
