@@ -2,7 +2,7 @@
 
 # plot time series data aggregated in space and time from multiple sources
 
-# November 16, 2017
+# November 20, 2017
 # Adel Abdallah
 
 import plotly
@@ -58,7 +58,7 @@ subsets_settings = {
     'Monthly Demand': {
         'dash': 'solid',
         'legend_index': 4,
-        'legend_name': '<br> 1 site (time series): UDWR GenRes 2010 <br> "Monthly Demand"',
+        'legend_name': '<br> 1 site (time series): WEAP Model 2010 <br> "Monthly Demand"',
         'width':'3',
         'color':'rgb(170, 247, 255)'
         },
