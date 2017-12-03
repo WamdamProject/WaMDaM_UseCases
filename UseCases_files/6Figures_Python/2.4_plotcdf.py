@@ -4,7 +4,7 @@
 # Then get the percentage of time it exceeds dry and wet years 
 
 # Adel Abdallah
-# November 16, 2017
+# Dec 2, 2017
 
 
 import plotly
@@ -61,8 +61,8 @@ data = []
 cdf = go.Scatter(
     x = cumulative_monthly,
     y = probability,
-        showlegend=False,
-
+        showlegend=True,
+name='UDWR from 1923 to 2014',
     marker = dict(
         color='rgb(0, 0, 0)'
         )
@@ -78,7 +78,7 @@ filtered_data = cdfdata
 filtered_data.to_csv('CDF_data.csv', index=False)
 
 
-cdfdata
+# cdfdata
 
 lowerthanDry=cdfdata.loc[cdfdata['cumulative_monthly'] <= 666, 'probability']
 print lowerthanDry
@@ -90,38 +90,75 @@ print UpperthanWet
 # vertical line dry year 
 dry = go.Scatter(
     x=[666, 666 ],
-    y=[0, 1],
+    y=[0, 0.48],
     mode='lines',
-        name='dry',
+        name='Dry year scenario <br> (BRSDM model)',
     hoverinfo='dry',
-    showlegend=False,
+    showlegend=True,
     line=dict(
         shape='vh',
-        width='2',
-        dash = 'dash',
+        width='4',
+        dash = 'dot',
         color = '#3FA0FF'
             )
                     )
 data.append(dry)
 
 
-# vertical line wet year 
-wet = go.Scatter(
-    x=[17181, 17181],
-    y=[0, 1],
+
+# horizontal line dry year 
+dryHo = go.Scatter(
+    x=[0, 666 ],
+    y=[0.48, 0.48],
     mode='lines',
-        name='wet',
-    hoverinfo='wet',
+        name='Dry year scenario <br> (BRSDM model)',
+    hoverinfo='dry',
     showlegend=False,
     line=dict(
         shape='vh',
+        width='4',
+        dash = 'dot',
+        color = '#3FA0FF'
+            )
+                    )
+data.append(dryHo)
+
+
+
+# vertical line wet year 
+wet = go.Scatter(
+    x=[17181, 17181],
+    y=[0, 0.93],
+    mode='lines',
+        name='Wet year scenario <br> (BRSDM model)',
+    hoverinfo='wet',
+    showlegend=True,
+    line=dict(
+        shape='vh',
         dash = 'dash',
-        width='2',
+        width='4',
         color = '#290AD8'
             )
                     )
 data.append(wet)
 
+
+# horizontal line wet year 
+wetHo = go.Scatter(
+    x=[0, 17181],
+    y=[0.93, 0.93],
+    mode='lines',
+        name='Wet year scenario <br> (BRSDM model)',
+    hoverinfo='wet',
+    showlegend=False,
+    line=dict(
+        shape='vh',
+        dash = 'dash',
+        width='4',
+        color = '#290AD8'
+            )
+                    )
+data.append(wetHo)
 
 
 layout = go.Layout(
@@ -138,7 +175,7 @@ layout = go.Layout(
 
             ),
     yaxis = dict(
-                title = 'Cumulative probability <br> (from 1923 to 2014)',
+                title = 'Cumulative probability',
                 dtick='0.1',
                 ticks='outside',
                 ticklen=25,
@@ -154,46 +191,17 @@ layout = go.Layout(
         l=230,
         b=150       ),
     legend=dict(
-        x=0.4,y=0.5,
+        x=0.5,y=0.5,
             bordercolor='#00000',
-            borderwidth=2    
+            borderwidth=2, 
+     font=dict(
+            family='arial',
+            size=35                    )           
     ),
-    
-        annotations=[
-        dict(
-            x=8000,
-            y=0.6,
-            xref='x',
-            yref='y',
-            text='Dry year <br> flow season=<br>666 AF/month, <br> 48% of flow is <br>lower than it',
-            showarrow=False,
-#             arrowhead=7,
-#             ax=0,
-#             ay=-100,
-            font=dict(
-            family='arial',
-            size=35,
-            color='#3FA0FF'
-                    )
-            ),
-                dict(
-            x=24500,
-            y=0.6,
-            xref='x',
-            yref='y',
-            text='Wet year <br>flow season=<br>17,181 AF/month, <br>3% of flow is <br>higher than it',
-            showarrow=False,
-#             arrowhead=7,
-#             ax=0,
-#             ay=-100,
-            font=dict(
-            family='arial',
-            size=35,
-            color='#290AD8'
-                    )
-            ),
+ 
         
-        ]
+        
+        
     )
 
 fig = dict(data=data, layout=layout)
