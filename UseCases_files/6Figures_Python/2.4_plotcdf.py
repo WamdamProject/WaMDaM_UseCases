@@ -83,9 +83,13 @@ filtered_data.to_csv('CDF_data.csv', index=False)
 lowerthanDry=cdfdata.loc[cdfdata['cumulative_monthly'] <= 666, 'probability']
 print lowerthanDry
 
+UpperthanNormal=cdfdata.loc[cdfdata['cumulative_monthly'] >= 2506, 'probability']
+print UpperthanNormal
 
 UpperthanWet=cdfdata.loc[cdfdata['cumulative_monthly'] >= 17181, 'probability']
 print UpperthanWet
+
+
 
 # vertical line dry year 
 dry = go.Scatter(
@@ -122,7 +126,45 @@ dryHo = go.Scatter(
             )
                     )
 data.append(dryHo)
+# ------------------------------------------------------------
 
+
+# vertical line normal year 
+normal = go.Scatter(
+    x=[2506, 2506],
+    y=[0, 0.844],
+    mode='lines',
+        name='Normal year scenario <br> (BRSDM model)',
+    hoverinfo='wet',
+    showlegend=True,
+    line=dict(
+        shape='vh',
+        dash = 'dashdot',
+        width='4',
+        color = '#264DFF'
+            )
+                    )
+data.append(normal)
+
+
+# horizontal line normal year 
+normalHo = go.Scatter(
+    x=[0, 2506],
+    y=[0.844, 0.844],
+    mode='lines',
+        name='Normal year scenario <br> (BRSDM model)',
+    hoverinfo='wet',
+    showlegend=False,
+    line=dict(
+        shape='vh',
+        dash = 'dashdot',
+        width='4',
+        color = '#264DFF'
+            )
+                    )
+data.append(normalHo)
+
+# ------------------------------------------------------------
 
 
 # vertical line wet year 
@@ -159,6 +201,9 @@ wetHo = go.Scatter(
             )
                     )
 data.append(wetHo)
+
+
+
 
 
 layout = go.Layout(
