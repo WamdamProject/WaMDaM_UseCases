@@ -36,11 +36,11 @@ Users can further search for more metadata and data about these instances.
 Then they can choose which ones to import to their model 
 
 Adel Abdallah 
-Last updated October 29, 2017
+Last updated Dec 5, 2017
 
 */
 -- This SELECT statement shows the list of WEAP Objects and their Attributes that have one or many native terms available them that have available data in the datasets
-Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,DatasetAcronym, WEAPAttributeName,AttributeNameCV,AttributeName
+Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,DatasetAcronym, WEAPAttributeName,AttributeNameCV,AttributeName,DatasetAcronym
 
 From 
 
