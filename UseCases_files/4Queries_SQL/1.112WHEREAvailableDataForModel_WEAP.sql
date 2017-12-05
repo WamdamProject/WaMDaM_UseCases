@@ -83,17 +83,17 @@ ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-Left JOIN "Mapping"
-ON Mapping.AttributeID= Attributes.AttributeID
+Left JOIN "Mappings"
+ON Mappings.AttributeID= Attributes.AttributeID
 
 Left JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 Left JOIN "Scenarios" 
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 Left JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
