@@ -1,6 +1,6 @@
 /*
 
-4.3MergeTimeSeriesValues.sql  --Shasta Reservoir
+4.32MergeTimeSeriesValues_Shasta.sql
 
 
 Use case 4: identify and compare infrastructure data across many data sources.
@@ -69,7 +69,7 @@ ON "SeasonalNumericValues"."DataValuesMapperID" = "DataValuesMapper"."DataValues
 -- Specify controlled Object Type, instance name, and an attribute of interest
 WHERE ObjectTypeCV='Reservoir' 
 
-AND InstanceNameCV='Hyrum Reservoir'  
+AND InstanceNameCV='Shasta Reservoir'  
 
 AND AttributeNameCV = 'Volume'
 
@@ -123,7 +123,7 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 -- Specify controlled Object Type, instance name, and an attribute of interest
 WHERE ObjectTypeCV='Reservoir' 
 
-AND InstanceNameCV='Hyrum Reservoir'  
+AND InstanceNameCV='Shasta Reservoir'  
 
 AND AttributeNameCV ='Elevation' 
 
