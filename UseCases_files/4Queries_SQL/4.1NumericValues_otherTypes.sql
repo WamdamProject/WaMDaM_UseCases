@@ -29,20 +29,20 @@ ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
-LEFT JOIN "Mapping"
-ON "Mapping"."AttributeID"= "Attributes"."AttributeID"
+LEFT JOIN "Mappings"
+ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 
 LEFT JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
 LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mapping"."DataValuesMapperID"
+ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
 
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 LEFT JOIN "Scenarios" 
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
