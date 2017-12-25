@@ -1,5 +1,5 @@
 /*
-4.63MultipleDescriptorValues_HydroPower_UT_CA.sql
+4.63MultipleDescriptorValues_HydroPower_UT.sql
 
 Use case 4: identify and compare infrastructure data across many data sources.
 What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
