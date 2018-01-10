@@ -4,7 +4,7 @@
 
 
 # Adel Abdallah
-# November 16, 2017
+# Jan 9, 2017
 
 import plotly
 import plotly.plotly as py
@@ -49,7 +49,7 @@ subsets_settings = {
         'width':'3',
         'legend_index': 4,
         'legend_name': 'UDWR WEAP Model, 2010',
-         'color':'#E5B17E'
+         'color':'#99540F'
         },
     'Rwise': {
         'dash': 'dash',
@@ -65,7 +65,7 @@ subsets_settings = {
         'width':'3',
         'legend_index': 2,
         'legend_name': 'BOR Reservoirs Dataset, 2006',
-         'color':'#99540F'
+         'color':'#E5B17E'
         },    
     
     'Dead Storage, BOR 2006': {
@@ -174,7 +174,7 @@ Dead_Storage = go.Scatter(
     showlegend=True,
     line=dict(
         shape='vh',
-        width='3',
+        width='4',
         color = '#72D9FF'
             )
                     )
@@ -191,7 +191,7 @@ Live_Storage = go.Scatter(
     showlegend=True,
     line=dict(
         shape='vh',
-        width='3',
+        width='4',
         color = '#3FA0FF'
             )
                     )
@@ -208,7 +208,7 @@ Total_Storage = go.Scatter(
     showlegend=True,
     line=dict(
         shape='vh',
-        width='3',
+        width='4',
         color = '#264DFF'
             )
                     )
