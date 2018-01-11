@@ -36,11 +36,11 @@ Users can further search for more metadata and data about these instances.
 Then they can choose which ones to import to their model 
 
 Adel Abdallah 
-Last updated Dec 5, 2017
+Last updated Jan 11, 2017
 
 */
 -- This SELECT statement shows the list of WEAP Objects and their Attributes that have one or many native terms available them that have available data in the datasets
-Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,DatasetAcronym, WEAPAttributeName,AttributeNameCV,AttributeName,DatasetAcronym
+Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,DatasetAcronym, WEAPAttributeName,AttributeNameCV,AttributeName,InstanceNameCV
 
 From 
 
@@ -71,7 +71,7 @@ Inner Join
 --They have nodes or links within the specified boundary 
 -- the controlled ObjectTypes and Attributes match between WEAP and the other datasets   
 
-SELECT Distinct ObjectTypeCV,ObjectType,DatasetAcronym, AttributeNameCV,AttributeName
+SELECT Distinct ObjectTypeCV,ObjectType,DatasetAcronym, AttributeNameCV,AttributeName,InstanceNameCV
 
 --SELECT Distinct ObjectTypeCV, AttributeNameCV
 --SELECT COUNT(Distinct ObjectTypeCV) as CountOfObjects,COUNT(Distinct AttributeNameCV) As CountOfAttributes
@@ -101,14 +101,14 @@ ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 -- If a native attribute is not registered with a controlled attribute, then exclude the native one 
 -- because it has no value as far as it cannot be related to other attributes  
 WHERE AttributeNameCV is not null
-  
+  /*
 and
 -- limit the search to within the specified boundaries
 ("Longitude_x">='-111.648' 
 AND "Longitude_x"<='-110.82'
 AND "Latitude_y_x">='40.712'
 AND "Latitude_y"<='42.848') 
-
+*/
 --
 AND (ObjectTypeCV IN 
 
