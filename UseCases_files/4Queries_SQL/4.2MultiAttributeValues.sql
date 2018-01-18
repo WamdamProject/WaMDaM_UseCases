@@ -6,7 +6,7 @@ What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
 
 
 Adel Abdallah
-Updated October 30, 2017
+Updated Jan 18, 2018
 
 This query shows data values for a particular MultiColumns of a reservoir InstanceName: area, and capacity, and stage 
 
@@ -33,20 +33,20 @@ LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
 -- Join the Attributes to get their Mappings   
-LEFT JOIN "Mapping"
-ON Mapping.AttributeID= Attributes.AttributeID
+LEFT JOIN "Mappings"
+ON Mappings.AttributeID= Attributes.AttributeID
 
--- Join the Mapping to get their Instances   
+-- Join the Mappings to get their Instances   
 LEFT JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
 -- Join the Mappings to get their ScenarioMappings   
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 -- Join the ScenarioMappings to get their Scenarios   
 LEFT JOIN "Scenarios"
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 
 -- Join the Scenarios to get their MasterNetworks   
@@ -55,15 +55,15 @@ ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
 -- Join the Mappings to get their Methods   
 LEFT JOIN "Methods" 
-ON "Methods"."MethodID"="Mapping"."MethodID"
+ON "Methods"."MethodID"="Mappings"."MethodID"
 
 -- Join the Mappings to get their Sources   
 LEFT JOIN "Sources" 
-ON "Sources"."SourceID"="Mapping"."SourceID"
+ON "Sources"."SourceID"="Mappings"."SourceID"
 
 -- Join the Mappings to get their DataValuesMappers   
 LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mapping"."DataValuesMapperID"
+ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
 
 -- Join the DataValuesMapper to get their MultiAttributeSeries   
 LEFT JOIN "MultiAttributeSeries"  
@@ -77,7 +77,7 @@ LEFT JOIN "DataValuesMapper" As "DataValuesMapperColumn"
 ON "DataValuesMapperColumn"."DataValuesMapperID"="MultiAttributeSeries"."AttributeNameID"
 
 -- Join the DataValuesMapperColumn to get back to their specific Mapping, now called MappingColumns
-LEFT JOIN "Mapping" As "MappingColumns"
+LEFT JOIN "Mappings" As "MappingColumns"
 ON "MappingColumns"."DataValuesMapperID"="DataValuesMapperColumn"."DataValuesMapperID"
 
 -- Join the MappingColumns to get back to their specific Attribute, now called AttributeColumns
@@ -102,5 +102,3 @@ AND ("AttributesColumns"."AttributeNameCV" ='Volume' or "AttributesColumns"."Att
 
 -- Sort the the values of each column name based on their ascending order
 ORDER BY DatasetName,ObjectType,InstanceName,ScenarioName,AttributeName,MultiAttributeName,ValueOrder ASC
-
-
