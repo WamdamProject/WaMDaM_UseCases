@@ -1,19 +1,3 @@
-/*
-
-3.1IdentifyDemandSites.sql
-
-Use case 3: identify and compare demand data for a site as reported in many sources. 
-What is the total agriculture water use or demand in Cache Valley, Utah?
-
-
-Find node and link Instances within a boundary in space
---First look for all the instances and their attributes, then query the actual values (present the result with the number of sites)
-
-Adel Abdallah
-Updated October 30, 2017
-
-*/
-
 Select DISTINCT DatasetAcronym,MasterNetworkName,ScenarioName,ObjectType,ObjectTypeCV,ObjectTypologyCV, AttributeDataTypeCV
 ,AttributeName,AttributeNameCV,InstanceName,InstanceCategory,InstanceNameCV
 ,Sourcename, Methodname
@@ -28,32 +12,32 @@ ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
-LEFT JOIN "Mapping"
-ON "Mapping"."AttributeID"= "Attributes"."AttributeID"
+LEFT JOIN "Mappings"
+ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 
 LEFT JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "InstanceCategory" 
-ON "InstanceCategory"."InstanceCategoryID"="Instances"."InstanceCategoryID"
+LEFT JOIN "InstanceCategories" 
+ON "InstanceCategories"."InstanceCategoryID"="Instances"."InstanceCategoryID"
 
 LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mapping"."DataValuesMapperID"
+ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
 
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 LEFT JOIN "Scenarios" 
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
 LEFT join "Methods" 
-ON "Methods"."MethodID" = "Mapping"."MethodID"
+ON "Methods"."MethodID" = "Mappings"."MethodID"
 
 LEFT join "Sources" 
-ON "Sources"."SourceID" = "Mapping"."SourceID"
+ON "Sources"."SourceID" = "Mappings"."SourceID"
 
 WHERE  
 
@@ -72,7 +56,4 @@ AND AttributeNameCV='Flow'
 --AND InstanceCategory='Agriculture'
 
 
-
 ORDER BY AttributeDataTypeCV ,MasterNetworkName,ScenarioName,InstanceName DESC
-
-
