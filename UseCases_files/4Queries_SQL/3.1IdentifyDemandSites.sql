@@ -1,3 +1,18 @@
+/*		
+ 		
+3.1IdentifyDemandSites.sql		
+		
+Use case 3: identify and compare demand data for a site as reported in many sources. 		
+What is the total agriculture water use or demand in Cache Valley, Utah?		
+		
+		
+ Find node and link Instances within a boundary in space		
+ ---First look for all the instances and their attributes, then query the actual values (present the result with the number of sites)		 		
+ Adel Abdallah		
+ Updated October 30, 2017		
+ 		
+ */
+ 
 Select DISTINCT DatasetAcronym,MasterNetworkName,ScenarioName,ObjectType,ObjectTypeCV,ObjectTypologyCV, AttributeDataTypeCV
 ,AttributeName,AttributeNameCV,InstanceName,InstanceCategory,InstanceNameCV
 ,Sourcename, Methodname
