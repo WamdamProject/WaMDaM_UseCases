@@ -2,7 +2,7 @@
 
 # plot time series data aggregated in space and time from multiple sources
 
-# November 20, 2017
+# Jan 25, 2018
 # Adel Abdallah
 
 import plotly
@@ -41,7 +41,7 @@ subsets_settings = {
         },        
         
     'Water Use /surface and ground': {
-        'dash': 'solid',
+        'dash': 'dash',
         'legend_index': 2,
         'legend_name': '<br> 1 site (time series): WaDE  <br> "Water Use/surface and ground water"',
         'width':'3',
