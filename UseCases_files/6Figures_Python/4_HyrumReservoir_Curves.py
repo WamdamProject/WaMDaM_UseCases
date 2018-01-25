@@ -30,73 +30,58 @@ subsets_settings = {
         'dash': 'solid',     # this is properity of the line (curve)
         'width':'3',
         'legend_index': 1,   # to order the legend
-        'mode':'line',
-        'legend_name': 'Utah Dams Dataset, 2016',  # this is the manual curve name 
+         'symbol':'square',
+        'size':'7',
+        'mode':'line+markers',
+        'legend_name': 'Utah Dams Dataset (2016)',  # this is the manual curve name 
          'color':'#990F0F'
         },
     
     'USU WEAP Model 2017': {
         'dash': 'solid',
          'width':'3',
-          'mode':'line',
+          'mode':'line+markers',
+          'symbol':'circle',
+                'size':'7',
+
         'legend_index': 3,
-        'legend_name': 'USU WEAP Model, 2017',
+        'legend_name': 'USU WEAP Model (2017)',
          'color':'#B26F2C'
         },
     'UDWR GenRes 2010': {
         'dash': 'dash',
-        'mode':'line',
+        'mode':'line+markers',
         'width':'3',
+                'size':'7',
+
+        'symbol':'circle',
         'legend_index': 4,
-        'legend_name': 'UDWR WEAP Model, 2010',
-         'color':'#99540F'
+        'legend_name': 'UDWR WEAP Model (2010)',
+         'color':'#7A430C'
         },
     'Rwise': {
         'dash': 'dash',
-        'mode':'line',
+        'mode':'line+markers',
         'width':'3',
+                  'symbol':'star',
+                'size':'7',
+
         'legend_index': 0,
-        'legend_name': 'BOR Water Info. System, 2017',
+        'legend_name': 'BOR Water Info. System (2017)',
          'color':'#E57E7E'
         },
     'Base case': {
         'dash': 'solid',
         'mode':'lines+markers',
         'width':'3',
+                  'symbol':'bowtie',
+        'size':'11',
+
         'legend_index': 2,
-        'legend_name': 'BOR Reservoirs Dataset, 2006',
+        'legend_name': 'BOR Reservoirs Dataset (2006)',
          'color':'#E5B17E'
         },    
-    
-    'Dead Storage, BOR 2006': {
-        'dash': 'dash',
-        'mode':'line',
-        'width':'3',
-        'legend_index': 5,
-        'legend_name': 'Dead Storage, BOR 2006',
-         'color':'rgb(0, 0, 0)'
 
-        },
-    
-    'Live Storage, BOR 2006': {
-        'dash': 'dash',
-        'mode':'line',
-        'width':'3',
-        'legend_index': 6,
-        'legend_name': 'Live Storage, BOR 2006',
-         'color':'rgb(0, 0, 0)'
-
-        },
-        
-    'Total Storage, BOR 2006': {
-        'dash': 'dash',
-        'mode':'line',
-        'width':'3',
-        'legend_index':7,
-        'legend_name': 'Total Storage, BOR 2006',
-         'color':'rgb(0, 0, 0)'
-
-        }
     }
 
 
@@ -110,7 +95,7 @@ subsets_settings2 = {
         'legend_index': 3,   # to order the legend
          'mode':'lines+markers',
         'color':'#E57E7E',
-        'legend_name': 'BOR Water Info. System, 2017'  # this is the edited curve name 
+        'legend_name': 'BOR Water Info. System (2017)'  # this is the edited curve name 
                     }
 
 
@@ -130,9 +115,12 @@ for subset in subsets.groups.keys():
                         width =subsets_settings[subset]['width'],
                         dash=subsets_settings[subset]['dash']
                                 ),
-#                     marker = dict(
-#                         size ='15',
-#                         color = '#a50021'),  
+                     marker = dict(
+                         size=subsets_settings[subset]['size'],
+                         symbol=subsets_settings[subset]['symbol'],
+                         #color = '#a50021',
+                         maxdisplayed=12
+),  
                     opacity = 1)
     data.append(s)
 
@@ -149,12 +137,13 @@ data2 = go.Scatter(
                     color ='#E57E7E',
                     width ='3'),
                 marker = dict(
-                size ='5',
-                color = '#E57E7E',      
-#                 symbol ='square',
-#                         line = dict(
-#                         color = ['rgb(153, 84, 15)'],
-#                         width = [1]),
+                size ='9',
+                color = '#E57E7E',
+                maxdisplayed=15,
+                symbol ='star',
+                         line = dict(
+                         color = ['rgb(153, 84, 15)']
+                         ),
 
                             ),
     
@@ -162,108 +151,130 @@ data2 = go.Scatter(
                 opacity =1)
                 
 data.append(data2)     
-                
-
-# vertical line Dead_Storage
-Dead_Storage = go.Scatter(
-    x=[3012, 3012],
-    y=[4540, 4750],
-    mode='lines',
-    name='Dead Storage, BOR 2006',
-    hoverinfo='Dead Storage, BOR 2006',
-    showlegend=True,
-    line=dict(
-        shape='vh',
-        width='4',
-        color = '#72D9FF'
-            )
-                    )
-data.append(Dead_Storage)    
     
-    
-# vertical Live_Storage
-Live_Storage = go.Scatter(
-    x=[14440, 14440],
-    y=[4540, 4750],
-    mode='lines',
-    name='Live Storage, BOR 2006',
-    hoverinfo='Live_Storage',
-    showlegend=True,
-    line=dict(
-        shape='vh',
-        width='4',
-        color = '#3FA0FF'
-            )
-                    )
-data.append(Live_Storage)
-
-
-# vertical line Total_Storage
-Total_Storage = go.Scatter(
-    x=[15760, 15760],
-    y=[4540, 4750],
-    mode='lines',
-    name='Total Storage, BOR 2006',
-    hoverinfo='Total Storage, BOR 2006',
-    showlegend=True,
-    line=dict(
-        shape='vh',
-        width='4',
-        color = '#264DFF'
-            )
-                    )
-data.append(Total_Storage)
-
-
-                              
-
 # Legend is ordered based on data, so we are sorting the data based 
 # on desired legend order indicarted by the index value entered above
 data.sort(key=lambda x: subsets_settings[subsets_names[x['name']]]['legend_index'])
 
 
+trace1 = go.Scatter(
+    x=[1500, 8000, 15500],
+    y=[4680, 4680,4680],
+    mode='text',
+    showlegend=False,
+    text=['Dead<br>pool', 'Live<br>pool', 'total<br>pool'],
+    textposition='top',
+
+)
+data.append(trace1)     
+
+
 # set up the figure layout
-layout = dict(
-    #title = "UseCase5",
-    yaxis = dict(
-        title = "Elevation (feet)",
-        tickformat= ',',
-                ticks='outside',
-                ticklen=10,
+layout = {
+        'shapes': [
+        # Rectangle reference to the axes
+        {
+            "opacity": 0.3,
+            'type': 'rect',
+            'xref': 'x',
+            'yref': 'y',
+            'x0': 0,
+            'y0': 4580,
+            'x1': 3012,
+            'y1': 4750,
+            'line': {
+                'color': 'rgb(0, 0, 0)',
+                'width': 0.1,
+            },
+            'fillcolor': 'rgb(153, 229, 255)'
+        },
+     # Rectangle reference to the plot
+        {
+           "opacity": 0.3,
+            'type': 'rect',
+            'xref': 'x',
+            'yref': 'y',
+            'x0': 3012,
+            'y0': 4580,
+            'x1': 14440,
+            'y1': 4750,
+            'line': {
+                'color': 'rgb(0, 0, 0)',
+                'width': 0.1,
+            },
+            'fillcolor': 'rgb(127, 212, 255)',
+        },
+        
+        {
+            "opacity": 0.3,
+            'type': 'rect',
+            'xref': 'x',
+            'yref': 'y',
+            'x0': 14440,
+            'y0': 4580,
+            'x1': 15760,
+            'y1': 4750,
+            'line': {
+                'color': 'rgb(0, 0, 0)',
+                'width': 0.1,
+            },
+            'fillcolor': 'rgb(101, 191, 255)',
+        }        
+    ],
+        'yaxis': {
+        'title': 'Elevation (feet)',
+        'tickformat': ',',
+        'ticks':'outside',
+        'ticklen': '10',
 
 
-        range = ['4580', '4700'],
-                showline=True
+        'range' : ['4580', '4700'],
+                'showline':'True'
 
-                ),
-    xaxis = dict(
-        title = "Volume (acre-feet)",
-        tickformat= ',',       
-        ticks='outside',
-        dtick='5000',
-        range = ['0', '30000'],
-        ticklen=20,
-        tick0=0,
-        showline=True,
-        ),
-    legend=dict(
-        x=0.55,y=0.04,
-            bordercolor='#00000',
-            borderwidth=2    
-    ),
-    width=1200,
-    height=800,
-    margin=go.Margin(
+                },
+    'xaxis' : {
+        'title' : 'Volume (acre-feet)',
+        'tickformat': ',',   
+         'showgrid':False,
+
+        'ticks':'outside',
+        'dtick':'5000',
+        'range' : ['0', '30000'],
+        'ticklen':20,
+        'tick0':0,
+        'showline':True,
+    },
+    'legend':{
+        'x':0.55,
+        'y':0.04,
+        'bordercolor':'#00000',
+         'borderwidth':2    
+    },
+    'width':1200,
+    'height':800,
+    'margin':go.Margin(
         l=150,
         b=150       ),
     #paper_bgcolor='rgb(233,233,233)',
     #plot_bgcolor='rgb(233,233,233)',
-    font=dict(size=32,family='arial'),
+    'font':{'size':32,'family':'arial'},
+    
+
+        }
 
 
-)
+    
 
-fig = dict(data=data, layout=layout)
+
+    #title = "UseCase5",
+    
+
+
+fig = {
+    'data': data,
+    'layout': layout,}
+
+
 #py.iplot(fig, filename = "4_HyrumReservoir_Curves.py") 
 
 
