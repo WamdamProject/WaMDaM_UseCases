@@ -4,7 +4,7 @@
 
 
 # Adel Abdallah
-# Jan 25, 2017
+# Jan 25, 2018
 
 import plotly
 import plotly.plotly as py
@@ -158,11 +158,11 @@ data.sort(key=lambda x: subsets_settings[subsets_names[x['name']]]['legend_index
 
 
 trace1 = go.Scatter(
-    x=[1500, 8000, 15500],
+    x=[1500, 8000, 16000],
     y=[4680, 4680,4680],
     mode='text',
     showlegend=False,
-    text=['Dead<br>pool', 'Live<br>pool', 'total<br>pool'],
+    text=['Dead<br>pool', 'Live<br>pool', 'Total<br>pool'],
     textposition='top',
 
 )
@@ -212,7 +212,7 @@ layout = {
             'yref': 'y',
             'x0': 14440,
             'y0': 4580,
-            'x1': 15760,
+            'x1': 17746,
             'y1': 4750,
             'line': {
                 'color': 'rgb(0, 0, 0)',
@@ -245,7 +245,7 @@ layout = {
         'showline':True,
     },
     'legend':{
-        'x':0.55,
+        'x':0.45,
         'y':0.04,
         'bordercolor':'#00000',
          'borderwidth':2    
