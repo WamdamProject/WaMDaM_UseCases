@@ -139,7 +139,7 @@ data2 = go.Scatter(
                 marker = dict(
                 size ='9',
                 color = '#E57E7E',
-                maxdisplayed=15,
+                maxdisplayed=20,
                 symbol ='star',
                          line = dict(
                          color = ['rgb(153, 84, 15)']
@@ -162,7 +162,7 @@ trace1 = go.Scatter(
     y=[4680, 4680,4680],
     mode='text',
     showlegend=False,
-    text=['Dead<br>pool', 'Live<br>pool', 'Total<br>pool'],
+    text=['Dead<br> storage', 'Live<br>storage', 'Total<br>storage'],
     textposition='top',
 
 )
