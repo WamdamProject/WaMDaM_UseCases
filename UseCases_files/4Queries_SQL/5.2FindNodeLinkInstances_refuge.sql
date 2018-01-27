@@ -20,7 +20,7 @@ The reason why is because the where clause is based on the start and end node in
 which join to the connections table, which only has instances related to links.
 
 Adel Abdallah
-Updated October 30, 2017
+Updated Jan 27, 2018
 
 */
 
@@ -43,11 +43,11 @@ ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
-LEFT JOIN "Mapping"
-ON "Mapping"."AttributeID"= "Attributes"."AttributeID"
+LEFT JOIN "Mappings"
+ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 
 LEFT JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
 ---------------------------------------------------------------------------------------------
 -- Join the Connections table to the Instances table   
@@ -61,7 +61,7 @@ ON "StartNodeInstance"."InstanceID"="Connections"."StartNodeInstanceID"
 
 --- Get the Object Type Name for the start node instance 
 
-LEFT JOIN "Mapping" As "MappingStartNodeInstace"
+LEFT JOIN "Mappings" As "MappingStartNodeInstace"
 ON "MappingStartNodeInstace"."InstanceID"="StartNodeInstance"."InstanceID"
 
 LEFT JOIN  "Attributes" As "AttributesStartNodeInstance"
@@ -78,7 +78,7 @@ ON "EndNodeInstance"."InstanceID"="Connections"."EndNodeInstanceID"
 
 --- Get the Object Type Name for the start node instance 
 
-LEFT JOIN "Mapping" As "MappingEndNodeInstace"
+LEFT JOIN "Mappings" As "MappingEndNodeInstace"
 ON "MappingEndNodeInstace"."InstanceID"="EndNodeInstance"."InstanceID"
 
 LEFT JOIN  "Attributes" As "AttributesEndNodeInstance"
@@ -90,20 +90,20 @@ ON "ObjectTypeEndNodeInstance"."ObjectTypeID"="AttributesEndNodeInstance"."Objec
 
 
 
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 LEFT JOIN "Scenarios" 
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
 LEFT JOIN Methods
-on Methods.MethodID = Mapping.MethodID
+on Methods.MethodID = Mappings.MethodID
 
 LEFT JOIN Sources
-ON Sources.SourceID = Mapping.SourceID 
+ON Sources.SourceID = Mappings.SourceID 
 
 -- This clause is needed to only return the Instances of an ObjectType
 -- an Instance and its parent ObjectType are connected together in wamdam through this special attribute
