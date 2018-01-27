@@ -1,4 +1,4 @@
-# Use Case 4_HyrumReservoir_Curves.py
+# UseCase2.3_HyrumReservoir_Curves.py
 
 # plot multi-attributes from multiple sources
 
@@ -275,9 +275,9 @@ fig = {
     'layout': layout,}
 
 
-#py.iplot(fig, filename = "4_HyrumReservoir_Curves.py") 
+#py.iplot(fig, filename = "UseCase2.3_HyrumReservoir_Curves.py") 
 
 
 ## it can be run from the local machine on Pycharm like this like below
 ## It would also work here offline but in a seperate window  
-plotly.offline.plot(fig, filename = "4_HyrumReservoir_Curves.py") 
+plotly.offline.plot(fig, filename = "UseCase2.3_HyrumReservoir_Curves.py") 
