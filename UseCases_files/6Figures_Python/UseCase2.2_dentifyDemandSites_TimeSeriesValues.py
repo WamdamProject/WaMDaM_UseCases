@@ -1,4 +1,4 @@
-# Use Case 3.3dentifyDemandSites_TimeSeriesValues.py
+# UseCase2.2_dentifyDemandSites_TimeSeriesValues.py
 
 # plot time series data aggregated in space and time from multiple sources
 
@@ -161,8 +161,8 @@ layout['annotations'] = annotations
 # create a figure object          
 fig = dict(data=data, layout=layout)
 
-#py.iplot(fig, filename = "3.3dentifyDemandSites_TimeSeriesValues") 
+#py.iplot(fig, filename = "UseCase2.2_dentifyDemandSites_TimeSeriesValues") 
 
 ## it can be run from the local machine on Pycharm like this like below
 ## It would also work here offline but in a seperate window  
-plotly.offline.plot(fig, filename = "3.3dentifyDemandSites_TimeSeriesValues")       
+plotly.offline.plot(fig, filename = "UseCase2.2_dentifyDemandSites_TimeSeriesValues")       
