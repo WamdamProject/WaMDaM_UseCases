@@ -10,7 +10,7 @@ datasets in WaMDaM and identify additional needed data not available in WaMDaM d
 
 
 Adel Abdallah 
-Last updated October 29, 2017
+Last updated Jan 27, 2018
 
 */
 
@@ -20,14 +20,14 @@ FROM Datasets
 LEFT JOIN "ObjectTypes" 
 ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 
-LEFT JOIN  "ObjectCategory"
-ON "ObjectCategory"."ObjectCategoryID"="ObjectTypes"."ObjectCategoryID" 
+LEFT JOIN  "ObjectCategories"
+ON "ObjectCategories"."ObjectCategoryID"="ObjectTypes"."ObjectCategoryID" 
 
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-LEFT JOIN  "AttributeCategory"
-ON "AttributeCategory"."AttributeCategoryID"="Attributes"."AttributeCategoryID" 
+LEFT JOIN  "AttributeCategories"
+ON "AttributeCategories"."AttributeCategoryID"="Attributes"."AttributeCategoryID" 
 
 -- Provide the model name 
 WHERE "DatasetAcronym"='WEAP' 
@@ -35,4 +35,3 @@ WHERE "DatasetAcronym"='WEAP'
 
 --exclude the dummy attributes that are just used to connect Object Types with their Instances. 
 AND AttributeName!='ObjectTypeInstances' 
-
