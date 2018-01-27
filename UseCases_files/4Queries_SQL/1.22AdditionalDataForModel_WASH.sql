@@ -26,7 +26,7 @@ The query is generic to other models (if they are already defined in WaMDaM): ju
 --WHERE "DatasetAcronym"=’WASH’
 
 Adel Abdallah 
-October 30, 2017
+Jan 27, 2018
 
 */
 -- Show the join results for the native WEAP Object Types and Attributes
@@ -48,14 +48,14 @@ FROM Datasets
 LEFT JOIN "ObjectTypes" 
 ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 
-LEFT JOIN  "ObjectCategory"
-ON "ObjectCategory"."ObjectCategoryID"="ObjectTypes"."ObjectCategoryID" 
+LEFT JOIN  "ObjectCategories"
+ON "ObjectCategories"."ObjectCategoryID"="ObjectTypes"."ObjectCategoryID" 
 
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-LEFT JOIN  "AttributeCategory"
-ON "AttributeCategory"."AttributeCategoryID"="Attributes"."AttributeCategoryID" 
+LEFT JOIN  "AttributeCategories"
+ON "AttributeCategories"."AttributeCategoryID"="Attributes"."AttributeCategoryID" 
 
 
 WHERE "DatasetAcronym"='WASH' 
@@ -93,17 +93,17 @@ ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-LEFT JOIN "Mapping"
-ON Mapping.AttributeID= Attributes.AttributeID
+LEFT JOIN "Mappings"
+ON Mappings.AttributeID= Attributes.AttributeID
 
 LEFT JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 LEFT JOIN "Scenarios" 
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
