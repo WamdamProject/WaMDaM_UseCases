@@ -3,7 +3,7 @@
 6.MeasureStorageSavings.sql
 
 Adel Abdallah
-October 30, 2017
+Jan 27, 2018
 
 
 
@@ -28,7 +28,7 @@ diff=3556
 */
 
 
-SELECT DISTINCT "Mapping"."MappingID",DatasetAcronym,ScenarioName,ObjectType,AttributeName,AttributeNameCV,
+SELECT DISTINCT "Mappings"."MappingID",DatasetAcronym,ScenarioName,ObjectType,AttributeName,AttributeNameCV,
 InstanceName,InstanceNameCV
 --SELECT ScenarioName,ScenarioMappingID
 
@@ -42,17 +42,17 @@ ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
-LEFT JOIN "Mapping"
-ON "Mapping"."AttributeID"= "Attributes"."AttributeID"
+LEFT JOIN "Mappings"
+ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 
 LEFT JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 LEFT JOIN "Scenarios" 
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
