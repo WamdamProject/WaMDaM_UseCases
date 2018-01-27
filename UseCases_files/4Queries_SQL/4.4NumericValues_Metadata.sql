@@ -13,7 +13,7 @@ users can import the data values to their model. WaM-DaM keeps track of the mean
 to what instance they apply too.... 
 
 Adel Abdallah
-October 30, 2017
+Jan 27, 2018
 
 */
 
@@ -37,17 +37,17 @@ ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
-LEFT JOIN "Mapping"
-ON "Mapping"."AttributeID"= "Attributes"."AttributeID"
+LEFT JOIN "Mappings"
+ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 
 LEFT JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
 Left JOIN "Methods" 
-ON "Methods"."MethodID"="Mapping"."MethodID"
+ON "Methods"."MethodID"="Mappings"."MethodID"
 
 Left JOIN "Sources" 
-ON "Sources"."SourceID"="Mapping"."SourceID"
+ON "Sources"."SourceID"="Mappings"."SourceID"
 
 Left JOIN "People" As "PeopleSources"
 ON "PeopleSources"."PersonID"="Sources"."PersonID"
@@ -64,13 +64,13 @@ ON "OrganizationsSources" ."OrganizationID"="PeopleSources"."OrganizationID"
 
 
 LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mapping"."DataValuesMapperID"
+ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
 
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 LEFT JOIN "Scenarios" 
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
