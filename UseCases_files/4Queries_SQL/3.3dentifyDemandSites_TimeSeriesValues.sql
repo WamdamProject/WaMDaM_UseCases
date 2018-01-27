@@ -13,7 +13,7 @@ If the time series is a Water Year, then convert it to a Calendar year
 --Users need to check on the unit name to perform a conversion like from cfs to af/month
 
 Adel Abdallah
-Updated October 30, 2017
+Updated Jan 27, 2018
 */
 
 SELECT DatasetAcronym,ScenarioName,AttributeName,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
@@ -22,11 +22,11 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          FROM (
 
          SELECT DatasetAcronym,ScenarioName,AttributeName, AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
-         WaterOrCalendarYear,count(DISTINCT InstanceName) As NumDemandSites,count(value) As CountValues,
+         YearType,count(DISTINCT InstanceName) As NumDemandSites,count(value) As CountValues,
 
          Case 
-                  WHEN WaterOrCalendarYear='CalenderYear' AND (strftime('%m', DateTimeStamp) ='10' or  strftime('%m', DateTimeStamp) ='11' or  strftime('%m', DateTimeStamp) ='12') THEN date(DateTimeStamp,'+1 year')   
-                  WHEN WaterOrCalendarYear='WaterYear' AND (strftime('%m', DateTimeStamp) ='10' or  strftime('%m', DateTimeStamp) ='11' or  strftime('%m', DateTimeStamp) ='12') THEN date(DateTimeStamp,'-1 year')   
+                  WHEN YearType='CalenderYear' AND (strftime('%m', DateTimeStamp) ='10' or  strftime('%m', DateTimeStamp) ='11' or  strftime('%m', DateTimeStamp) ='12') THEN date(DateTimeStamp,'+1 year')   
+                  WHEN YearType='WaterYear' AND (strftime('%m', DateTimeStamp) ='10' or  strftime('%m', DateTimeStamp) ='11' or  strftime('%m', DateTimeStamp) ='12') THEN date(DateTimeStamp,'-1 year')   
                   Else DateTimeStamp 
          End WaterYearDate,
 
@@ -40,7 +40,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          --the year column should be from the calendar year one after making the shift 
 
-         --check if it is a water year by querying the field "WaterOrCalendarYear" in the TimeSeries table
+         --check if it is a water year by querying the field "YearType" in the TimeSeries table
          --convert the time stamp to be in the format of Month and Year (no days)
          -- If the time series is "WateYear", then convert it to a calendar year.
 
@@ -54,26 +54,26 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          LEFT JOIN  "Attributes"
          ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
-         LEFT JOIN "AttributeCategory" 
-         ON "AttributeCategory"."AttributeCategoryID"="Attributes"."AttributeCategoryID"
+         LEFT JOIN "AttributeCategories" 
+         ON "AttributeCategories"."AttributeCategoryID"="Attributes"."AttributeCategoryID"
 
-         LEFT JOIN "Mapping"
-         ON "Mapping"."AttributeID"= "Attributes"."AttributeID"
+         LEFT JOIN "Mappings"
+         ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 
          LEFT JOIN "Instances" 
-         ON "Instances"."InstanceID"="Mapping"."InstanceID"
+         ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-         LEFT JOIN "InstanceCategory" 
-         ON "InstanceCategory"."InstanceCategoryID"="Instances"."InstanceCategoryID"
+         LEFT JOIN "InstanceCategories" 
+         ON "InstanceCategories"."InstanceCategoryID"="Instances"."InstanceCategoryID"
 
          LEFT JOIN "DataValuesMapper" 
-         ON "DataValuesMapper"."DataValuesMapperID"="Mapping"."DataValuesMapperID"
+         ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
 
-         LEFT JOIN "ScenarioMapping"
-         ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+         LEFT JOIN "ScenarioMappings"
+         ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
          LEFT JOIN "Scenarios" 
-         ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+         ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
          LEFT JOIN "MasterNetworks" 
          ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
@@ -109,7 +109,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          AND (AttributeCategoryName ISNULL or  AttributeCategoryName!= 'Groundwater')
 
          GROUP BY DatasetAcronym,AttributeName,ScenarioName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
-         WaterOrCalendarYear,strftime('%Y', WaterYearDate)
+         YearType,strftime('%Y', WaterYearDate)
 
 
 
