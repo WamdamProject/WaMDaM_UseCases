@@ -30,7 +30,7 @@ subsets_settings = {
         'width':'3',
         'color':'rgb(153, 15, 15)'
         },
-    'CUHASI': {
+    'CUAHSI': {
         'dash': 'dash',
         'legend_index': 1,
         'legend_name': 'USGS',
