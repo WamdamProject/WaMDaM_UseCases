@@ -11,7 +11,7 @@
 <a href="http://htmlpreview.github.io/?https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/7Figures_HTML/2.4_plotcdf.html
 " target="_blank"> Figure 6b </a>
 
-<a href="http://htmlpreview.github.io/?https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/7Figures_HTML/3.3dentifyDemandSites_TimeSeriesValues.html
+<a href="http://htmlpreview.github.io/?https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/7Figures_HTML/UseCase2.2_identifyDemandSites_TimeSeriesValues.html
 " target="_blank"> Figure 7 </a>
 
 
