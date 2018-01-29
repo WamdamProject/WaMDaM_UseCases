@@ -15,7 +15,7 @@
 " target="_blank"> Figure 7 </a>
 
 
-<a href="http://htmlpreview.github.io/?https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/7Figures_HTML/4_HyrumReservoir_Curves.py.html
+<a href="http://htmlpreview.github.io/?https://github.com/WamdamProject/WaMDaM_UseCases/blob/master/UseCases_files/7Figures_HTML/UseCase2.3_HyrumReservoir_Curves.html
 " target="_blank"> Figure 8 </a>
 
 
