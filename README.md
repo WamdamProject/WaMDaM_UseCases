@@ -20,40 +20,9 @@ The following presented use cases help users identify and compare two fundamenta
 
 ## Use Cases in the Bear River Watershed, Utah 
 
-
-**[Use case 1](/UseCases_files/9Discussion/UseCase1.md):** identify data availability for attributes needed by a model in a study area. 
-What attributes that have available data to develop a WEAP and WASH models in the Upper Bear River watershed?
-
-
-
-**[Use case 2](/UseCases_files/9Discussion/UseCase2.md):** identify and compare time series and seasonal discharge data across data sources. 
-What is the discharge at the node “below Stewart Dam” in Idaho?
-
-
-
-
-**[Use case 3](/UseCases_files/9Discussion/UseCase3.md):** identify and compare demand data for a site as reported in many sources.
-What is the total agriculture water use or demand in Cache Valley, Utah?
-
-
-
-**[Use case 4](/UseCases_files/9Discussion/UseCase4.md):** identify and compare infrastructure data across many data sources. 
-What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
-
-
-
-**[Use case 5](/UseCases_files/9Discussion/UseCase5.md):** identify inflow and outflow into and out of a node water system component and compare them across data sources or models.
-What is the inflow and outflow of Hyrum Reservoir, Utah? 
-
-
-
-
-**[Use case 6](/UseCases_files/9Discussion/UseCase6.md):** compare differences in network topology and data values between two model scenarios.
-What is the difference in input data between the two scenarios or the Bear River WEAP model?
-
+Pease refer to this updated page
+http://docs.wamdam.org/UseCases/Application/
  
-
-
 
 
 ### Licensing  
