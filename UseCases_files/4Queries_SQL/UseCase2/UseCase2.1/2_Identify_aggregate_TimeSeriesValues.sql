@@ -17,7 +17,7 @@ The second gets the monthly data and keep it monthly but convert it from cfs to 
 The two parts are needed because of the “Having” function in the second part (to check on the days of the month)
 
 Adel Abdallah
-Updated October 30, 2017
+Updated March 29, 2018
 */
 --                                               Two select statements will be join together by UNION ALL function
 --                                    both Select Statements return identical column headers. Otherwise the Union will not work
@@ -25,10 +25,10 @@ Updated October 30, 2017
 
                                                    --The first SELECT statement (get the daily data and convert to monthly)
 
---DatasetAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,YearType,YearMonth, CountDays,CalenderYear,CumulativeMonthly
+--DatasetAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,YearType,YearMonth, TimeSeriesValueID,CountDays,CalenderYear,CumulativeMonthly
 
 SELECT DatasetAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,
-YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, count(value) As CountDays,
+YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, TimeSeriesValueID,count(value) As CountDays,
 --convert the time stamp to be in the format of Month and Year (no days)
 
 
@@ -117,7 +117,7 @@ Having CountDays>=27
                                                    --The second SELECT statement (get the monthly data and keep it monthly)
 
 SELECT DatasetAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,
-YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, count(value) As CountDays,
+YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, TimeSeriesValueID,count(value) As CountDays,
 
 
 --check if it is a water year by querying the field "YearType" in the TimeSeries table
@@ -200,7 +200,7 @@ GROUP BY DatasetAcronym,AttributeName,InstanceName,YearType,YearMonth
 
 --*************************************************************************************************************************************************************
 
-ORDER BY DatasetAcronym,CalenderYear,AttributeName,InstanceName ASC
+ORDER BY TimeSeriesValueID ,DatasetAcronym,CalenderYear,AttributeName,InstanceName ASC
 
 
 
