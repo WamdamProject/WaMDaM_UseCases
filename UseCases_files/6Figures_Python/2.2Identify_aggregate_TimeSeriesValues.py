@@ -2,7 +2,7 @@
 # plot aggregated to monthly and converted to acre-feet time series data of multiple sources
 
 # Adel Abdallah
-# November 16, 2017
+# March 29, 2018
 
 import plotly
 import plotly.plotly as py
@@ -72,6 +72,9 @@ for subset in subsets.groups.keys():
                         opacity = 1                                
                   )
     data.append(s)
+
+    
+    
     
 # Legend is ordered based on data, so we are sorting the data based 
 # on desired legend order indicarted by the index value entered above
@@ -108,7 +111,7 @@ layout = dict(
 
                 ),
     legend=dict(
-        x=0.2,y=0.9,
+        x=0.1,y=1.2,
         bordercolor='#00000',
             borderwidth=2
 
