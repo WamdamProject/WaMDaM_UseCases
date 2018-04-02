@@ -13,11 +13,11 @@ Time series data for a specific attribute
 WaM-DaM keeps track of the meanings of data values, their units, to what instance they apply too.... 
 
 Adel Abdallah
-Updated Dec 24, 2017
+Updated April 2, 2018
 
 */
 
-SELECT DISTINCT DatasetAcronym,ObjectType,
+SELECT DISTINCT ResourceTypeAcronym,ObjectType,
 --AttributeNameCV
 AttributeName,
 AttributeDataTypeCV,
@@ -25,14 +25,12 @@ YearType,
 --InstanceNameCV,
 InstanceName,
 ScenarioName,
-AggregationStatisticCV,AggregationInterval,IntervalTimeUnitCV,
-DualValue AS DualValue,BooleanValue
+AggregationStatisticCV,AggregationInterval,IntervalTimeUnitCV
 
+FROM ResourceTypes
 
-FROM "Datasets"
-
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -44,8 +42,8 @@ ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 LEFT JOIN "Instances" 
 ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 LEFT JOIN "ScenarioMappings"
 ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
@@ -56,15 +54,8 @@ ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
-LEFT JOIN "DualValues"
-ON DualValues.DataValuesMapperID=DataValuesMapper.DataValuesMapperID
-
-LEFT JOIN "CV_DualValueMeaning"
-ON CV_DualValueMeaning.Name=DualValues.DualValueMeaningCV
-
-
 LEFT JOIN "TimeSeries" 
-ON "TimeSeries"."DataValuesMapperID"="DataValuesMapper"."DataValuesMapperID"
+ON "TimeSeries"."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
 -- Join the DataValuesMapper to get their Time Series   
 LEFT JOIN "TimeSeriesValues" 
@@ -72,7 +63,7 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 
 -- Join the DataValuesMapper to get their SeasonalNumericValues
 LEFT JOIN "SeasonalNumericValues"
-ON "SeasonalNumericValues"."DataValuesMapperID" = "DataValuesMapper"."DataValuesMapperID"
+ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
 -- Limit the search for one node using the controlled instance name
 WHERE InstanceNameCV='USGS 10046500 BEAR RIVER BL STEWART DAM NR MONTPELIER, ID'  
