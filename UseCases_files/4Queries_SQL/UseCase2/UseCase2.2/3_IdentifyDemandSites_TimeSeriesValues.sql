@@ -13,15 +13,15 @@ If the time series is a Water Year, then convert it to a Calendar year
 --Users need to check on the unit name to perform a conversion like from cfs to af/month
 
 Adel Abdallah
-Updated Jan 27, 2018
+Updated April 2, 2018
 */
 
-SELECT DatasetAcronym,ScenarioName,AttributeName,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+SELECT ResourceTypeAcronym,ScenarioName,AttributeName,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
 strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,CountValues
 
          FROM (
 
-         SELECT DatasetAcronym,ScenarioName,AttributeName, AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+         SELECT ResourceTypeAcronym,ScenarioName,AttributeName, AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
          YearType,count(DISTINCT InstanceName) As NumDemandSites,count(value) As CountValues,
 
          Case 
@@ -45,10 +45,10 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          -- If the time series is "WateYear", then convert it to a calendar year.
 
 
-         FROM "Datasets"
+         FROM "ResourceTypes"
 
          Left JOIN "ObjectTypes" 
-         ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+         ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
          -- Join the Objects to get their attributes  
          LEFT JOIN  "Attributes"
@@ -66,8 +66,8 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          LEFT JOIN "InstanceCategories" 
          ON "InstanceCategories"."InstanceCategoryID"="Instances"."InstanceCategoryID"
 
-         LEFT JOIN "DataValuesMapper" 
-         ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+         LEFT JOIN "ValuesMapper" 
+         ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
          LEFT JOIN "ScenarioMappings"
          ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
@@ -79,7 +79,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
          LEFT JOIN "TimeSeries" 
-         ON "TimeSeries"."DataValuesMapperID"="DataValuesMapper"."DataValuesMapperID"
+         ON "TimeSeries"."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
          LEFT JOIN "TimeSeriesValues" 
          ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
@@ -108,7 +108,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          AND (AttributeCategoryName ISNULL or  AttributeCategoryName!= 'Groundwater')
 
-         GROUP BY DatasetAcronym,AttributeName,ScenarioName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+         GROUP BY ResourceTypeAcronym,AttributeName,ScenarioName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
          YearType,strftime('%Y', WaterYearDate)
 
 
