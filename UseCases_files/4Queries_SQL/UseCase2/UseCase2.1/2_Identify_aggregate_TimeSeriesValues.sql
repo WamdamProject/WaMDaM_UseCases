@@ -17,7 +17,7 @@ The second gets the monthly data and keep it monthly but convert it from cfs to 
 The two parts are needed because of the “Having” function in the second part (to check on the days of the month)
 
 Adel Abdallah
-Updated March 29, 2018
+Updated April 2, 2018
 */
 --                                               Two select statements will be join together by UNION ALL function
 --                                    both Select Statements return identical column headers. Otherwise the Union will not work
@@ -27,7 +27,7 @@ Updated March 29, 2018
 
 --DatasetAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,YearType,YearMonth, TimeSeriesValueID,CountDays,CalenderYear,CumulativeMonthly
 
-SELECT DatasetAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,
+SELECT ResourceTypeAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,
 YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, TimeSeriesValueID,count(value) As CountDays,
 --convert the time stamp to be in the format of Month and Year (no days)
 
@@ -51,10 +51,10 @@ Case
 END As CumulativeMonthly
 
 
-FROM "Datasets"
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -66,8 +66,8 @@ ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 LEFT JOIN "Instances" 
 ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 LEFT JOIN "ScenarioMappings"
 ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
@@ -79,7 +79,7 @@ LEFT JOIN "MasterNetworks"
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
 LEFT JOIN "TimeSeries" 
-ON "TimeSeries"."DataValuesMapperID"="DataValuesMapper"."DataValuesMapperID"
+ON "TimeSeries"."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
 LEFT JOIN "TimeSeriesValues" 
 ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
@@ -93,13 +93,13 @@ AND "InstanceNameCV"='USGS 10046500 BEAR RIVER BL STEWART DAM NR MONTPELIER, ID'
 
 AND "AttributeNameCV"='Flow'
 
---AND datasetacronym='BearRiverCommission'
+--AND ResourceTypeAcronym='BearRiverCommission'
 
 
 -- Daily time series. 
 AND IntervalTimeUnitCV='day'
 
-GROUP BY DatasetAcronym,AttributeName,InstanceName,YearType,YearMonth
+GROUP BY ResourceTypeAcronym,AttributeName,InstanceName,YearType,YearMonth
 
 -- use this only if converting from daily to monthly (otherwise, months wont show up because their count is just 1)
 --The use of "HAVING" clause enables you to specify conditions that filter which group results appear in the final results.
@@ -116,7 +116,7 @@ Having CountDays>=27
 
                                                    --The second SELECT statement (get the monthly data and keep it monthly)
 
-SELECT DatasetAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,
+SELECT ResourceTypeAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,
 YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, TimeSeriesValueID,count(value) As CountDays,
 
 
@@ -142,10 +142,10 @@ END As CumulativeMonthly
 
 
 
-FROM "Datasets"
+FROM "ResourceTypes"
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -157,8 +157,8 @@ ON "Mappings"."AttributeID"= "Attributes"."AttributeID"
 LEFT JOIN "Instances" 
 ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 LEFT JOIN "ScenarioMappings"
 ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
@@ -170,7 +170,7 @@ LEFT JOIN "MasterNetworks"
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
 LEFT JOIN "TimeSeries" 
-ON "TimeSeries"."DataValuesMapperID"="DataValuesMapper"."DataValuesMapperID"
+ON "TimeSeries"."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
 LEFT JOIN "TimeSeriesValues" 
 ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
@@ -191,7 +191,7 @@ AND "AttributeNameCV"='Flow'
 --Then you can use the “Having” clause below for daily but need to comment it for monthly
 AND IntervalTimeUnitCV='month'
 
-GROUP BY DatasetAcronym,AttributeName,InstanceName,YearType,YearMonth
+GROUP BY ResourceTypeAcronym,AttributeName,InstanceName,YearType,YearMonth
 
 -- use this only if converting from daily to monthly (otherwise, months wont show up because their count is just 1)
 --The use of "HAVING" clause enables you to specify conditions that filter which group results appear in the final results.
@@ -200,7 +200,7 @@ GROUP BY DatasetAcronym,AttributeName,InstanceName,YearType,YearMonth
 
 --*************************************************************************************************************************************************************
 
-ORDER BY TimeSeriesValueID ,DatasetAcronym,CalenderYear,AttributeName,InstanceName ASC
+ORDER BY TimeSeriesValueID ,ResourceTypeAcronym,CalenderYear,AttributeName,InstanceName ASC
 
 
 
