@@ -13,15 +13,16 @@ What is the total agriculture water use or demand in Cache Valley, Utah?
  		
  */
  
-Select DISTINCT DatasetAcronym,MasterNetworkName,ScenarioName,ObjectType,ObjectTypeCV,ObjectTypologyCV, AttributeDataTypeCV
+Select DISTINCT ResourceTypeAcronym,MasterNetworkName,ScenarioName,ObjectType,ObjectTypeCV,ObjectTypologyCV, AttributeDataTypeCV
 ,AttributeName,AttributeNameCV,InstanceName,InstanceCategory,InstanceNameCV
 ,Sourcename, Methodname
 
 --,Longitude_x,Latitude_y
 
-FROM Datasets
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+FROM ResourceTypes
+
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -36,8 +37,8 @@ ON "Instances"."InstanceID"="Mappings"."InstanceID"
 LEFT JOIN "InstanceCategories" 
 ON "InstanceCategories"."InstanceCategoryID"="Instances"."InstanceCategoryID"
 
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 LEFT JOIN "ScenarioMappings"
 ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
