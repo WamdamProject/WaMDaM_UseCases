@@ -6,19 +6,20 @@ Use case 3: identify and compare demand data for a site as reported in many sour
 What is the total agriculture water use or demand in Cache Valley, Utah?
 
 Adel Abdallah
-Updated Jan 27, 2018
+Updated April 2, 2018
 
 */
 
-Select DISTINCT DatasetAcronym,MasterNetworkName,ScenarioName,ObjectType,ObjectTypeCV,ObjectTypologyCV, AttributeDataTypeCV
+Select DISTINCT ResourceTypeAcronym,MasterNetworkName,ScenarioName,ObjectType,ObjectTypeCV,ObjectTypologyCV, AttributeDataTypeCV
 ,AttributeName,AttributeNameCV,InstanceName,InstanceCategory,InstanceNameCV,NumericValue,UnitName,descriptorvalue 
 ,Sourcename, Methodname
 
 --,Longitude_x,Latitude_y
 
-FROM Datasets
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+FROM ResourceTypes
+
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -33,8 +34,8 @@ ON "Instances"."InstanceID"="Mappings"."InstanceID"
 LEFT JOIN "InstanceCategories" 
 ON "InstanceCategories"."InstanceCategoryID"="Instances"."InstanceCategoryID"
 
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 LEFT JOIN "ScenarioMappings"
 ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
@@ -52,10 +53,10 @@ LEFT join "Sources"
 ON "Sources"."SourceID" = "Mappings"."SourceID"
 
 LEFT JOIN "NumericValues" 
-ON "NumericValues"."DataValuesMapperID"="DataValuesMapper"."DataValuesMapperID"
+ON "NumericValues"."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
 LEFT JOIN DescriptorValues
-ON DescriptorValues.DataValuesMapperID=DataValuesMapper.DataValuesMapperID
+ON DescriptorValues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
 
 WHERE  
