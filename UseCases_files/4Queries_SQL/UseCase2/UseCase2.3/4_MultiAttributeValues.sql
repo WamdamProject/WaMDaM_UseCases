@@ -6,7 +6,7 @@ What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
 
 
 Adel Abdallah
-Updated Jan 18, 2018
+Updated April 2, 2018
 
 This query shows data values for a particular MultiColumns of a reservoir InstanceName: area, and capacity, and stage 
 
@@ -22,11 +22,10 @@ SELECT "ObjectTypes"."ObjectType",
 "AttributesColumns"."UnitNameCV" AS "AttributeNameUnitName",
 "Value","ValueOrder"
 
-FROM "Datasets"
+FROM ResourceTypes
 
--- Join the dataset to get its Object Types 
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Object types to get their attributes  
 LEFT JOIN  "Attributes"
@@ -62,23 +61,23 @@ LEFT JOIN "Sources"
 ON "Sources"."SourceID"="Mappings"."SourceID"
 
 -- Join the Mappings to get their DataValuesMappers   
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 -- Join the DataValuesMapper to get their MultiAttributeSeries   
 LEFT JOIN "MultiAttributeSeries"  
-ON "MultiAttributeSeries" ."DataValuesMapperID"="DataValuesMapper"."DataValuesMapperID"
+ON "MultiAttributeSeries" ."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
 
 /*This is an extra join to get to each column name within the MultiColumn Array */
 
 -- Join the MultiAttributeSeries to get to their specific DataValuesMapper, now called DataValuesMapperColumn
-LEFT JOIN "DataValuesMapper" As "DataValuesMapperColumn"
-ON "DataValuesMapperColumn"."DataValuesMapperID"="MultiAttributeSeries"."AttributeNameID"
+LEFT JOIN "ValuesMapper" As "ValuesMapperColumn"
+ON "ValuesMapperColumn"."ValuesMapperID"="MultiAttributeSeries"."AttributeNameID"
 
 -- Join the DataValuesMapperColumn to get back to their specific Mapping, now called MappingColumns
 LEFT JOIN "Mappings" As "MappingColumns"
-ON "MappingColumns"."DataValuesMapperID"="DataValuesMapperColumn"."DataValuesMapperID"
+ON "MappingColumns"."ValuesMapperID"="ValuesMapperColumn"."ValuesMapperID"
 
 -- Join the MappingColumns to get back to their specific Attribute, now called AttributeColumns
 LEFT JOIN  "Attributes" AS "AttributesColumns"
@@ -101,4 +100,4 @@ AND ("AttributesColumns"."AttributeNameCV" ='Volume' or "AttributesColumns"."Att
 --AND ScenarioName='Reference_LowerBear'
 
 -- Sort the the values of each column name based on their ascending order
-ORDER BY DatasetName,ObjectType,InstanceName,ScenarioName,AttributeName,MultiAttributeName,ValueOrder ASC
+ORDER BY ResourceTypeAcronym,ObjectType,InstanceName,ScenarioName,AttributeName,MultiAttributeName,ValueOrder ASC
