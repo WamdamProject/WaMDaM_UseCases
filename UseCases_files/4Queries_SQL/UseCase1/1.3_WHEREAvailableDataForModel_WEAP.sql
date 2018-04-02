@@ -36,11 +36,11 @@ Users can further search for more metadata and data about these instances.
 Then they can choose which ones to import to their model 
 
 Adel Abdallah 
-Last updated Jan 11, 2017
+Last updated April  2, 2018
 
 */
 -- This SELECT statement shows the list of WEAP Objects and their Attributes that have one or many native terms available them that have available data in the datasets
-Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,DatasetAcronym, WEAPAttributeName,AttributeNameCV,AttributeName,InstanceNameCV
+Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WEAPAttributeName,AttributeNameCV,AttributeName,InstanceNameCV
 
 From 
 
@@ -49,16 +49,16 @@ From
 (
 SELECT  Distinct ObjectTypeCV AS WEAPObjectTypeCV , ObjectType AS WEAPObjectType, AttributeNameCV AS WEAPAttributeNameCV , AttributeName AS WEAPAttributeName
 
-FROM Datasets
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-WHERE "DatasetAcronym"='WEAP' 
---WHERE "DatasetAcronym"='WASH' 
+WHERE "ResourceTypeAcronym"='WEAP' 
+--WHERE "ResourceTypeAcronym"='WASH' 
 
 )
 ----------------------------------------------------------------------------------------------
@@ -71,14 +71,14 @@ Inner Join
 --They have nodes or links within the specified boundary 
 -- the controlled ObjectTypes and Attributes match between WEAP and the other datasets   
 
-SELECT Distinct ObjectTypeCV,ObjectType,DatasetAcronym, AttributeNameCV,AttributeName,InstanceNameCV
+SELECT Distinct ObjectTypeCV,ObjectType,ResourceTypeAcronym, AttributeNameCV,AttributeName,InstanceNameCV
 
 --SELECT Distinct ObjectTypeCV, AttributeNameCV
 --SELECT COUNT(Distinct ObjectTypeCV) as CountOfObjects,COUNT(Distinct AttributeNameCV) As CountOfAttributes
-FROM Datasets
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
@@ -117,16 +117,16 @@ AND (ObjectTypeCV IN
 -- limit the available ObjectTypes in the datasets to only the ones that their controlled ObjectTypes match the controlled ObjectTypes of WEAP  
 SELECT Distinct ObjectTypeCV
 
-FROM Datasets
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-WHERE "DatasetAcronym"='WEAP'
---WHERE "DatasetAcronym"='WASH'
+WHERE "ResourceTypeAcronym"='WEAP'
+--WHERE "ResourceTypeAcronym"='WASH'
 
 ))
 
@@ -141,16 +141,16 @@ AND (AttributeNameCV IN
 
 SELECT Distinct AttributeNameCV
 
-FROM Datasets
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-WHERE "DatasetAcronym"='WEAP'
---WHERE "DatasetAcronym"='WASH'
+WHERE "ResourceTypeAcronym"='WEAP'
+--WHERE "ResourceTypeAcronym"='WASH'
 
 ))
   
