@@ -13,7 +13,7 @@ users can import the data values to their model. WaM-DaM keeps track of the mean
 to what instance they apply too.... 
 
 Adel Abdallah
-Jan 27, 2018
+Updated April 2, 2018
 
 */
 
@@ -29,10 +29,10 @@ PeopleSources.Phone As "SourcePersonPhone",
 "PeopleSources"."PersonName" As "SourceContactName",
 SourceWebpage	
 
-FROM "Datasets"
+FROM ResourceTypes
 
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
@@ -63,8 +63,8 @@ ON "OrganizationsSources" ."OrganizationID"="PeopleSources"."OrganizationID"
 
 
 
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 LEFT JOIN "ScenarioMappings"
 ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
@@ -76,10 +76,10 @@ LEFT JOIN "MasterNetworks"
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
 LEFT JOIN "NumericValues" 
-ON "NumericValues"."DataValuesMapperID"="DataValuesMapper"."DataValuesMapperID"
+ON "NumericValues"."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
 LEFT JOIN "TimeSeries" 
-ON "TimeSeries"."DataValuesMapperID"="DataValuesMapper"."DataValuesMapperID"
+ON "TimeSeries"."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
 -- Join the DataValuesMapper to get their Time Series   
 LEFT JOIN "TimeSeriesValues" 
@@ -87,19 +87,14 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 
 -- Join the DataValuesMapper to get their SeasonalNumericValues
 LEFT JOIN "SeasonalNumericValues"
-ON "SeasonalNumericValues"."DataValuesMapperID" = "DataValuesMapper"."DataValuesMapperID"
+ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
 LEFT JOIN DescriptorValues
-ON DescriptorValues.DataValuesMapperID=DataValuesMapper.DataValuesMapperID
+ON DescriptorValues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
 LEFT JOIN CV_DescriptorValues
 ON CV_DescriptorValues.Name=DescriptorValues.DescriptorValueCV	
 
-LEFT JOIN DualValues
-ON DualValues.DataValuesMapperID=DataValuesMapper.DataValuesMapperID
-
-LEFT JOIN CV_DualValueMeaning
-ON CV_DualValueMeaning.Name=DualValues.DualValueMeaningCV
 
 -- Specifiy controlled Object Type, instance name, and an attribute of interest
 WHERE ObjectTypeCV='Reservoir' 
