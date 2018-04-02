@@ -11,18 +11,18 @@ Time series data for a specific attribute
 WaM-DaM keeps track of the meanings of data values, their units, to what instance they apply too.... 
 
 Adel Abdallah
-Updated Jan 27, 2018
+Updated April 2, 2018
 
 */
 --DatasetAcronym,ScenarioName,ObjectType,AttributeName,AttributeNameCV,InstanceName,InstanceNameCV,SeasonName,SeasonOrder,SeasonNumericValue
 
-SELECT DatasetAcronym,ScenarioName,ObjectType,AttributeName,AttributeNameCV,
+SELECT ResourceTypeAcronym,ScenarioName,ObjectType,AttributeName,AttributeNameCV,
 InstanceName,InstanceNameCV,SeasonName,SeasonOrder,SeasonNumericValue
 
-FROM "Datasets"
+FROM ResourceTypes
 
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -34,8 +34,8 @@ ON Mappings.AttributeID= Attributes.AttributeID
 LEFT JOIN "Instances" 
 ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 LEFT JOIN "ScenarioMappings"
 ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
@@ -48,7 +48,7 @@ ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
 -- Join the DataValuesMapper to get their SeasonalParameters   
 LEFT JOIN "SeasonalNumericValues"
-ON "SeasonalNumericValues"."DataValuesMapperID" = "DataValuesMapper"."DataValuesMapperID" 
+ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID" 
 
 WHERE
  InstanceNameCV='USGS 10046500 BEAR RIVER BL STEWART DAM NR MONTPELIER, ID'   
@@ -64,4 +64,4 @@ AND AttributeDataTypeCV='SeasonalNumericValues'
 AND SeasonName!='Total'
 
 --sort the results and show the seasons in the order they were entered
-ORDER BY DatasetAcronym,ObjectType,AttributeName,InstanceName, ScenarioName,SeasonOrder,SeasonName ASC
+ORDER BY ResourceTypeAcronym,ObjectType,AttributeName,InstanceName, ScenarioName,SeasonOrder,SeasonName ASC
