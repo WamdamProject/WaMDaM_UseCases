@@ -8,18 +8,19 @@ What is the total agriculture water use or demand in Cache Valley, Utah?
 
 Find node and link Instances within a boundary in space
 Adel Abdallah
-Updated Jan 27, 2018
+Updated April 2, 2018
 */
 --First look for all the instances and their attributes, then query the actual values (present the result with the number of sites)
 
 --DatasetAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,NumDemandSites,TotalAnnualNumericCacheCanals, TotalAnnualUseCacheCanals
-Select DISTINCT DatasetAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,count(DISTINCT InstanceName) As NumDemandSites,sum(NumericValue) AS TotalNumeric,sum(SeasonNumericValue) As TotalAnnualUseCacheCanals
+Select DISTINCT ResourceTypeAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,count(DISTINCT InstanceName) As NumDemandSites,sum(NumericValue) AS TotalNumeric,sum(SeasonNumericValue) As TotalAnnualUseCacheCanals
 --DateTimeStamp,Value
 --,Longitude_x,Latitude_y
 
-FROM Datasets
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+FROM ResourceTypes
+
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -34,8 +35,8 @@ ON "Instances"."InstanceID"="Mappings"."InstanceID"
 LEFT JOIN "InstanceCategories" 
 ON "InstanceCategories"."InstanceCategoryID"="Instances"."InstanceCategoryID"
 
-LEFT JOIN "DataValuesMapper" 
-ON "DataValuesMapper"."DataValuesMapperID"="Mappings"."DataValuesMapperID"
+LEFT JOIN "ValuesMapper" 
+ON "ValuesMapper"."ValuesMapperID"="Mappings"."ValuesMapperID"
 
 LEFT JOIN "ScenarioMappings"
 ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
@@ -55,11 +56,11 @@ ON "Sources"."SourceID" = "Mappings"."SourceID"
 
 -- Join the DataValuesMapper to get their Seasonal 
 LEFT JOIN "SeasonalNumericValues"
-ON "SeasonalNumericValues"."DataValuesMapperID" = "DataValuesMapper"."DataValuesMapperID"
+ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID" 
 
 -- Join the DataValuesMapper to get their Numeric parameters   
 LEFT JOIN "NumericValues"
-ON "NumericValues"."DataValuesMapperID" = "DataValuesMapper"."DataValuesMapperID"
+ON "NumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
 
 WHERE  
@@ -82,4 +83,4 @@ AND InstanceCategory='Agriculture'
 AND AttributeDataTypeCV IN ('SeasonalNumericValues' , 'NumericValues')
 
 
-GROUP  BY DatasetAcronym,ObjectType,MasterNetworkName,ScenarioName
+GROUP  BY ResourceTypeAcronym,ObjectType,MasterNetworkName,ScenarioName
