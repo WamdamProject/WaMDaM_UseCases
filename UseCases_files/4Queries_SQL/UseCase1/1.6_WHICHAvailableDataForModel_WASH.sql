@@ -37,7 +37,7 @@ Users can further search for more metadata and data about these instances.
 Then they can choose which ones to import to their model 
 
 Adel Abdallah 
-October 30, 2017
+April 2, 2018
 
 */
 -- This SELECT statement shows the list of WASH Objects and their Attributes that have one or many native terms available them that have available data in the datasets
@@ -53,15 +53,15 @@ From
 (
 SELECT  Distinct ObjectTypeCV AS WASHObjectTypeCV , ObjectType AS WASHObjectType, AttributeNameCV AS WASHAttributeNameCV , AttributeName AS WASHAttributeName
 
-FROM Datasets
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-WHERE "DatasetAcronym"='WASH' 
+WHERE "ResourceTypeAcronym"='WASH' 
 
 )
 ----------------------------------------------------------------------------------------------
@@ -74,29 +74,29 @@ Inner Join
 --They have nodes or links within the specified boundary 
 -- the controlled ObjectTypes and Attributes match between WASH and the other datasets   
 
-SELECT Distinct ObjectTypeCV,ObjectType,DatasetAcronym, AttributeNameCV,AttributeName
+SELECT Distinct ObjectTypeCV,ObjectType,ResourceTypeAcronym, AttributeNameCV,AttributeName
 
 --SELECT Distinct ObjectTypeCV, AttributeNameCV
 --SELECT COUNT(Distinct ObjectTypeCV) as CountOfObjects,COUNT(Distinct AttributeNameCV) As CountOfAttributes
-FROM Datasets
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-Left JOIN "Mapping"
-ON Mapping.AttributeID= Attributes.AttributeID
+Left JOIN "Mappings"
+ON Mappings.AttributeID= Attributes.AttributeID
 
 Left JOIN "Instances" 
-ON "Instances"."InstanceID"="Mapping"."InstanceID"
+ON "Instances"."InstanceID"="Mappings"."InstanceID"
 
-LEFT JOIN "ScenarioMapping"
-ON "ScenarioMapping"."MappingID"="Mapping"."MappingID"
+LEFT JOIN "ScenarioMappings"
+ON "ScenarioMappings"."MappingID"="Mappings"."MappingID"
 
 Left JOIN "Scenarios" 
-ON "Scenarios"."ScenarioID"="ScenarioMapping"."ScenarioID"
+ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 Left JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
@@ -120,15 +120,15 @@ AND (ObjectTypeCV IN
 -- limit the available ObjectTypes in the datasets to only the ones that their controlled ObjectTypes match the controlled ObjectTypes of WASH  
 SELECT Distinct ObjectTypeCV
 
-FROM Datasets
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-WHERE "DatasetAcronym"='WASH'
+WHERE "ResourceTypeAcronym"='WASH'
 
 ))
 
@@ -143,16 +143,16 @@ AND (AttributeNameCV IN
 
 SELECT Distinct AttributeNameCV
 
-FROM Datasets
+FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-WHERE "DatasetAcronym"='WASH'
---WHERE "DatasetAcronym"='WASH'
+WHERE "ResourceTypeAcronym"='WASH'
+--WHERE "ResourceTypeAcronym"='WASH'
 
 ))
   
