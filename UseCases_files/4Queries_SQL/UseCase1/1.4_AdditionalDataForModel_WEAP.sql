@@ -26,7 +26,7 @@ The query is generic to other models (if they are already defined in WaMDaM): ju
 --WHERE "DatasetAcronym"=’WASH’
 
 Adel Abdallah 
-Jan 27, 2018
+April 2, 2018
 
 */
 -- Show the join results for the native WEAP Object Types and Attributes
@@ -43,10 +43,10 @@ From
 -- Get the WEAP data requirement of ObjectTypes and Attributes
 	
 SELECT DISTINCT  ObjectType AS WEAPObjectType,ObjectCategoryName,ObjectTypeCV AS WEAPObjectTypeCV ,AttributeName AS WEAPAttributeName,AttributeCategoryName,AttributeCategoryName,AttributeNameCV AS WEAPAttributeNameCV
-FROM Datasets
+FROM ResourceTypes
 
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 LEFT JOIN  "ObjectCategories"
 ON "ObjectCategories"."ObjectCategoryID"="ObjectTypes"."ObjectCategoryID" 
@@ -58,7 +58,7 @@ LEFT JOIN  "AttributeCategories"
 ON "AttributeCategories"."AttributeCategoryID"="Attributes"."AttributeCategoryID" 
 
 
-WHERE "DatasetAcronym"='WEAP' 
+WHERE "ResourceTypeAcronym"='WEAP' 
 
 -- Users can limit the search of additional attributes based on Attribute Category 
 -- They can excldue all the attributes that have a native category (or controlled too) of "Water Quality" or "cost" 	
@@ -69,7 +69,7 @@ AND AttributeCategoryName!='Cost'
 
 
 
-OR "DatasetAcronym"='WEAP'  AND AttributeCategoryName is null AND WEAPAttributeName!='ObjectTypeInstances'
+OR "ResourceTypeAcronym"='WEAP'  AND AttributeCategoryName is null AND WEAPAttributeName!='ObjectTypeInstances'
 
 
 AND WEAPAttributeName!='ObjectTypeInstances'
@@ -88,10 +88,10 @@ LEFT OUTER Join
 	
 SELECT Distinct ObjectTypeCV,AttributeNameCV
 
-FROM Datasets
+FROM ResourceTypes
 
 LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
