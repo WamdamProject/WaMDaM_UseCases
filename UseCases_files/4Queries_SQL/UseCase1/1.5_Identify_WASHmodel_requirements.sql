@@ -10,15 +10,15 @@ datasets in WaMDaM and identify additional needed data not available in WaMDaM d
 
 
 Adel Abdallah 
-Last updated Jan 27, 2017
+Last updated April 2, 2018
 
 */
 
 SELECT DISTINCT  ObjectType,ObjectCategoryName,ObjectTypeCV ,AttributeName, AttributeCategoryName,AttributeNameCV 
-FROM Datasets
+FROM ResourceTypes
 
-LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+Left JOIN "ObjectTypes" 
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 LEFT JOIN  "ObjectCategories"
 ON "ObjectCategories"."ObjectCategoryID"="ObjectTypes"."ObjectCategoryID" 
@@ -30,8 +30,8 @@ LEFT JOIN  "AttributeCategories"
 ON "AttributeCategories"."AttributeCategoryID"="Attributes"."AttributeCategoryID" 
 
 -- Provide the model name 
---WHERE "DatasetAcronym"='WEAP' 
-WHERE "DatasetAcronym"='WASH' 
+--WHERE "ResourceTypeAcronym"='WEAP' 
+WHERE "ResourceTypeAcronym"='WASH' 
 
 --exclude the dummy attributes that are just used to connect Object Types with their Instances. 
 AND AttributeName!='ObjectTypeInstances' 
