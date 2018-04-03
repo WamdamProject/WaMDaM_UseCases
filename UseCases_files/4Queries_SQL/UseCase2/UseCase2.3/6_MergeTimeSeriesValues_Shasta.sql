@@ -9,7 +9,7 @@ What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
 
 
 Adel Abdallah
-Updated April 2, 2018
+Updated April 3, 2018
 
 
 
@@ -22,7 +22,7 @@ SELECT  ElevationAttribute,ElevationUnit,VolumeAttribute,VolumeUnit,VolumeDateTi
 FROM
 (
 
-SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS VolumeAttribute,AttributeNameCV,AttributeDataTypeCV,"UnitName" As VolumeUnit,DateTimeStamp As VolumeDateTimeStamp,Value As VolumeValue
+SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS VolumeAttribute,AttributeNameCV,AttributeDataTypeCV,"UnitName" As VolumeUnit,DateTimeStamp As VolumeDateTimeStamp,DataValue As VolumeValue
 
 
 FROM ResourceTypes
@@ -82,7 +82,7 @@ INNER Join
 
 (
 
-SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS ElevationAttribute,AttributeNameCV,AttributeDataTypeCV,"UnitName" As ElevationUnit,DateTimeStamp As ElevationDateTimeStamp,Value As ElevationValue
+SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS ElevationAttribute,AttributeNameCV,AttributeDataTypeCV,"UnitName" As ElevationUnit,DateTimeStamp As ElevationDateTimeStamp,DataValue As ElevationValue
 
 
 FROM ResourceTypes
