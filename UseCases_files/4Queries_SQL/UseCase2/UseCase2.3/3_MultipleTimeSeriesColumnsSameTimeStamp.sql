@@ -7,7 +7,7 @@ What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
 
 
 Adel Abdallah
-Updated April 2, 2018
+Updated April 3, 2018
 
 */
 --Add metadata about these joins similar to what I have somewhere else 
@@ -18,7 +18,7 @@ SELECT  ElevationAttribute,ElevationUnit,VolumeAttribute,VolumeUnit,VolumeDateTi
 FROM
 (
 
-SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS VolumeAttribute,AttributeNameCV,AttributeDataTypeCV,"UnitName" As VolumeUnit,DateTimeStamp As VolumeDateTimeStamp,Value As VolumeValue
+SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS VolumeAttribute,AttributeNameCV,AttributeDataTypeCV,"UnitName" As VolumeUnit,DateTimeStamp As VolumeDateTimeStamp,DataValue As VolumeValue
 
 
 FROM ResourceTypes
@@ -78,7 +78,7 @@ INNER Join
 
 (
 
-SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS ElevationAttribute,AttributeNameCV,AttributeDataTypeCV,"UnitName" As ElevationUnit,DateTimeStamp As ElevationDateTimeStamp,Value As ElevationValue
+SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS ElevationAttribute,AttributeNameCV,AttributeDataTypeCV,"UnitName" As ElevationUnit,DateTimeStamp As ElevationDateTimeStamp,DataValue As ElevationValue
 
 FROM ResourceTypes
 
@@ -137,7 +137,7 @@ INNER Join
 
 (
 
-SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS ReservoirInflow,AttributeNameCV,AttributeDataTypeCV,"UnitName" As ReservoirInflowUnit,DateTimeStamp As ReservoirInflowDateTimeStamp,Value As ReservoirInflowValue
+SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS ReservoirInflow,AttributeNameCV,AttributeDataTypeCV,"UnitName" As ReservoirInflowUnit,DateTimeStamp As ReservoirInflowDateTimeStamp,DataValue As ReservoirInflowValue
 
 FROM ResourceTypes
 
@@ -197,7 +197,7 @@ INNER Join
 
 (
 
-SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS ReservoirInflow,AttributeNameCV,AttributeDataTypeCV,"UnitName" As ReservoirReleaseUnit,DateTimeStamp As ReservoirReleaseDateTimeStamp,Value As ReservoirReleaseValue
+SELECT DISTINCT ResourceTypeAcronym,ScenarioName,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,AttributeName AS ReservoirInflow,AttributeNameCV,AttributeDataTypeCV,"UnitName" As ReservoirReleaseUnit,DateTimeStamp As ReservoirReleaseDateTimeStamp,DataValue As ReservoirReleaseValue
 
 
 FROM ResourceTypes
