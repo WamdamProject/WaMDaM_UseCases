@@ -19,7 +19,7 @@ The second gets the monthly data and keep it monthly but convert it from cfs to 
 The two parts are needed because of the “Having” function in the second part (to check on the days of the month)
 
 Adel Abdallah
-Updated April 2, 2018
+Updated April 3, 2018
 
 */
 --                                               Two select statements will be join together by UNION ALL function
@@ -31,7 +31,7 @@ Updated April 2, 2018
 --DatasetAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,YearType,YearMonth, TimeSeriesValueID,CountDays,CalenderYear,CumulativeMonthly
 
 SELECT ResourceTypeAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,
-YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, TimeSeriesValueID,count(value) As CountDays,
+YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, TimeSeriesValueID,count(DataValue) As CountDays,
 --convert the time stamp to be in the format of Month and Year (no days)
 
 
@@ -48,8 +48,8 @@ End CalenderYear,
 --covert the cfs/month to cumulative acre-ft per month 
 -- Divide by 43560 square feet then multiply by 60*60*24 (and 30) to convert
 Case 
-         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='day' AND AggregationStatisticCV='Cumulative' AND count(value)>=27)   THEN SUM(Value)/43560*60*60
-         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='day' AND AggregationStatisticCV='Average' AND count(value)>=27)   THEN SUM(Value)/43560*60*60*24
+         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='day' AND AggregationStatisticCV='Cumulative' AND count(DataValue)>=27)   THEN SUM(DataValue)/43560*60*60
+         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='day' AND AggregationStatisticCV='Average' AND count(DataValue)>=27)   THEN SUM(DataValue)/43560*60*60*24
          Else null
 END As CumulativeMonthly
 
@@ -120,7 +120,7 @@ Having CountDays>=27
                                                    --The second SELECT statement (get the monthly data and keep it monthly)
 
 SELECT ResourceTypeAcronym,AttributeName, InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,
-YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, TimeSeriesValueID,count(value) As CountDays,
+YearType,strftime('%m/%Y', DateTimeStamp) as YearMonth, TimeSeriesValueID,count(DataValue) As CountDays,
 
 
 --check if it is a water year by querying the field "YearType" in the TimeSeries table
@@ -138,9 +138,9 @@ End As CalenderYear,
 --covert the cfs/month to cumulative acre-ft per month 
 -- Divide by 43559.9 square feet then multiply by 60*60*24
 Case 
-         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative') THEN Value/43560
-         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Average' )   THEN Value/43560*60*60*24*30
-         Else Value
+         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative') THEN DataValue/43560
+         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Average' )   THEN DataValue/43560*60*60*24*30
+         Else DataValue
 END As CumulativeMonthly
 
 
