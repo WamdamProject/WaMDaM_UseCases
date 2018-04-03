@@ -6,7 +6,7 @@ What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
 
 
 Adel Abdallah
-Updated April 2, 2018
+Updated April 3, 2018
 
 This query shows data values for a particular MultiColumns of a reservoir InstanceName: area, and capacity, and stage 
 
@@ -20,7 +20,7 @@ SELECT "ObjectTypes"."ObjectType",
 "AttributesColumns"."AttributeName" AS "AttributeName",
 "AttributesColumns"."AttributeNameCV",
 "AttributesColumns"."UnitNameCV" AS "AttributeNameUnitName",
-"Value","ValueOrder"
+"DataValue","ValueOrder"
 
 FROM ResourceTypes
 
@@ -73,7 +73,7 @@ ON "MultiAttributeSeries" ."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
 -- Join the MultiAttributeSeries to get to their specific DataValuesMapper, now called DataValuesMapperColumn
 LEFT JOIN "ValuesMapper" As "ValuesMapperColumn"
-ON "ValuesMapperColumn"."ValuesMapperID"="MultiAttributeSeries"."AttributeNameID"
+ON "ValuesMapperColumn"."ValuesMapperID"="MultiAttributeSeries"."MappingID_Attribute"
 
 -- Join the DataValuesMapperColumn to get back to their specific Mapping, now called MappingColumns
 LEFT JOIN "Mappings" As "MappingColumns"
