@@ -1,5 +1,5 @@
 /*
-4.6MultipleDescriptorValues_HydroPower.sql
+4.6MultipleCategoricalvalues_HydroPower.sql
 
 Use case 4: identify and compare infrastructure data across many data sources.
 What is the volume, purpose, evaporation, and elevation of Hyrum Reservoir Utah?
@@ -10,18 +10,18 @@ Result:
 
 
 Adel Abdallah
-Updated April 2, 2018
+Updated May 17, 2018
 
 */
 
-SELECT  DISTINCT ResourceTypeAcronymPurpose,InstanceNamePurpose ,DescriptorValuePurpose,ResourceTypeAcronymState,InstanceNameState,DescriptorValueState
+SELECT  DISTINCT ResourceTypeAcronymPurpose,InstanceNamePurpose ,CategoricalvaluePurpose,ResourceTypeAcronymState,InstanceNameState,CategoricalvalueState
 
 FROM
 
 (
 ----------------------
 
-SELECT ResourceTypeAcronym AS ResourceTypeAcronymState,InstanceName As InstanceNameState ,descriptorvalue As DescriptorValueState
+SELECT ResourceTypeAcronym AS ResourceTypeAcronymState,InstanceName As InstanceNameState ,Categoricalvalue As CategoricalvalueState
 
 
 FROM ResourceTypes
@@ -64,11 +64,11 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 LEFT JOIN "SeasonalNumericValues"
 ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
-LEFT JOIN DescriptorValues
-ON DescriptorValues.ValuesMapperID=ValuesMapper.ValuesMapperID
+LEFT JOIN Categoricalvalues
+ON Categoricalvalues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
-LEFT JOIN CV_DescriptorValues
-ON CV_DescriptorValues.Name=DescriptorValues.DescriptorValueCV	
+LEFT JOIN CV_Categorical
+ON CV_Categorical.Name=Categoricalvalues.CategoricalvalueCV	
 
 
 -- Specifiy controlled Object Type, instance name, and an attribute of interest
@@ -78,7 +78,7 @@ AND Attributes.AttributeName='STATE'
 
 AND ResourceTypeAcronym='US Major Dams'
 
-AND Descriptorvalue='UT'
+AND Categoricalvalue='UT'
 
 
 ---------------
@@ -86,7 +86,7 @@ AND Descriptorvalue='UT'
 
 INNER JOIN
 (
-SELECT ResourceTypeAcronym AS ResourceTypeAcronymPurpose,InstanceName As InstanceNamePurpose ,descriptorvalue As DescriptorValuePurpose
+SELECT ResourceTypeAcronym AS ResourceTypeAcronymPurpose,InstanceName As InstanceNamePurpose ,Categoricalvalue As CategoricalvaluePurpose
 
 FROM ResourceTypes
 
@@ -128,11 +128,11 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 LEFT JOIN "SeasonalNumericValues"
 ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
-LEFT JOIN DescriptorValues
-ON DescriptorValues.ValuesMapperID=ValuesMapper.ValuesMapperID
+LEFT JOIN Categoricalvalues
+ON Categoricalvalues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
-LEFT JOIN CV_DescriptorValues
-ON CV_DescriptorValues.Name=DescriptorValues.DescriptorValueCV	
+LEFT JOIN CV_Categorical
+ON CV_Categorical.Name=Categoricalvalues.CategoricalvalueCV	
 
 -- Specifiy controlled Object Type, instance name, and an attribute of interest
 WHERE ObjectTypeCV='Reservoir' 
@@ -141,7 +141,7 @@ AND ResourceTypeAcronym='US Major Dams'
 
 AND (Attributes.AttributeName ='PURPOSE' or Attributes.AttributeName ='SYMBOL')
 
-AND descriptorvalue='H'
+AND Categoricalvalue='H'
 
 )
 
@@ -150,7 +150,6 @@ InstanceNameState=InstanceNamePurpose
 
 
 --ORDER BY AttributeNameCV,ObjectType,ObjectTypeCV,InstanceName desc
-
 
 
 
