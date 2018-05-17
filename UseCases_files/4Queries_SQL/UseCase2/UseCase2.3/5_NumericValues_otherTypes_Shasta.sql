@@ -13,12 +13,12 @@ users can import the data values to their model. WaM-DaM keeps track of the mean
 to what instance they apply too.... 
 
 Adel Abdallah
-Updated April 2, 2018
+Updated May 17, 2018
 
 */
 
 SELECT DISTINCT ResourceTypeAcronym,ObjectType,ObjectTypeCV,InstanceName,InstanceNameCV,Attributes.AttributeName,AttributeNameCV,AttributeDataTypeCV,"UnitNameCV",ScenarioName
-,"NumericValues"."NumericValue",descriptorvalue,CV_DescriptorValues.Definition AS DescriptorValueDefinition
+,"NumericValues"."NumericValue",Categoricalvalue,CV_Categorical.Definition AS CategoricalValueDefinition
 
 
 FROM ResourceTypes
@@ -61,11 +61,11 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 LEFT JOIN "SeasonalNumericValues"
 ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
-LEFT JOIN DescriptorValues
-ON DescriptorValues.ValuesMapperID=ValuesMapper.ValuesMapperID
+LEFT JOIN CategoricalValues
+ON CategoricalValues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
-LEFT JOIN CV_DescriptorValues
-ON CV_DescriptorValues.Name=DescriptorValues.DescriptorValueCV	
+LEFT JOIN CV_Categorical
+ON CV_Categorical.Name=CategoricalValues.CategoricalValueCV	
 
 
 -- Specifiy controlled Object Type, instance name, and an attribute of interest
