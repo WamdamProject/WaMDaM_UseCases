@@ -10,7 +10,7 @@ Result:
 
 
 Adel Abdallah
-Updated May 17, 2018
+Updated May 21, 2018
 
 */
 
@@ -135,7 +135,7 @@ ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 LEFT JOIN CategoricalValues
 ON CategoricalValues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
-LEFT JOIN CV_CategoricalValues
+LEFT JOIN CV_Categorical
 ON CV_Categorical.Name=CategoricalValues.CategoricalValueCV	
 
 
@@ -221,5 +221,4 @@ AND Attributes.AttributeName ='N_Gen'
 
 ON 
 InstanceNameCVDamHEIGHT=InstanceNameCVN_Gen
-
 
