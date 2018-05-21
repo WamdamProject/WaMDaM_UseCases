@@ -10,13 +10,13 @@ Result:
 
 
 Adel Abdallah
-Updated May 17, 2018
+Updated May 21, 2018
 
 */
 
 ----------------------
 
-SELECT ResourceTypeAcronym AS ResourceTypeAcronymmState,InstanceName As InstanceNameState ,descriptorvalue As DescriptorValueState
+SELECT ResourceTypeAcronym AS ResourceTypeAcronymmState,InstanceName As InstanceNameState ,Categoricalvalue As CategoricalValueState
 
 FROM ResourceTypes
 
@@ -72,6 +72,6 @@ AND Attributes.AttributeName='State'
 
 AND ResourceTypeAcronym='NHAAP'
 
-AND Descriptorvalue='UT'
+AND Categoricalvalue='UT'
 
---AND Descriptorvalue='CA'
+--AND Categoricalvalue='CA'
