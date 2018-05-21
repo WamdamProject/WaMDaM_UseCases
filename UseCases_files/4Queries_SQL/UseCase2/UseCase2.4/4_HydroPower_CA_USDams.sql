@@ -10,18 +10,18 @@ Result:
 
 
 Adel Abdallah
-Updated May 17, 2018
+Updated May 21, 2018
 
 */
 
-SELECT  DISTINCT ResourceTypeAcronymPurpose,InstanceNamePurpose ,DescriptorValuePurpose,ResourceTypeAcronymState,InstanceNameState,DescriptorValueState
+SELECT  DISTINCT ResourceTypeAcronymPurpose,InstanceNamePurpose CategoricalvaluePurpose,ResourceTypeAcronymState,InstanceNameState,CategoricalvalueState
 
 FROM
 
 (
 ----------------------
 
-SELECT ResourceTypeAcronym AS ResourceTypeAcronymState,InstanceName As InstanceNameState ,descriptorvalue As DescriptorValueState
+SELECT ResourceTypeAcronym AS ResourceTypeAcronymState,InstanceName As InstanceNameState ,Categoricalvalue As CategoricalvalueState
 
 
 FROM ResourceTypes
@@ -78,7 +78,7 @@ AND Attributes.AttributeName='STATE'
 
 AND ResourceTypeAcronym='US Major Dams'
 
-AND Descriptorvalue='CA'
+AND Categoricalvalue='CA'
 
 
 ---------------
@@ -86,7 +86,7 @@ AND Descriptorvalue='CA'
 
 INNER JOIN
 (
-SELECT ResourceTypeAcronym AS ResourceTypeAcronymPurpose,InstanceName As InstanceNamePurpose ,descriptorvalue As DescriptorValuePurpose
+SELECT ResourceTypeAcronym AS ResourceTypeAcronymPurpose,InstanceName As InstanceNamePurpose ,Categoricalvalue AsCategoricalvaluePurpose
 
 
 FROM ResourceTypes
@@ -132,8 +132,8 @@ ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 LEFT JOIN CategoricalValues
 ON CategoricalValues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
-LEFT JOIN CV_CategoricalValues
-ON CV_CategoricalValues.Name=CategoricalValues.CategoricalValueCV	
+LEFT JOIN CV_Categorical
+ON CV_Categorical.Name=CategoricalValues.CategoricalValueCV	
 
 
 -- Specifiy controlled Object Type, instance name, and an attribute of interest
@@ -143,7 +143,7 @@ AND ResourceTypeAcronym ='US Major Dams'
 
 AND (Attributes.AttributeName ='PURPOSE' or Attributes.AttributeName ='SYMBOL')
 
-AND descriptorvalue='H'
+AND Categoricalvalue='H'
 
 )
 
@@ -152,7 +152,6 @@ InstanceNameState=InstanceNamePurpose
 
 
 --ORDER BY AttributeNameCV,ObjectType,ObjectTypeCV,InstanceName desc
-
 
 
 
