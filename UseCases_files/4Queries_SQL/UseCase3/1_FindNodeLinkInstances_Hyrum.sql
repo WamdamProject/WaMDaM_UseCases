@@ -23,11 +23,12 @@ The reason why is because the "where clause" is based on the start and end node 
 which join to the connections table, which only has instances related to links.
 
 Adel Abdalllah
-Updated Jan 27, 2018
+Updated May 27, 2018
 
 */
 
-Select DatasetAcronym,ScenarioName,
+
+Select ResourceTypeAcronym,ScenarioName,
 
 
 "Instances"."InstanceName" As LinkInstanceName, ObjectTypes.ObjectType AS LinkObjectType,ObjectTypes.ObjectTypeCV, 
@@ -38,10 +39,10 @@ ObjectTypeEndNodeInstance.ObjectType AS EndNodeObjectType
 
 
 
-FROM Datasets
+FROM ResourceTypes
 
 LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -126,8 +127,8 @@ AND AttributesEndNodeInstance.AttributeName='ObjectTypeInstances'
 --Limit the search for one or manay specified Object Types 
 --AND (ObjectTypes.ObjectTypeCV='Reservoir' or ObjectTypes.ObjectTypeCV='Demand site' or ObjectTypes.ObjectTypeCV='Diversion')
 
---Limit the search to only one dataset 
---AND DatasetAcronym='WEAP'
+--Limit the search to only one ResourceTypes
+--AND ResourceTypeAcronym='WEAP'
 
 --Limit the search to only one scenario
 --AND ScenarioName='USU WEAP Model 2017'
@@ -138,4 +139,4 @@ AND (StartNodeInstance.InstanceNameCV='Hyrum Reservoir' Or EndNodeInstance.Insta
 
 --AND (StartNodeInstance.InstanceNameCV = 'Bear River Migratory Bird Refuge' Or EndNodeInstance.InstanceNameCV ='Bear River Migratory Bird Refuge' )
 
-ORDER BY DatasetAcronym,MasterNetworkName,ScenarioName
+ORDER BY ResourceTypeAcronym,MasterNetworkName,ScenarioName
