@@ -6,12 +6,12 @@ Use case 3: identify and compare demand data for a site as reported in many sour
 What is the total agriculture water use or demand in Cache Valley, Utah?
 
 Adel Abdallah
-Updated April 2, 2018
+Updated May 28, 2018
 
 */
 
 Select DISTINCT ResourceTypeAcronym,MasterNetworkName,ScenarioName,ObjectType,ObjectTypeCV,ObjectTypologyCV, AttributeDataTypeCV
-,AttributeName,AttributeNameCV,InstanceName,InstanceCategory,InstanceNameCV,NumericValue,UnitName,descriptorvalue 
+,AttributeName,AttributeNameCV,InstanceName,InstanceCategory,InstanceNameCV,NumericValue,UnitName,CategoricalValue
 ,Sourcename, Methodname
 
 --,Longitude_x,Latitude_y
@@ -55,8 +55,8 @@ ON "Sources"."SourceID" = "Mappings"."SourceID"
 LEFT JOIN "NumericValues" 
 ON "NumericValues"."ValuesMapperID"="ValuesMapper"."ValuesMapperID"
 
-LEFT JOIN DescriptorValues
-ON DescriptorValues.ValuesMapperID=ValuesMapper.ValuesMapperID
+LEFT JOIN CategoricalValues
+ON CategoricalValues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
 
 WHERE  
