@@ -36,11 +36,12 @@ Users can further search for more metadata and data about these instances.
 Then they can choose which ones to import to their model 
 
 Adel Abdallah 
-Last updated April  2, 2018
+Last updated May 28, 2018
 
 */
 -- This SELECT statement shows the list of WEAP Objects and their Attributes that have one or many native terms available them that have available data in the datasets
-Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WEAPAttributeName,AttributeNameCV,AttributeName,InstanceNameCV
+Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WEAPAttributeName,AttributeNameCV,AttributeName
+--,InstanceNameCV
 
 From 
 
@@ -101,6 +102,9 @@ ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 -- If a native attribute is not registered with a controlled attribute, then exclude the native one 
 -- because it has no value as far as it cannot be related to other attributes  
 WHERE AttributeNameCV is not null
+
+and ResourceTypeAcronym!='WEAP'
+
   /*
 and
 -- limit the search to within the specified boundaries
@@ -161,7 +165,7 @@ WHERE "ResourceTypeAcronym"='WEAP'
 --AND ObjectTypeCV='Reservoir'
 
 --AND AttributeNameCV='Volume'
-
+and ResourceTypeAcronym!='WEAP'
 )
 --**************************************************
 -- This is the join crtieria: Both the controlled ObjectType and controlled Attribute in WEAP must match the same
@@ -170,5 +174,4 @@ WHERE "ResourceTypeAcronym"='WEAP'
 On WEAPObjectTypeCV=ObjectTypeCV
 AND 
 WEAPAttributeNameCV =AttributeNameCV
-
 
