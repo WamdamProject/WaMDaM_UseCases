@@ -1,5 +1,5 @@
 /*
-2.1IdentifyTimeSeriesSeasonal_Dual.sql
+2.1IdentifyTimeSeriesSeasonal_Categorical.sql
 
 Use case 2: identify and compare time series and seasonal discharge data across data sources. 
 What is the discharge at the node “below Stewart Dam” in Idaho?
@@ -13,19 +13,20 @@ Time series data for a specific attribute
 WaM-DaM keeps track of the meanings of data values, their units, to what instance they apply too.... 
 
 Adel Abdallah
-Updated April 2, 2018
+Updated May 28, 2018
 
 */
 
-SELECT DISTINCT ResourceTypeAcronym,ObjectType,
+SELECT DISTINCt ResourceTypeAcronym,ObjectType,
 --AttributeNameCV
-AttributeName,
+Attributes.AttributeName,
 AttributeDataTypeCV,
 YearType,
 --InstanceNameCV,
 InstanceName,
 ScenarioName,
-AggregationStatisticCV,AggregationInterval,IntervalTimeUnitCV
+AggregationStatisticCV,AggregationInterval,IntervalTimeUnitCV,
+CategoricalValue,Mappings.MappingID
 
 FROM ResourceTypes
 
@@ -65,10 +66,21 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 LEFT JOIN "SeasonalNumericValues"
 ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
+LEFT JOIN CategoricalValues
+ON CategoricalValues.ValuesMapperID=ValuesMapper.ValuesMapperID
+
+--LEFT JOIN CV_Categorical
+--ON CV_Categorical.Name=CategoricalValues.CategoricalValueCV	
+
+
 -- Limit the search for one node using the controlled instance name
 WHERE InstanceNameCV='USGS 10046500 BEAR RIVER BL STEWART DAM NR MONTPELIER, ID'  
 
 AND (AttributeNameCV='Flow' or AttributeNameCV='Status')
 
+AND ScenarioName is not null
+
 Order By AttributeDataTypeCV DESC
---,IntervalTimeUnitCV,DatasetAcronym,ScenarioName ASC
+--,IntervalTimeUnitCV,ResourceTypeAcronym,ScenarioName ASC
+
+
