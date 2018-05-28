@@ -13,7 +13,7 @@ If the time series is a Water Year, then convert it to a Calendar year
 --Users need to check on the unit name to perform a conversion like from cfs to af/month
 
 Adel Abdallah
-Updated April 2, 2018
+Updated May 28, 2018
 */
 
 SELECT ResourceTypeAcronym,ScenarioName,AttributeName,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
@@ -22,7 +22,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          FROM (
 
          SELECT ResourceTypeAcronym,ScenarioName,AttributeName, AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
-         YearType,count(DISTINCT InstanceName) As NumDemandSites,count(value) As CountValues,
+         YearType,count(DISTINCT InstanceName) As NumDemandSites,count(DataValue) As CountValues,
 
          Case 
                   WHEN YearType='CalenderYear' AND (strftime('%m', DateTimeStamp) ='10' or  strftime('%m', DateTimeStamp) ='11' or  strftime('%m', DateTimeStamp) ='12') THEN date(DateTimeStamp,'+1 year')   
@@ -31,9 +31,9 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          End WaterYearDate,
 
          Case 
-                  WHEN (UnitNameCV='acre foot' AND  IntervalTimeUnitCV='Year' AND AggregationStatisticCV='Cumulative' )                                                                                               THEN Value
-                  WHEN (UnitNameCV='acre foot' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative'  )                                                                                          THEN      SUM(Value)
-                  WHEN (UnitNameCV='Million cubic meter per month' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative'  AND count(value)>=60 )         THEN      SUM(Value)*810.714402 --convert mcm to Acre-ft  --60 is 12 months * 5 instances in WASH
+                  WHEN (UnitNameCV='acre foot' AND  IntervalTimeUnitCV='Year' AND AggregationStatisticCV='Cumulative' )                                                                                               THEN DataValue
+                  WHEN (UnitNameCV='acre foot' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative'  )                                                                                          THEN      SUM(DataValue)
+                  WHEN (UnitNameCV='Million cubic meter per month' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative'  AND count(DataValue)>=60 )         THEN      SUM(DataValue)*810.714402 --convert mcm to Acre-ft  --60 is 12 months * 5 instances in WASH
                   Else null  
          END As CumulativeAnnual
 
@@ -96,11 +96,11 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          AND ObjectTypeCV='Demand site' 
 
-         AND AttributeNameCV='Flow'
+         AND AttributeNameCV in ('Flow','Delivered flow')
 
          -- narrow the search to instances with the category of agriculture
 
-         AND InstanceCategory='Agriculture'
+         --AND InstanceCategory='Agriculture'
 
          --AND ScenarioName='UDWR GenRes 2010'
 
@@ -118,5 +118,4 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
 -- exclude the years that have less than 12 months (which will have a null value here because of the case above)
 WHERE CumulativeAnnual is not null
-
 
