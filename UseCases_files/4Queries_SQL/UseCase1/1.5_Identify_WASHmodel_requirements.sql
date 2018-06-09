@@ -10,11 +10,11 @@ datasets in WaMDaM and identify additional needed data not available in WaMDaM d
 
 
 Adel Abdallah 
-Last updated April 2, 2018
+Last updated June 9, 2018
 
 */
 
-SELECT DISTINCT  ObjectType,ObjectCategoryName,ObjectTypeCV ,AttributeName, AttributeCategoryName,AttributeNameCV 
+SELECT DISTINCT  ObjectType,ObjectCategoryName,ObjectTypeCV ,AttributeName_Abstract, AttributeCategoryName,AttributeNameCV 
 FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
