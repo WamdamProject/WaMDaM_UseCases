@@ -152,7 +152,12 @@ ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 Left JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID" 
 
-WHERE "ResourceTypeAcronym"='WEAP'
+WHERE "ResourceTypeAcronym"='WEAP' 
+
+-- exclude the available data from the model itself  
+AND MasterNetworkName!='Bear River Network'
+
+
 --WHERE "ResourceTypeAcronym"='WASH'
 
 ))
@@ -173,4 +178,3 @@ WHERE "ResourceTypeAcronym"='WEAP'
 On WEAPObjectTypeCV=ObjectTypeCV
 AND 
 WEAPAttributeNameCV =AttributeNameCV
-
