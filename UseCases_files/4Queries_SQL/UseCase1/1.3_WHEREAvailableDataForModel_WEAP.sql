@@ -40,7 +40,7 @@ Last updated May 28, 2018
 
 */
 -- This SELECT statement shows the list of WEAP Objects and their Attributes that have one or many native terms available them that have available data in the datasets
-Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WEAPAttributeName,AttributeNameCV,AttributeName
+Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WEAPAttributeName,AttributeNameCV,AttributeName_Abstract
 --,InstanceNameCV
 
 From 
@@ -48,7 +48,7 @@ From
 ----------------------------------------------------------------------------------------------
 -- Get the WEAP data requirement of ObjectTypes and Attributes
 (
-SELECT  Distinct ObjectTypeCV AS WEAPObjectTypeCV , ObjectType AS WEAPObjectType, AttributeNameCV AS WEAPAttributeNameCV , AttributeName AS WEAPAttributeName
+SELECT  Distinct ObjectTypeCV AS WEAPObjectTypeCV , ObjectType AS WEAPObjectType, AttributeNameCV AS WEAPAttributeNameCV , AttributeName_Abstract AS WEAPAttributeName
 
 FROM ResourceTypes
 
@@ -72,7 +72,7 @@ Inner Join
 --They have nodes or links within the specified boundary 
 -- the controlled ObjectTypes and Attributes match between WEAP and the other datasets   
 
-SELECT Distinct ObjectTypeCV,ObjectType,ResourceTypeAcronym, AttributeNameCV,AttributeName,InstanceNameCV
+SELECT Distinct ObjectTypeCV,ObjectType,ResourceTypeAcronym, AttributeNameCV,AttributeName_Abstract,InstanceNameCV
 
 --SELECT Distinct ObjectTypeCV, AttributeNameCV
 --SELECT COUNT(Distinct ObjectTypeCV) as CountOfObjects,COUNT(Distinct AttributeNameCV) As CountOfAttributes
@@ -105,14 +105,14 @@ WHERE AttributeNameCV is not null
 
 and ResourceTypeAcronym!='WEAP'
 
-  /*
+
 and
 -- limit the search to within the specified boundaries
 ("Longitude_x">='-111.648' 
 AND "Longitude_x"<='-110.82'
 AND "Latitude_y_x">='40.712'
 AND "Latitude_y"<='42.848') 
-*/
+
 --
 AND (ObjectTypeCV IN 
 
