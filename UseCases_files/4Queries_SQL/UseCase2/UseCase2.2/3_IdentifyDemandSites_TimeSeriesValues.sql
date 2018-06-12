@@ -13,7 +13,7 @@ If the time series is a Water Year, then convert it to a Calendar year
 --Users need to check on the unit name to perform a conversion like from cfs to af/month
 
 Adel Abdallah
-Updated May 28, 2018
+Updated June 12, 2018
 */
 
 SELECT ResourceTypeAcronym,ScenarioName,AttributeName,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
@@ -96,7 +96,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          AND ObjectTypeCV='Demand site' 
 
-         AND AttributeNameCV in ('Flow','Delivered flow')
+         AND AttributeNameCV in ('Flow','Delivered flow', 'Demand')
 
          -- narrow the search to instances with the category of agriculture
 
@@ -118,4 +118,3 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
 -- exclude the years that have less than 12 months (which will have a null value here because of the case above)
 WHERE CumulativeAnnual is not null
-
