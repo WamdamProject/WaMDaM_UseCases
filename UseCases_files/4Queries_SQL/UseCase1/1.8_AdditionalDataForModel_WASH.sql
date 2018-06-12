@@ -26,14 +26,14 @@ The query is generic to other models (if they are already defined in WaMDaM): ju
 --WHERE "DatasetAcronym"=’WASH’
 
 Adel Abdallah 
-April 2, 2018
+June 12, 2018
 
 */
 -- Show the join results for the native WEAP Object Types and Attributes
-SELECT Distinct WASHObjectType, WASHAttributeName
+--SELECT Distinct WASHObjectType, WASHAttributeName
 
 -- Show the join results for the native WASH Object Types and Attributes and the controlled ones as well
---SELECT DISTINCT WASHObjectType,ObjectCategoryName ,WASHObjectTypeCV , WASHAttributeName,AttributeCategoryName,WASHAttributeNameCV
+SELECT DISTINCT WASHObjectType ,WASHObjectTypeCV , WASHAttributeName,WASHAttributeNameCV
 
 From 
 
@@ -64,12 +64,11 @@ WHERE "ResourceTypeAcronym"='WASH'
 -- They can excldue all the attributes that have a native category (or controlled too) of "Water Quality" or "cost" 	
 
 
-OR "ResourceTypeAcronym"='WASH'  
+--OR "ResourceTypeAcronym"='WASH'  
 --AND AttributeCategoryName is null 
 AND WASHAttributeName!='ObjectTypeInstances'
 
 
-AND WASHAttributeName!='ObjectTypeInstances'
 
 )
 
