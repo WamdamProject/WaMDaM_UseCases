@@ -26,14 +26,14 @@ The query is generic to other models (if they are already defined in WaMDaM): ju
 --WHERE "DatasetAcronym"=’WASH’
 
 Adel Abdallah 
-April 2, 2018
+June 12, 2018
 
 */
 -- Show the join results for the native WEAP Object Types and Attributes
 SELECT Distinct WEAPObjectType, ObjectCategoryName,WEAPAttributeName,AttributeCategoryName
 
 -- Show the join results for the native WEAP Object Types and Attributes and the controlled ones as well
---SELECT DISTINCT WEAPObjectType,ObjectCategoryName ,WEAPObjectTypeCV , WEAPAttributeName,AttributeCategoryName,WEAPAttributeNameCV
+--SELECT Distinct WEAPObjectType, WEAPObjectTypeCV,ObjectTypeCVx,ObjectCategoryName,WEAPAttributeName,AttributeNameCVx,WEAPAttributeNameCV,AttributeCategoryName
 
 From 
 
@@ -42,7 +42,7 @@ From
 ----------------------------------------------------------------------------------------------
 -- Get the WEAP data requirement of ObjectTypes and Attributes
 	
-SELECT DISTINCT  ObjectType AS WEAPObjectType,ObjectCategoryName,ObjectTypeCV AS WEAPObjectTypeCV ,AttributeName AS WEAPAttributeName,AttributeCategoryName,AttributeCategoryName,AttributeNameCV AS WEAPAttributeNameCV
+SELECT DISTINCT  ObjectType AS WEAPObjectType,ObjectCategoryName,ObjectTypeCV AS WEAPObjectTypeCV,AttributeName_Abstract AS WEAPAttributeName,AttributeCategoryName,AttributeCategoryName,AttributeNameCV AS WEAPAttributeNameCV
 FROM ResourceTypes
 
 Left JOIN "ObjectTypes" 
@@ -63,16 +63,22 @@ WHERE "ResourceTypeAcronym"='WEAP'
 -- Users can limit the search of additional attributes based on Attribute Category 
 -- They can excldue all the attributes that have a native category (or controlled too) of "Water Quality" or "cost" 	
 
+--exclude the dummy attributes which are defined as 'ObjectTypeInstances'
+AND WEAPAttributeName!='NULL'
+
+
+-- Comment out all this block between these two dashed lines if you want to see the full 
+-- list of additional attributes without filters
+-----------------------------------------------------------------------------------
 AND AttributeCategoryName!='Water Quality'
 AND AttributeCategoryName!='Cost'
 --AND ObjectCategoryName!='Supply and Resources'
+OR "ResourceTypeAcronym"='WEAP'  
 
+AND AttributeCategoryName is null 
+AND WEAPAttributeName!='NULL'
 
-
-OR "ResourceTypeAcronym"='WEAP'  AND AttributeCategoryName is null AND WEAPAttributeName!='ObjectTypeInstances'
-
-
-AND WEAPAttributeName!='ObjectTypeInstances'
+-----------------------------------------------------------------------------------
 
 )
 
@@ -86,7 +92,7 @@ LEFT OUTER Join
 --They have nodes or links within the specified boundary 
 -- the controlled ObjectTypes and Attributes match between WEAP and the other datasets
 	
-SELECT Distinct ObjectTypeCV,AttributeNameCV
+SELECT Distinct ObjectTypeCV as ObjectTypeCVx,AttributeNameCV as AttributeNameCVx
 
 FROM ResourceTypes
 
@@ -117,6 +123,9 @@ AND "Longitude_x"<='-110.82'
 AND "Latitude_y_x">='40.712'
 AND "Latitude_y"<='42.848') 
 
+--exclude the attributes that already exist in the Bear River from the WEAP model itself
+AND  MasterNetworkName!='Bear River Network'
+
 
 )
 --**************************************************
@@ -124,11 +133,11 @@ AND "Latitude_y"<='42.848')
 -- This is the join criteria: Both the controlled ObjectType and controlled Attribute in WEAP must match the same
 --controlled ObjectType and controlled Attribute in all available datasets within the specified boundary
 
-On WEAPObjectTypeCV=ObjectTypeCV
+On WEAPObjectTypeCV=ObjectTypeCVx
 AND 
-WEAPAttributeNameCV =AttributeNameCV
+WEAPAttributeNameCV =AttributeNameCVx
 
 -- the left outer join in SQLite still return the common matching data. This criteria below removes the matching results.
 -- full outer join which only returns the non-matching results is not supported in SQLite. So this condition below is a work around this limitation
 
-WHERE ObjectTypeCV is null AND AttributeNameCV is null
+WHERE ObjectTypeCVx is null AND AttributeNameCVx is null
