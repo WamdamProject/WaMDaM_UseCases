@@ -11,7 +11,7 @@ Time series data for a specific attribute
 WaM-DaM keeps track of the meanings of data values, their units, to what instance they apply too.... 
 
 Adel Abdallah
-Updated April 2, 2018
+Updated June 12, 2018
 
 */
 --DatasetAcronym,ScenarioName,ObjectType,AttributeName,AttributeNameCV,InstanceName,InstanceNameCV,SeasonName,SeasonOrder,SeasonNumericValue
@@ -54,7 +54,7 @@ WHERE
  InstanceNameCV='USGS 10046500 BEAR RIVER BL STEWART DAM NR MONTPELIER, ID'   
 
 AND AttributeNameCV='Flow'
-AND AttributeName ='Average Monthly Streamflow '
+AND AttributeName ='Average Monthly Streamflow'
 
 --AND AttributeName NOT IN ('Import/Export net inflow', 'Historic Diversion outflow')
 
