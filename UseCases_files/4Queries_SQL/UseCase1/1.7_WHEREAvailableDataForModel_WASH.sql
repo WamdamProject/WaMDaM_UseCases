@@ -36,11 +36,11 @@ Users can further search for more metadata and data about these instances.
 Then they can choose which ones to import to their model 
 
 Adel Abdallah 
-Last updated April 2, 2018
+Last updated June 12, 2018
 
 */
 -- This SELECT statement shows the list of WASH Objects and their Attributes that have one or many native terms available them that have available data in the datasets
-Select Distinct WASHObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WASHAttributeName,AttributeNameCV,AttributeName
+Select Distinct WASHObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WASHAttributeName,AttributeNameCV,AttributeName_Abstract
 
 From 
 
@@ -71,7 +71,7 @@ Inner Join
 --They have nodes or links within the specified boundary 
 -- the controlled ObjectTypes and Attributes match between WASH and the other datasets   
 
-SELECT Distinct ObjectTypeCV,ObjectType,ResourceTypeAcronym, AttributeNameCV,AttributeName
+SELECT Distinct ObjectTypeCV,ObjectType,ResourceTypeAcronym, AttributeNameCV,AttributeName,AttributeName_Abstract
 
 --SELECT Distinct ObjectTypeCV, AttributeNameCV
 --SELECT COUNT(Distinct ObjectTypeCV) as CountOfObjects,COUNT(Distinct AttributeNameCV) As CountOfAttributes
@@ -170,5 +170,4 @@ WHERE "ResourceTypeAcronym"='WASH'
 On WASHObjectTypeCV=ObjectTypeCV
 AND 
 WASHAttributeNameCV =AttributeNameCV
-
 
