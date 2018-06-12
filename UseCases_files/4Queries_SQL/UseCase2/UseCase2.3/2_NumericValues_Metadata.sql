@@ -13,7 +13,7 @@ users can import the data values to their model. WaM-DaM keeps track of the mean
 to what instance they apply too.... 
 
 Adel Abdallah
-Updated April 2, 2018
+Updated June 12, 2018
 
 */
 
