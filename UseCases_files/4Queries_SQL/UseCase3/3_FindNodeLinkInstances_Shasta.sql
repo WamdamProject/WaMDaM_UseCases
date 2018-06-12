@@ -23,11 +23,11 @@ The reason why is because the "where clause" is based on the start and end node 
 which join to the connections table, which only has instances related to links.
 
 Adel Abdalllah
-Updated Dec 5, 2017
+Updated June 12, 2018
 
 */
 
-Select DatasetAcronym,ScenarioName,
+Select ResourceTypeAcronym,ScenarioName,
 
 
 "Instances"."InstanceName" As LinkInstanceName, ObjectTypes.ObjectType AS LinkObjectType,ObjectTypes.ObjectTypeCV, 
@@ -38,10 +38,10 @@ ObjectTypeEndNodeInstance.ObjectType AS EndNodeObjectType
 
 
 
-FROM Datasets
+FROM ResourceTypes
 
 LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -138,4 +138,4 @@ AND (StartNodeInstance.InstanceNameCV='Shasta Reservoir' Or EndNodeInstance.Inst
 
 
 
-ORDER BY DatasetAcronym,MasterNetworkName,ScenarioName
+ORDER BY ResourceTypeAcronym,MasterNetworkName,ScenarioName
