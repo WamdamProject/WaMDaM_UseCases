@@ -89,11 +89,11 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 LEFT JOIN "SeasonalNumericValues"
 ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
-LEFT JOIN DescriptorValues
-ON DescriptorValues.ValuesMapperID=ValuesMapper.ValuesMapperID
+LEFT JOIN CategoricalValues
+ON CategoricalValues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
-LEFT JOIN CV_DescriptorValues
-ON CV_DescriptorValues.Name=DescriptorValues.DescriptorValueCV	
+LEFT JOIN CV_Categorical
+ON CV_Categorical.Name=CategoricalValues.CategoricalValueCV	
 
 
 -- Specifiy controlled Object Type, instance name, and an attribute of interest
@@ -105,5 +105,4 @@ AND InstanceNameCV='Hyrum Reservoir'
 AND AttributeNameCV IN ('Volume') 
 
 ORDER BY AttributeNameCV,ObjectType,ObjectTypeCV,InstanceName desc
-
 
