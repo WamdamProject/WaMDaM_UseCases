@@ -9,7 +9,7 @@ What is the total agriculture water use or demand in Cache Valley, Utah?
  Find node and link Instances within a boundary in space		
  ---First look for all the instances and their attributes, then query the actual values (present the result with the number of sites)		 		
  Adel Abdallah		
- Updated October 30, 2017		
+ Updated June 12, 2018		
  		
  */
  
@@ -66,7 +66,7 @@ AND "Instances"."Latitude_y"<='42.100')
 
 AND ObjectTypeCV='Demand site' 
 
-AND AttributeNameCV='Flow'
+AND AttributeNameCV In ('Flow', 'Demand')
 
 -- narrow the search to instances with the category of agriculture
 --AND InstanceCategory='Agriculture'
