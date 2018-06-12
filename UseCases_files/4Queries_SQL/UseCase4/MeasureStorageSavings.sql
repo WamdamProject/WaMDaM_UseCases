@@ -3,7 +3,7 @@
 6.MeasureStorageSavings.sql
 
 Adel Abdallah
-Jan 27, 2018
+June 12, 2018
 
 
 
@@ -28,16 +28,16 @@ diff=3556
 */
 
 
-SELECT DISTINCT "Mappings"."MappingID",DatasetAcronym,ScenarioName,ObjectType,AttributeName,AttributeNameCV,
+SELECT DISTINCT "Mappings"."MappingID",ResourceType,ScenarioName,ObjectType,AttributeName,AttributeNameCV,
 InstanceName,InstanceNameCV
 --SELECT ScenarioName,ScenarioMappingID
 
 
 
-FROM "Datasets"
+FROM "ResourceTypes"
 
 LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 LEFT JOIN  "Attributes"
 ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
@@ -57,6 +57,6 @@ ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
-WHERE DatasetAcronym='BearRiverWyoming' AND MasterNetworkName='Upper Bear River Network' AND ScenarioMappingID IS NOT NULL 
+WHERE ResourceTypeAcronym='BearRiverWyoming' AND MasterNetworkName='Upper Bear River Network' AND ScenarioMappingID IS NOT NULL 
 --and scenarioName='UDWR GenRes 2010'
 --and scenarioName='Bear Dry Year Model'
