@@ -20,11 +20,11 @@ The reason why is because the where clause is based on the start and end node in
 which join to the connections table, which only has instances related to links.
 
 Adel Abdallah
-Updated Jan 27, 2018
+Updated June 12, 2018
 
 */
 
-Select DatasetAcronym,ScenarioName,
+Select ResourceTypeAcronym,ScenarioName,
 
 
 "Instances"."InstanceName" As LinkInstanceName, ObjectTypes.ObjectType AS LinkObjectType,ObjectTypes.ObjectTypeCV, 
@@ -34,10 +34,10 @@ Select DatasetAcronym,ScenarioName,
 ObjectTypeEndNodeInstance.ObjectType AS EndNodeObjectType
 
 
-FROM Datasets
+FROM ResourceTypes
 
 LEFT JOIN "ObjectTypes" 
-ON "ObjectTypes"."DatasetID"="Datasets"."DatasetID"
+ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
 
 -- Join the Objects to get their attributes  
 LEFT JOIN  "Attributes"
@@ -134,8 +134,7 @@ AND AttributesEndNodeInstance.AttributeName='ObjectTypeInstances'
 
 AND (StartNodeInstance.InstanceNameCV = 'Bear River Migratory Bird Refuge' Or EndNodeInstance.InstanceNameCV ='Bear River Migratory Bird Refuge' )
 
-ORDER BY DatasetAcronym,MasterNetworkName,ScenarioName
-
+ORDER BY ResourceTypeAcronym,MasterNetworkName,ScenarioName
 
 
 
