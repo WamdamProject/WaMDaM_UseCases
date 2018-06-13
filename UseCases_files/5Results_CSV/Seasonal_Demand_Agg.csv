@@ -1,121 +1,121 @@
-ResourceTypeAcronym,InstanceName,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeName_Abstract,SeasonName,SeasonOrder,SeasonNumericValue
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Oct,1,221.176
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Nov,2,60.63749
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Dec,3,20.68512
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jan,4,16.92178
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Feb,5,10.42869
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Mar,6,3.948858
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Apr,7,33.71105
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,May,8,456.4773
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jun,9,608.9324
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jul,10,675.3607
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Aug,11,633.501
-WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Sep,12,470.9079
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Oct,1,208.23
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Nov,2,0
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Dec,3,0
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jan,4,0
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Feb,5,0
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Mar,6,0
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Apr,7,189.57
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,May,8,1194.38
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jun,9,2284.59
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jul,10,2636
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Aug,11,2384.45
-WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Sep,12,1173.18
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Oct,1,257.3597
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Nov,2,0
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Dec,3,0
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jan,4,0
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Feb,5,0
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Mar,6,0
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Apr,7,0
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,May,8,1698.8699
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jun,9,1973.315
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jul,10,1955.2147
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Aug,11,1508.83598
-WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Sep,12,985.71377
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Oct,1,47.8286
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Nov,2,0
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Dec,3,0
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jan,4,0
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Feb,5,0
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Mar,6,0
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Apr,7,32.2175
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,May,8,103.46803
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jun,9,129.95923
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jul,10,134.34387
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Aug,11,125.58399
-WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Sep,12,92.4494
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Oct,1,32.11266
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Nov,2,0
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Dec,3,0
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jan,4,0
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Feb,5,0
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Mar,6,0
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Apr,7,21.63119
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,May,8,69.46959
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jun,9,87.25608
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jul,10,90.1998
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Aug,11,84.3185
-WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Sep,12,62.07156
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Oct,1,485.76359
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Nov,2,0
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Dec,3,0
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jan,4,0
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Feb,5,0
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Mar,6,0
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Apr,7,0
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,May,8,736.02745
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jun,9,1247.74046
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jul,10,1839.06337
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Aug,11,1729.41071
-WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Sep,12,940.98499
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Oct,1,33.63
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Nov,2,0
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Dec,3,0
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jan,4,0
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Feb,5,0
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Mar,6,0
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Apr,7,3.916
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,May,8,114.7099
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jun,9,144.9385
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Jul,10,148.8
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Aug,11,139.5357
-WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,Sep,12,95.45597
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Oct,1,7.183
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Nov,2,0
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Dec,3,0
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jan,4,0
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Feb,5,0
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Mar,6,0
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Apr,7,4.838
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,May,8,15.539
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jun,9,19.518
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jul,10,20.176
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Aug,11,18.861
-WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Sep,12,13.884
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Oct,1,6.9637
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Nov,2,0
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Dec,3,0
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jan,4,0
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Feb,5,0
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Mar,6,0
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Apr,7,0
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,May,8,10.5459
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jun,9,17.8822
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jul,10,26.3504
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Aug,11,24.774
-WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Sep,12,13.4833
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Oct,1,6.9637
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Nov,2,0
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Dec,3,0
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jan,4,0
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Feb,5,0
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Mar,6,0
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Apr,7,0
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,May,8,10.5459
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jun,9,17.8822
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Jul,10,26.3504
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Aug,11,24.774
-WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,Sep,12,13.4833
+ResourceTypeAcronym,InstanceName,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeName_Abstract,UnitName,SeasonName,SeasonOrder,SeasonNumericValue
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Oct,1,221.176
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Nov,2,60.63749
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Dec,3,20.68512
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jan,4,16.92178
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Feb,5,10.42869
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Mar,6,3.948858
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Apr,7,33.71105
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,May,8,456.4773
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jun,9,608.9324
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jul,10,675.3607
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Aug,11,633.501
+WEAP,Bear River Canal Company,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Sep,12,470.9079
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Oct,1,208.23
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Nov,2,0
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Dec,3,0
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jan,4,0
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Feb,5,0
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Mar,6,0
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Apr,7,189.57
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,May,8,1194.38
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jun,9,2284.59
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jul,10,2636
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Aug,11,2384.45
+WEAP,Highline Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Sep,12,1173.18
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Oct,1,257.3597
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Nov,2,0
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Dec,3,0
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jan,4,0
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Feb,5,0
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Mar,6,0
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Apr,7,0
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,May,8,1698.8699
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jun,9,1973.315
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jul,10,1955.2147
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Aug,11,1508.83598
+WEAP,Hyrum Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Sep,12,985.71377
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Oct,1,47.8286
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Nov,2,0
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Dec,3,0
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jan,4,0
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Feb,5,0
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Mar,6,0
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Apr,7,32.2175
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,May,8,103.46803
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jun,9,129.95923
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jul,10,134.34387
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Aug,11,125.58399
+WEAP,Logan Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Sep,12,92.4494
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Oct,1,32.11266
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Nov,2,0
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Dec,3,0
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jan,4,0
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Feb,5,0
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Mar,6,0
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Apr,7,21.63119
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,May,8,69.46959
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jun,9,87.25608
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jul,10,90.1998
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Aug,11,84.3185
+WEAP,North Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Sep,12,62.07156
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Oct,1,485.76359
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Nov,2,0
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Dec,3,0
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jan,4,0
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Feb,5,0
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Mar,6,0
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Apr,7,0
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,May,8,736.02745
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jun,9,1247.74046
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jul,10,1839.06337
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Aug,11,1729.41071
+WEAP,Paradise Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Sep,12,940.98499
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Oct,1,33.63
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Nov,2,0
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Dec,3,0
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jan,4,0
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Feb,5,0
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Mar,6,0
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Apr,7,3.916
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,May,8,114.7099
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jun,9,144.9385
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Jul,10,148.8
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Aug,11,139.5357
+WEAP,West Cache Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Demand,AF,Sep,12,95.45597
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Oct,1,7.183
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Nov,2,0
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Dec,3,0
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jan,4,0
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Feb,5,0
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Mar,6,0
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Apr,7,4.838
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,May,8,15.539
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jun,9,19.518
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jul,10,20.176
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Aug,11,18.861
+WEAP,Cub River Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Sep,12,13.884
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Oct,1,6.9637
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Nov,2,0
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Dec,3,0
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jan,4,0
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Feb,5,0
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Mar,6,0
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Apr,7,0
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,May,8,10.5459
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jun,9,17.8822
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jul,10,26.3504
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Aug,11,24.774
+WEAP,Providence Irr,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Sep,12,13.4833
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Oct,1,6.9637
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Nov,2,0
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Dec,3,0
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jan,4,0
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Feb,5,0
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Mar,6,0
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Apr,7,0
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,May,8,10.5459
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jun,9,17.8822
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Jul,10,26.3504
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Aug,11,24.774
+WEAP,Wellsville Mendon Canal,USU WEAP Model 2017,Demand site,Demand,Monthly Variation,% share,Sep,12,13.4833
