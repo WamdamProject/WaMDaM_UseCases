@@ -10,18 +10,18 @@ Result:
 
 
 Adel Abdallah
-Updated May 17, 2018
+Updated June 13, 2018
 
 */
 
-SELECT  DISTINCT ResourceTypeAcronymPurpose,InstanceNamePurpose ,CategoricalvaluePurpose,ResourceTypeAcronymState,InstanceNameState,CategoricalvalueState
+SELECT  DISTINCT ResourceTypeAcronymPurpose,InstanceNamePurpose ,CategoricalvaluePurpose,ResourceTypeAcronymState,InstanceNameState,FreeTextValueState
 
 FROM
 
 (
 ----------------------
 
-SELECT ResourceTypeAcronym AS ResourceTypeAcronymState,InstanceName As InstanceNameState ,Categoricalvalue As CategoricalvalueState
+SELECT ResourceTypeAcronym AS ResourceTypeAcronymState,InstanceName As InstanceNameState ,FreeTextValue As FreeTextValueState
 
 
 FROM ResourceTypes
@@ -64,6 +64,10 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 LEFT JOIN "SeasonalNumericValues"
 ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
+
+LEFT JOIN FreeText
+ON FreeText.ValuesMapperID=ValuesMapper.ValuesMapperID
+
 LEFT JOIN Categoricalvalues
 ON Categoricalvalues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
@@ -78,7 +82,7 @@ AND Attributes.AttributeName='STATE'
 
 AND ResourceTypeAcronym='US Major Dams'
 
-AND Categoricalvalue='UT'
+AND FreeTextValue='UT'
 
 
 ---------------
@@ -128,6 +132,11 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 LEFT JOIN "SeasonalNumericValues"
 ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
+
+LEFT JOIN FreeText
+ON FreeText.ValuesMapperID=ValuesMapper.ValuesMapperID
+
+
 LEFT JOIN Categoricalvalues
 ON Categoricalvalues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
@@ -150,7 +159,6 @@ InstanceNameState=InstanceNamePurpose
 
 
 --ORDER BY AttributeNameCV,ObjectType,ObjectTypeCV,InstanceName desc
-
 
 
 
