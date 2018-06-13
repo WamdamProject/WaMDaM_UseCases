@@ -10,13 +10,14 @@ Result:
 
 
 Adel Abdallah
-Updated May 21, 2018
+Updated June 13, 2018
 
 */
 
 ----------------------
 
-SELECT ResourceTypeAcronym AS ResourceTypeAcronymmState,InstanceName As InstanceNameState ,Categoricalvalue As CategoricalValueState
+SELECT ResourceTypeAcronym AS ResourceTypeAcronymmState,InstanceName As InstanceNameState,FreeTextValue as StateFreeTextValue
+--,Categoricalvalue As CategoricalValueState
 
 FROM ResourceTypes
 
@@ -58,6 +59,9 @@ ON "TimeSeriesValues"."TimeSeriesID"="TimeSeries"."TimeSeriesID"
 LEFT JOIN "SeasonalNumericValues"
 ON "SeasonalNumericValues"."ValuesMapperID" = "ValuesMapper"."ValuesMapperID"
 
+LEFT JOIN FreeText
+ON FreeText.ValuesMapperID=ValuesMapper.ValuesMapperID
+
 LEFT JOIN CategoricalValues
 ON CategoricalValues.ValuesMapperID=ValuesMapper.ValuesMapperID
 
@@ -72,6 +76,6 @@ AND Attributes.AttributeName='State'
 
 AND ResourceTypeAcronym='NHAAP'
 
-AND Categoricalvalue='UT'
+AND FreeTextValue='UT'
 
 --AND Categoricalvalue='CA'
