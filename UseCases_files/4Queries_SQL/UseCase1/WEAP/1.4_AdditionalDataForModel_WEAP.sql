@@ -70,8 +70,12 @@ AND WEAPAttributeName!='NULL'
 -- Comment out all this block between these two dashed lines if you want to see the full 
 -- list of additional attributes without filters
 -----------------------------------------------------------------------------------
-AND AttributeCategoryName!='Water Quality'
-AND AttributeCategoryName!='Cost'
+--AND AttributeCategoryName!='Water Quality'
+--AND AttributeCategoryName!='Cost'
+
+-----------------------------------------------------------------------------------
+
+	
 --AND ObjectCategoryName!='Supply and Resources'
 OR "ResourceTypeAcronym"='WEAP'  
 
