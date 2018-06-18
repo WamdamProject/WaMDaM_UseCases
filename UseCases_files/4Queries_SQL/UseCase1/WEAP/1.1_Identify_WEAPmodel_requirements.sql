@@ -15,7 +15,7 @@ Last updated June 9, 2018
 */
 
 SELECT DISTINCT  ObjectType,ObjectCategoryName,ObjectTypeCV ,AttributeName_Abstract, AttributeCategoryName,AttributeNameCV 
-FROM ResourceTypes
+FROM "ResourceTypes"
 
 LEFT JOIN "ObjectTypes" 
 ON "ObjectTypes"."ResourceTypeID"="ResourceTypes"."ResourceTypeID"
