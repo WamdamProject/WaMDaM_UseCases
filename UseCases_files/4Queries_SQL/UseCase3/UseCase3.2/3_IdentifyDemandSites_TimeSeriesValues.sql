@@ -16,12 +16,12 @@ Adel Abdallah
 Updated June 12, 2018
 */
 
-SELECT ResourceTypeAcronym,ScenarioName,InstanceName,AttributeName,AttributeNameCV,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+SELECT ResourceTypeAcronym,ScenarioName,InstanceName,AttributeName,AttributeName_Abstract,AttributeNameCV,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
 strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,CountValues
 
          FROM (
 
-         SELECT ResourceTypeAcronym,InstanceName,ScenarioName,AttributeName, AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+         SELECT ResourceTypeAcronym,InstanceName,ScenarioName,AttributeName, AttributeName_Abstract,AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
          YearType,count(DISTINCT InstanceName) As NumDemandSites,count(DataValue) As CountValues,
 
          Case 
@@ -117,4 +117,4 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 )
 
 -- exclude the years that have less than 12 months (which will have a null value here because of the case above)
---WHERE CumulativeAnnual is not null
+WHERE CumulativeAnnual is not null
