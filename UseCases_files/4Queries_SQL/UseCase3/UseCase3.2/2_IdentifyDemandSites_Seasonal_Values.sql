@@ -13,7 +13,7 @@ Updated June 12, 2018
 --First look for all the instances and their attributes, then query the actual values (present the result with the number of sites)
 
 --DatasetAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,NumDemandSites,TotalAnnualNumericCacheCanals, TotalAnnualUseCacheCanals
-Select DISTINCT ResourceTypeAcronym,ScenarioName,InstanceName,ObjectTypeCV,AttributeName_Abstract,AttributeNameCV,UnitName,InstanceName,SeasonOrder,SeasonNumericValue
+Select DISTINCT ResourceTypeAcronym,ScenarioName,ObjectTypeCV,AttributeName_Abstract,AttributeNameCV,UnitName,InstanceName,SeasonOrder,SeasonNumericValue
 --DateTimeStamp,Value
 --,Longitude_x,Latitude_y
 
