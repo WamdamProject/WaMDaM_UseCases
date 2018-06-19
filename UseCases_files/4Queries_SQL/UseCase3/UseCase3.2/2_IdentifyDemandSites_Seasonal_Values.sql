@@ -83,4 +83,4 @@ AND InstanceCategory='Agriculture'
 AND AttributeDataTypeCV IN ('SeasonalNumericValues')
 
 
---GROUP  BY ResourceTypeAcronym,ObjectType,MasterNetworkName,ScenarioName
+GROUP  BY ScenarioName, InstanceName,SeasonOrder
