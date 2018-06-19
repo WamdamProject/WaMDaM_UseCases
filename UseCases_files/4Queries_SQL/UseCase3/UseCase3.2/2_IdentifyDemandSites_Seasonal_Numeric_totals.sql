@@ -1,5 +1,5 @@
 /*
-3.2dentifyDemandSites_SeasonalValues.sql
+2_IdentifyDemandSites_Seasonal_Numeric_totals.sql
 
 Use case 3: identify and compare demand data for a site as reported in many sources. 
 What is the total agriculture water use or demand in Cache Valley, Utah?
