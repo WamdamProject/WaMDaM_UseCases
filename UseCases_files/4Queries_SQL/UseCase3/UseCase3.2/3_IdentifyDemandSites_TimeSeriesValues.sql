@@ -16,12 +16,12 @@ Adel Abdallah
 Updated June 12, 2018
 */
 
-SELECT ResourceTypeAcronym,ScenarioName,AttributeName,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+SELECT ResourceTypeAcronym,ScenarioName,InstanceName,AttributeName,AttributeNameCV,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
 strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,CountValues
 
          FROM (
 
-         SELECT ResourceTypeAcronym,ScenarioName,AttributeName, AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+         SELECT ResourceTypeAcronym,InstanceName,ScenarioName,AttributeName, AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
          YearType,count(DISTINCT InstanceName) As NumDemandSites,count(DataValue) As CountValues,
 
          Case 
@@ -96,7 +96,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          AND ObjectTypeCV='Demand site' 
 
-         AND AttributeNameCV in ('Flow','Delivered flow', 'Demand')
+         AND AttributeNameCV in ('Flow','Delivered flow', 'Demand','Depleted flow')
 
          -- narrow the search to instances with the category of agriculture
 
@@ -104,7 +104,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          --AND ScenarioName='UDWR GenRes 2010'
 
-
+	  --AND AttributeName_Abstract="Monthly Demand"
 
          AND (AttributeCategoryName ISNULL or  AttributeCategoryName!= 'Groundwater')
 
@@ -117,4 +117,4 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 )
 
 -- exclude the years that have less than 12 months (which will have a null value here because of the case above)
-WHERE CumulativeAnnual is not null
+--WHERE CumulativeAnnual is not null
