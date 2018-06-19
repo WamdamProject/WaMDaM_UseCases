@@ -16,12 +16,12 @@ Adel Abdallah
 Updated June 12, 2018
 */
 
-SELECT ResourceTypeAcronym,ScenarioName,InstanceName,AttributeName,AttributeName_Abstract,AttributeNameCV,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+SELECT ResourceTypeAcronym,ScenarioName,AttributeName,AttributeName_Abstract,AttributeNameCV,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
 strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,CountValues
 
          FROM (
 
-         SELECT ResourceTypeAcronym,InstanceName,ScenarioName,AttributeName, AttributeName_Abstract,AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
+         SELECT ResourceTypeAcronym,ScenarioName,AttributeName, AttributeName_Abstract,AttributeNameCV,AttributeCategoryName,InstanceName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
          YearType,count(DISTINCT InstanceName) As NumDemandSites,count(DataValue) As CountValues,
 
          Case 
@@ -92,7 +92,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          AND ("Instances"."Longitude_x">='-112.3' 
          AND "Instances"."Longitude_x"<='-111.4'
          AND "Instances"."Latitude_y">='41.3'
-         AND "Instances"."Latitude_y"<='42.100') 
+         AND "Instances"."Latitude_y"<='41.83') 
 
          AND ObjectTypeCV='Demand site' 
 
@@ -100,7 +100,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          -- narrow the search to instances with the category of agriculture
 
-         --AND InstanceCategory='Agriculture'
+         AND InstanceCategory='Agriculture'
 
          --AND ScenarioName='UDWR GenRes 2010'
 
