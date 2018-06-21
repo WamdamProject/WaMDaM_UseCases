@@ -13,8 +13,8 @@ Updated June 21, 2018
 --First look for all the instances and their attributes, then query the actual values (present the result with the number of sites)
 
 --DatasetAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,NumDemandSites,TotalAnnualNumericCacheCanals, TotalAnnualUseCacheCanals
-Select DISTINCT ResourceTypeAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV 
-,count(DISTINCT InstanceName) As NumDemandSites,sum(NumericValue) AS TotalNumeric,sum(SeasonNumericValue) As TotalAnnualUseCacheCanals
+Select DISTINCT ResourceTypeAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,InstanceName 
+--,count(DISTINCT InstanceName) As NumDemandSites,sum(NumericValue) AS TotalNumeric,sum(SeasonNumericValue) As TotalAnnualUseCacheCanals
 --DateTimeStamp,Value
 --,Longitude_x,Latitude_y
 
@@ -68,20 +68,21 @@ WHERE
 
 -- specify the boundary of coordinates of the search domain in space 
 -- this Boundary Cache Valley, Utah
-("Instances"."Longitude_x">='-112.3' 
-AND "Instances"."Longitude_x"<='-111.4'
-AND "Instances"."Latitude_y">='41.3'
-AND "Instances"."Latitude_y"<='42.100') 
+("Instances"."Longitude_x">='-112.0' 
+AND "Instances"."Longitude_x"<='-111.6'
+AND "Instances"."Latitude_y">='41.5'
+AND "Instances"."Latitude_y"<='41.8') 
 
 AND ObjectTypeCV='Demand site' 
 
 AND AttributeNameCV='Demand'
 
 -- narrow the search to instances with the category of agriculture
+
 AND InstanceCategory='Agriculture'
 
 
 AND AttributeDataTypeCV IN ('SeasonalNumericValues' , 'NumericValues')
 
 
-GROUP  BY ResourceTypeAcronym,ObjectType,MasterNetworkName,ScenarioName,AttributeDataTypeCV
+--GROUP  BY ResourceTypeAcronym,ObjectType,MasterNetworkName,ScenarioName,AttributeDataTypeCV
