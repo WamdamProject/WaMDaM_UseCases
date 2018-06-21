@@ -13,7 +13,7 @@ If the time series is a Water Year, then convert it to a Calendar year
 --Users need to check on the unit name to perform a conversion like from cfs to af/month
 
 Adel Abdallah
-Updated June 12, 2018
+Updated June 21, 2018
 */
 
 SELECT ResourceTypeAcronym,ScenarioName,AttributeName,AttributeName_Abstract,AttributeNameCV,AttributeCategoryName, AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
@@ -89,10 +89,10 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          -- specify the boundary of coordinates of the search domain in space 
          -- this Boundary Cache Valley, Utah
-         AND ("Instances"."Longitude_x">='-112.3' 
-         AND "Instances"."Longitude_x"<='-111.4'
-         AND "Instances"."Latitude_y">='41.3'
-         AND "Instances"."Latitude_y"<='41.83') 
+		AND ("Instances"."Longitude_x">='-112.0' 
+		AND "Instances"."Longitude_x"<='-111.6'
+		AND "Instances"."Latitude_y">='41.5'
+		AND "Instances"."Latitude_y"<='41.8') 
 
          AND ObjectTypeCV='Demand site' 
 
@@ -108,9 +108,9 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          AND (AttributeCategoryName ISNULL or  AttributeCategoryName!= 'Groundwater')
 
+	  	  
          GROUP BY ResourceTypeAcronym,AttributeName,ScenarioName,AggregationStatisticCV,IntervalTimeUnitCV,UnitNameCV,UnitName,
          YearType,strftime('%Y', WaterYearDate)
-
 
 
          --close the second Select statement         
@@ -118,3 +118,4 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
 -- exclude the years that have less than 12 months (which will have a null value here because of the case above)
 WHERE CumulativeAnnual is not null
+
