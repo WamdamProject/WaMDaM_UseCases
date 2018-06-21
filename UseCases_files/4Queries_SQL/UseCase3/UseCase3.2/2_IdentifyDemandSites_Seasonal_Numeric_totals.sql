@@ -68,10 +68,10 @@ WHERE
 
 -- specify the boundary of coordinates of the search domain in space 
 -- this Boundary Cache Valley, Utah
-("Instances"."Longitude_x">='-112.0' 
+("Instances"."Longitude_x">='-112.1' 
 AND "Instances"."Longitude_x"<='-111.6'
 AND "Instances"."Latitude_y">='41.5'
-AND "Instances"."Latitude_y"<='41.8') 
+AND "Instances"."Latitude_y"<='41.91') 
 
 AND ObjectTypeCV='Demand site' 
 
