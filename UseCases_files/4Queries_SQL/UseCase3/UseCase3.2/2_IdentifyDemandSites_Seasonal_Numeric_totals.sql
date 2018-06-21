@@ -8,12 +8,13 @@ What is the total agriculture water use or demand in Cache Valley, Utah?
 
 Find node and link Instances within a boundary in space
 Adel Abdallah
-Updated June 12, 2018
+Updated June 21, 2018
 */
 --First look for all the instances and their attributes, then query the actual values (present the result with the number of sites)
 
 --DatasetAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,NumDemandSites,TotalAnnualNumericCacheCanals, TotalAnnualUseCacheCanals
-Select DISTINCT ResourceTypeAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV,count(DISTINCT InstanceName) As NumDemandSites,sum(NumericValue) AS TotalNumeric,sum(SeasonNumericValue) As TotalAnnualUseCacheCanals
+Select DISTINCT ResourceTypeAcronym,ScenarioName,ObjectTypeCV,AttributeNameCV,AttributeDataTypeCV 
+,count(DISTINCT InstanceName) As NumDemandSites,sum(NumericValue) AS TotalNumeric,sum(SeasonNumericValue) As TotalAnnualUseCacheCanals
 --DateTimeStamp,Value
 --,Longitude_x,Latitude_y
 
@@ -83,4 +84,4 @@ AND InstanceCategory='Agriculture'
 AND AttributeDataTypeCV IN ('SeasonalNumericValues' , 'NumericValues')
 
 
-GROUP  BY ResourceTypeAcronym,ObjectType,MasterNetworkName,ScenarioName
+GROUP  BY ResourceTypeAcronym,ObjectType,MasterNetworkName,ScenarioName,AttributeDataTypeCV
