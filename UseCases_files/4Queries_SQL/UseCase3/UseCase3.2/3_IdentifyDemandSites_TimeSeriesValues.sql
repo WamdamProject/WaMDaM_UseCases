@@ -117,5 +117,5 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 )
 
 -- exclude the years that have less than 12 months (which will have a null value here because of the case above)
-WHERE CumulativeAnnual is not null AND WaterYear >'2005'
+WHERE CumulativeAnnual is not null AND WaterYear >'2004'
 
