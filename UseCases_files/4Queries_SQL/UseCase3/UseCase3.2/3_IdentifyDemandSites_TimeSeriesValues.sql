@@ -103,7 +103,6 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
          AND InstanceCategory='Agriculture'
 
-         --AND ScenarioName='UDWR GenRes 2010'
 
 	  --AND AttributeName_Abstract="Monthly Demand"
 
@@ -118,5 +117,5 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 )
 
 -- exclude the years that have less than 12 months (which will have a null value here because of the case above)
-WHERE CumulativeAnnual is not null
+WHERE CumulativeAnnual is not null AND WaterYear >'2005'
 
