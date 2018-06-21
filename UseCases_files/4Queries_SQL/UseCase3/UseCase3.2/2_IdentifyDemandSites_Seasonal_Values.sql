@@ -8,7 +8,7 @@ What is the total agriculture water use or demand in Cache Valley, Utah?
 
 Find node and link Instances within a boundary in space
 Adel Abdallah
-Updated June 19, 2018
+Updated June 21, 2018
 */
 --First look for all the instances and their attributes, then query the actual values (present the result with the number of sites)
 
@@ -67,10 +67,10 @@ WHERE
 
 -- specify the boundary of coordinates of the search domain in space 
 -- this Boundary Cache Valley, Utah
-("Instances"."Longitude_x">='-112.3' 
-AND "Instances"."Longitude_x"<='-111.4'
-AND "Instances"."Latitude_y">='41.3'
-AND "Instances"."Latitude_y"<='42.100') 
+("Instances"."Longitude_x">='-112.1' 
+AND "Instances"."Longitude_x"<='-111.6'
+AND "Instances"."Latitude_y">='41.5'
+AND "Instances"."Latitude_y"<='41.91') 
 
 AND ObjectTypeCV='Demand site' 
 
