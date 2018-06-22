@@ -90,7 +90,7 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          -- specify the boundary of coordinates of the search domain in space 
          -- this Boundary Cache Valley, Utah
 	
-	AND ("Instances"."Longitude_x">='-112.1' 
+	AND ("Instances"."Longitude_x">='-112.0' 
 	AND "Instances"."Longitude_x"<='-111.6'
 	AND "Instances"."Latitude_y">='41.5'
 	AND "Instances"."Latitude_y"<='41.91') 
