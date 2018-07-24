@@ -26,7 +26,7 @@ The query is generic to other models (if they are already defined in WaMDaM): ju
 --WHERE "DatasetAcronym"=’WASH’
 
 Adel Abdallah 
-June 12, 2018
+July 24, 2018
 
 */
 -- Show the join results for the native WEAP Object Types and Attributes
@@ -120,7 +120,7 @@ ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
-
+WHERE
 ("Longitude_x">='-111.182' 
 AND "Longitude_x"<='-110.658'
 AND "Latitude_y_x">='40.787'
