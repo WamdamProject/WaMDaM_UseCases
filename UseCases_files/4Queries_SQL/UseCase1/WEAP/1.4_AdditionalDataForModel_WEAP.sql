@@ -121,11 +121,10 @@ ON "Scenarios"."ScenarioID"="ScenarioMappings"."ScenarioID"
 LEFT JOIN "MasterNetworks" 
 ON "MasterNetworks"."MasterNetworkID"="Scenarios"."MasterNetworkID"
 
-WHERE
-("Longitude_x">='-111.648' 
-AND "Longitude_x"<='-110.82'
-AND "Latitude_y_x">='40.712'
-AND "Latitude_y"<='42.848') 
+("Longitude_x">='-111.182' 
+AND "Longitude_x"<='-110.658'
+AND "Latitude_y_x">='40.787'
+AND "Latitude_y"<='42.538') 
 
 --exclude the attributes that already exist in the Bear River from the WEAP model itself
 AND  MasterNetworkName!='Bear River Network'
