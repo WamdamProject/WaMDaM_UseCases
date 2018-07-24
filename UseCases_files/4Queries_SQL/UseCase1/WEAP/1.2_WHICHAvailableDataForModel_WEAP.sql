@@ -107,10 +107,10 @@ WHERE AttributeNameCV is not null
   
 and
 -- limit the search to within the specified boundaries
-("Longitude_x">='-111.478' 
-AND "Longitude_x"<='-110.909'
-AND "Latitude_y_x">='40.682'
-AND "Latitude_y"<='42.566') 
+("Longitude_x">='-111.182' 
+AND "Longitude_x"<='-110.658'
+AND "Latitude_y_x">='40.787'
+AND "Latitude_y"<='42.538') 
 
 --
 AND (ObjectTypeCV IN 
