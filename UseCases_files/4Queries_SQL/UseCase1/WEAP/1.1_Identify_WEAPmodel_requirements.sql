@@ -10,7 +10,7 @@ datasets in WaMDaM and identify additional needed data not available in WaMDaM d
 
 
 Adel Abdallah 
-Last updated June 9, 2018
+Last updated July 24, 2018
 
 */
 
@@ -35,3 +35,5 @@ WHERE "ResourceTypeAcronym"='WEAP'
 
 --exclude the dummy attributes that are just used to connect Object Types with their Instances. 
 AND AttributeName!='ObjectTypeInstances' 
+
+AND (AttributeCategoryName not in ('Water Quality','Cost') or  AttributeCategoryName is NULL and  ObjectType!='Catchment')
