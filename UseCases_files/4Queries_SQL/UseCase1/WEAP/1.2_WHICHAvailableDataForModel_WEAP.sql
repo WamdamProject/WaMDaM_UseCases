@@ -62,6 +62,7 @@ ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
 WHERE "ResourceTypeAcronym"='WEAP' 
 --WHERE "ResourceTypeAcronym"='WASH' 
+AND WEAPAttributeName  NOT IN ('Volume-Curve','Elevation-Curve')
 
 )
 ----------------------------------------------------------------------------------------------
@@ -156,8 +157,6 @@ WHERE "ResourceTypeAcronym"='WEAP'
 
 -- exclude the available data from the model itself  
 AND MasterNetworkName!='Bear River Network'
-
-
 --WHERE "ResourceTypeAcronym"='WASH'
 
 ))
