@@ -60,6 +60,7 @@ ON "Attributes"."ObjectTypeID"="ObjectTypes"."ObjectTypeID"
 
 WHERE "ResourceTypeAcronym"='WEAP' 
 --WHERE "ResourceTypeAcronym"='WASH' 
+AND WEAPAttributeName  NOT IN ('Volume-Curve','Elevation-Curve')
 
 )
 ----------------------------------------------------------------------------------------------
