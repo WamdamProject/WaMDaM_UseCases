@@ -40,7 +40,7 @@ Last updated May 28, 2018
 
 */
 -- This SELECT statement shows the list of WEAP Objects and their Attributes that have one or many native terms available them that have available data in the datasets
-Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WEAPAttributeName,AttributeNameCV,AttributeName_Abstract,InstanceName
+Select Distinct WEAPObjectType ,ResourceTypeAcronym,InstanceName
 --,InstanceNameCV
 
 From 
@@ -174,4 +174,3 @@ and ResourceTypeAcronym!='WEAP'
 On WEAPObjectTypeCV=ObjectTypeCV
 AND 
 WEAPAttributeNameCV =AttributeNameCV
-
