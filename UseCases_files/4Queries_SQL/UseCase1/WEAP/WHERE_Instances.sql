@@ -1,5 +1,8 @@
 /*
---1.112WHEREAvailableDataForModel_WEAP.sql
+
+Query all the instances that have data for WEAP in the upper basin
+
+Update the description below. its for another similar use case. 
 
 This query identifies the available ObjectTypes and Attributes that the loaded datasets inside wamdam 
 meet the data requirement of a model (e.g., WEAP) within a specified geospatial boundary 
@@ -36,7 +39,7 @@ Users can further search for more metadata and data about these instances.
 Then they can choose which ones to import to their model 
 
 Adel Abdallah 
-Last updated May 28, 2018
+Last updated July 30, 2018
 
 */
 -- This SELECT statement shows the list of WEAP Objects and their Attributes that have one or many native terms available them that have available data in the datasets
