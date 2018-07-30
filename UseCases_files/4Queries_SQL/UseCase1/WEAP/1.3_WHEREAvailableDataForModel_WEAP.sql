@@ -1,5 +1,5 @@
 /*
---1.112WHEREAvailableDataForModel_WEAP.sql
+--1.3_WHEREAvailableDataForModel_WEAP.sql
 
 This query identifies the available ObjectTypes and Attributes that the loaded datasets inside wamdam 
 meet the data requirement of a model (e.g., WEAP) within a specified geospatial boundary 
@@ -36,11 +36,11 @@ Users can further search for more metadata and data about these instances.
 Then they can choose which ones to import to their model 
 
 Adel Abdallah 
-Last updated May 28, 2018
+Last updated July 30, 2018
 
 */
 -- This SELECT statement shows the list of WEAP Objects and their Attributes that have one or many native terms available them that have available data in the datasets
-Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType,ResourceTypeAcronym, WEAPAttributeName,AttributeNameCV
+Select Distinct WEAPObjectType ,ObjectTypeCV,ObjectType as SourceObjectType,ResourceTypeAcronym, WEAPAttributeName,AttributeNameCV,AttributeName as SourceAttributeName,InstanceName as SourceInstanceName
 --,InstanceNameCV
 
 From 
@@ -73,7 +73,7 @@ Inner Join
 --They have nodes or links within the specified boundary 
 -- the controlled ObjectTypes and Attributes match between WEAP and the other datasets   
 
-SELECT Distinct ObjectTypeCV,ObjectType,ResourceTypeAcronym, AttributeNameCV,AttributeName_Abstract,InstanceNameCV
+SELECT Distinct ObjectTypeCV,ObjectType,ResourceTypeAcronym, AttributeNameCV,AttributeName_Abstract,AttributeName,InstanceNameCV,InstanceName
 
 --SELECT Distinct ObjectTypeCV, AttributeNameCV
 --SELECT COUNT(Distinct ObjectTypeCV) as CountOfObjects,COUNT(Distinct AttributeNameCV) As CountOfAttributes
