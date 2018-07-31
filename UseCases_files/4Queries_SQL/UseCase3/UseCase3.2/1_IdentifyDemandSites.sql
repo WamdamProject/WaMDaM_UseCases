@@ -14,7 +14,7 @@ What is the total agriculture water use or demand in Cache Valley, Utah?
  */
  
 Select DISTINCT ResourceTypeAcronym,MasterNetworkName,ScenarioName,ObjectType,ObjectTypeCV,ObjectTypologyCV, AttributeDataTypeCV
-,AttributeName,AttributeNameCV,InstanceName,InstanceCategory,InstanceNameCV
+,AttributeName,AttributeName_Abstract,AttributeNameCV,InstanceName,InstanceCategory,InstanceNameCV
 ,Sourcename, Methodname
 
 --,Longitude_x,Latitude_y
@@ -59,17 +59,25 @@ WHERE
 
 -- specify the boundary of coordinates of the search domain in space 
 -- this Boundary Cache Valley, Utah
-("Instances"."Longitude_x">='-112.3' 
+("Instances"."Longitude_x">='-112.022' 
 AND "Instances"."Longitude_x"<='-111.4'
 AND "Instances"."Latitude_y">='41.3'
-AND "Instances"."Latitude_y"<='42.100') 
+AND "Instances"."Latitude_y"<='41.95') 
 
 AND ObjectTypeCV='Demand site' 
 
-AND AttributeNameCV In ('Flow', 'Demand')
+--AND AttributeNameCV In ('Flow', 'Demand')
 
 -- narrow the search to instances with the category of agriculture
 --AND InstanceCategory='Agriculture'
+
+AND ResourceTypeAcronym='WEAP' 
+
+AND ScenarioName='USU WEAP Model 2017'
+
+AND InstanceCategory='Agriculture'
+
+AND AttributeName_Abstract IN ('Annual Water Use Rate','Monthly Demand')
 
 
 ORDER BY AttributeDataTypeCV ,MasterNetworkName,ScenarioName,InstanceName DESC
