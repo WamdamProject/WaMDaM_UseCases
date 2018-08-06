@@ -1,0 +1,7 @@
+Date, Time, Scenario, Year, TimeStep, Allocation Order, Allocation Order Iteration, Type, Reduction Fraction, MinCoverage, ObjID, ObjName, Amount Reduced[CFS], Amount Reduced[m^3], Amount Reduced[AF]
+07/31/2018, 17:34:00, UpdateCacheDemand, 1979, September, 22, 7, CovCon, 0.01, 0, 467, "Reservoir: Devils Creek, Devils Creek", 0, 0, 0
+08/01/2018, 9:32:30, Reference, 1975, May, 22, 2, CovCon, 0.01, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/01/2018, 9:33:02, Reference, 1996, May, 22, 2, CovCon, 0.01, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/01/2018, 9:33:16, Reference, 2005, September, 22, 2, CovCon, 0.08, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/01/2018, 9:33:31, UpdateBearHeadFlowDry, 1975, May, 22, 2, CovCon, 0.01, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/01/2018, 9:34:04, UpdateBearHeadFlowDry, 1996, May, 22, 2, CovCon, 0.01, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0

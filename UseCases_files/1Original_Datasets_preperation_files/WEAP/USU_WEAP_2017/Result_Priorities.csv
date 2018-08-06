@@ -1,0 +1,53 @@
+Name, Type, River, Source, Destination, Demand Priority, Supply Preference, Allocation Order
+Porcupine Reservoir, Reservoir, East Fort Little Bear River, , , 99, , 23
+Hyrum Reservoir, Reservoir, Little Bear River, , , 10, , 5
+Cutler Reservoir, Reservoir, Lower Bear, , , 20, , 13
+Transmission Link from Withdrawal Node 1 to Bird Refuge, Transmission Link, Lower Bear, Withdrawal Node 1, Bird Refuge, 99, 1, 23
+Oneida Narrows, Reservoir, Lower Bear, , , 10, , 5
+Transmission Link from Withdrawal Node 4 to Wasatch Front Project, Transmission Link, Lower Bear, Withdrawal Node 4, Wasatch Front Project, 99, 1, 23
+Mainstem, Reservoir, Lower Bear, , , 20, , 13
+Transmission Link from Cache Valley Groundwater to Logan Potable, Transmission Link, , Cache Valley Groundwater, Logan Potable, 19, 69, 11
+Transmission Link from Withdrawal Node 3 to South Cache Potable, Transmission Link, Blacksmith Fork, Withdrawal Node 3, South Cache Potable, 19, 2, 11
+Transmission Link from Hyrum Reservoir to South Cache Potable, Transmission Link, Little Bear River, Hyrum Reservoir, South Cache Potable, 19, 1, 10
+Transmission Link from Box Elder GW Imports to Box Elder County MandI, Transmission Link, , Box Elder GW Imports, Box Elder County MandI, 99, 1, 23
+Transmission Link from Mainstem to Box Elder County MandI, Transmission Link, Lower Bear, Mainstem, Box Elder County MandI, 99, 1, 23
+Transmission Link from Mainstem to Wasatch Front Project, Transmission Link, Lower Bear, Mainstem, Wasatch Front Project, 99, 1, 23
+Transmission Link from Withdrawal Node 5 to Logan Potable, Transmission Link, Lower Bear, Withdrawal Node 5, Logan Potable, 19, 99, 12
+Transmission Link from Withdrawal Node 7 to Box Elder County MandI, Transmission Link, Lower Bear, Withdrawal Node 7, Box Elder County MandI, 99, 1, 23
+Transmission Link from Withdrawal Node 2 to West Cache Irr, Transmission Link, Lower Bear, Withdrawal Node 2, West Cache Irr, 35, 1, 19
+Transmission Link from Withdrawal Node 4 to Bear River Canal Company, Transmission Link, Lower Bear, Withdrawal Node 4, Bear River Canal Company, 32, 1, 18
+Bear Lake, Reservoir, Rainbow Canal and Outlet, , , 3, , 3
+Alexander, Reservoir, Lower Bear, , , 5, , 4
+Grace Dam, Reservoir, Lower Bear, , , 99, , 23
+Daniels, Reservoir, Malad River, , , 99, , 23
+Devils Creek, Reservoir, Devils Creek, , , 99, , 23
+Transmission Link from Withdrawal Node 10 to Last Chance Canal Co, Transmission Link, Lower Bear, Withdrawal Node 10, Last Chance Canal Co, 36, 1, 21
+Transmission Link from Hyrum Reservoir to Wellsville East Field Canal, Transmission Link, Little Bear River, Hyrum Reservoir, Wellsville East Field Canal, 15, 1, 6
+Transmission Link from Withdrawal Node 11 to Paradise Canal, Transmission Link, East Fort Little Bear River, Withdrawal Node 11, Paradise Canal, 15, 1, 6
+Transmission Link from Withdrawal Node 14 to Logan Irr, Transmission Link, Logan River, Withdrawal Node 14, Logan Irr, 15, 1, 6
+Transmission Link from Cache Valley Groundwater to North Cache Irr, Transmission Link, , Cache Valley Groundwater, North Cache Irr, 15, 1, 6
+Transmission Link from Withdrawal Node 15 to Cub River Irr, Transmission Link, Cub River, Withdrawal Node 15, Cub River Irr, 15, 1, 6
+Transmission Link from Withdrawal Node 16 to Harris Irr, Transmission Link, Lower Bear, Withdrawal Node 16, Harris Irr, 29, 1, 16
+Transmission Link from Withdrawal Node 18 to Dingle Irr, Transmission Link, Central Bear, Withdrawal Node 18, Dingle Irr, 24, 1, 14
+Transmission Link from Withdrawal Node 19 to Preston Irr, Transmission Link, Lower Bear, Withdrawal Node 19, Preston Irr, 28, 1, 15
+Transmission Link from Hyrum Reservoir to Wellsville Mendon Canal, Transmission Link, Little Bear River, Hyrum Reservoir, Wellsville Mendon Canal, 18, 1, 9
+Transmission Link from Hyrum Canal Withdrawal to Hyrum Canal, Transmission Link, South Fork Little Bear River, Hyrum Canal Withdrawal, Hyrum Canal, 24, 1, 14
+Transmission Link from Porcupine Reservoir to Highline Canal, Transmission Link, East Fort Little Bear River, Porcupine Reservoir, Highline Canal, 49, 1, 22
+Transmission Link from Grace Dam to Bench B, Transmission Link, Lower Bear, Grace Dam, Bench B, 36, 1, 20
+Transmission Link from Withdrawal Node 6 to Gentile Valley, Transmission Link, Lower Bear, Withdrawal Node 6, Gentile Valley, 30, 1, 17
+Deep Creek, Reservoir, Deep Creek, , , 99, , 23
+Mud Lake, Reservoir, , , , 99, , 23
+Irrigation Release Requir, Flow Requirement, Rainbow Canal and Outlet, , , 1, , 1
+Transmission Link from Withdrawal Node 9 to West Fork, Transmission Link, Rainbow Canal and Outlet, Withdrawal Node 9, West Fork, 24, 1, 14
+Transmission Link from Withdrawal Node 8 to Montpelier Irr, Transmission Link, Central Bear, Withdrawal Node 8, Montpelier Irr, 99, 1, 23
+re, Flow Requirement, Rainbow Inlet Diversion, , , 2, , 2
+Transmission Link from Withdrawal Node 10 to Bench B, Transmission Link, Lower Bear, Withdrawal Node 10, Bench B, 36, 99, 21
+Soda Instream, Flow Requirement, Lower Bear, , , 1, , 1
+Grace Instream, Flow Requirement, Lower Bear, , , 1, , 1
+Oneida Instream, Flow Requirement, Lower Bear, , , 1, , 1
+Transmission Link from Cache Valley Groundwater to North Cache Potable, Transmission Link, , Cache Valley Groundwater, North Cache Potable, 19, 1, 11
+Transmission Link from Withdrawal Node 12 to Logan Potable, Transmission Link, Dewitt Spring, Withdrawal Node 12, Logan Potable, 19, 19, 10
+Transmission Link from Withdrawal Node 13 to South  Blacksmith Irr, Transmission Link, Blacksmith Fork, Withdrawal Node 13, South  Blacksmith Irr, 17, 1, 8
+Transmission Link from Withdrawal Node 17 to Providence Irr, Transmission Link, Blacksmith Fork, Withdrawal Node 17, Providence Irr, 16, 1, 7
+Transmission Link from Withdrawal Node 27 to North Cache Potable, Transmission Link, Cub River, Withdrawal Node 27, North Cache Potable, 19, 2, 12
+Stewart Leakage, Flow Requirement, Stewart Leakage, , , 1, , 1
