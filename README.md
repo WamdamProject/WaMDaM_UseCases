@@ -12,7 +12,7 @@ We demonstrate the WaMDaM design and use cases using twelve data sources and mod
 The Watershed is an interesting one because it has various unique and overlapping available data provided by the three states, the Bear River Commission, national US datasets, and three existing systems models: BRSDM which allocates water based on priority for the upper Bear River Basin, a WEAP model which allocate water on priority, and a WASH model which allocates water to maximum suitable habitat areas in the Lower Bear River. Note that when developers organize their model’s input data into WaMDaM, models become a new source of data. We select a few locations in the Watershed to demonstrate use cases as each location has data from multiple sources: Stewart Dam site in Idaho, Hyrum Reservoir, Bear River Migratory Bird Refuge, and Cache County in Utah which is a major water use area in the Bear River Watershed.   
 
 <p align="center">
-  <img width="528" height="408" src="/UseCases_files/BearWatershed_Presentation.jpg">
+  <img width="528" height="408" src="https://github.com/WamdamProject/WaMDaM-software-ecosystem/blob/master/mkdocs/Edit_MD_Files/QuerySelect/images/BearWatershed.jpg">
 </p> 
 
 
