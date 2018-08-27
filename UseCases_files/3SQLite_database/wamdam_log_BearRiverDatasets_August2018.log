@@ -1,0 +1,61 @@
+WaMDaM: The Water Management Data Model Version 1.03 
+
+See the schema at http://schema.wamdam.org/diagrams/01_WaMDaM.html
+
+Website: WaMDaM.org 
+
+Instructions at http://docs.wamdam.org/Getting_started/Steps 
+
+Developer: Adel M. Abdallah
+
+Email: amabdallah@aggiemail.usu.edu 
+
+
+ 2018-08-27 11:53:05,746 - viewer.dlg_ConnectNewDatabaseSQLite - INFO - Start database connection.
+2018-08-27 11:53:06,470 - viewer.dlg_ConnectNewDatabaseSQLite - INFO - 'BearRiverDatasets_August2018.sqlite'was connected successfully.
+
+2018-08-27 11:55:23,354 - viewer.dlg_ConnectNewDatabaseSQLite - INFO - 'UtahDams_June_2018.xlsm'was selected.
+
+2018-08-27 11:55:24,221 - viewer.dlg_ConnectNewDatabaseSQLite - INFO - Backing up the database before starting to                                     load new data into it.
+2018-08-27 11:55:24,221 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start data load
+2018-08-27 11:55:26,394 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start cvData load.
+2018-08-27 11:55:29,253 - viewer.dlg_ImportSpreadsheetBasic - INFO - CvData load was finished successfully.
+2018-08-27 11:55:29,315 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start metaData load.
+2018-08-27 11:55:29,345 - viewer.dlg_ImportSpreadsheetBasic - INFO - MetaData load was finished successfully.
+2018-08-27 11:55:29,345 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start structData load.
+2018-08-27 11:55:29,377 - viewer.dlg_ImportSpreadsheetBasic - ERROR - Failed structData load.
+list index out of range
+2018-08-27 11:55:29,377 - viewer.dlg_ImportSpreadsheetBasic - ERROR - Failed data load.
+list index out of range
+The loading of all data has been reverted, Please fix the error and load the file again.
+2018-08-27 14:49:37,220 - viewer.dlg_ImportSpreadsheetBasic - INFO - 'USDams_June2018.xlsm'was selected.
+
+2018-08-27 14:49:43,553 - viewer.dlg_ImportSpreadsheetBasic - INFO - Backing up the database before starting to                                     load new data into it.
+2018-08-27 14:49:43,569 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start data load
+2018-08-27 14:50:13,049 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start cvData load.
+2018-08-27 14:50:15,918 - viewer.dlg_ImportSpreadsheetBasic - INFO - CvData load was finished successfully.
+2018-08-27 14:50:15,970 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start metaData load.
+2018-08-27 14:50:15,986 - viewer.dlg_ImportSpreadsheetBasic - INFO - MetaData load was finished successfully.
+2018-08-27 14:50:15,986 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start structData load.
+2018-08-27 14:50:16,056 - viewer.dlg_ImportSpreadsheetBasic - INFO - StructData load was finished successfully.
+2018-08-27 14:50:16,056 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start networksData load.
+2018-08-27 14:52:34,154 - viewer.dlg_ImportSpreadsheetBasic - INFO - NetworksData load was finished successfully.
+2018-08-27 14:52:34,154 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start Categorical Data load.
+2018-08-27 15:04:06,878 - viewer.dlg_ImportSpreadsheetBasic - INFO - Categorical data load was finished successfully.
+2018-08-27 15:04:06,880 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start textFreeData load.
+2018-08-27 16:13:13,053 - viewer.dlg_ImportSpreadsheetBasic - INFO - TextFreeData load was finished successfully.
+2018-08-27 16:13:13,053 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start paramsData load.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - ParamsData load was finished successfully.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start seasonParamsData load.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - SeasonParamsData load was finished successfully.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start timeSeriesData load.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - TimeSeriesData load was finished successfully.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start timeSeriesValueData load.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - TimeSeriesValueData load was finished successfully.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start fileData load.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - FileData load was finished successfully.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - Start MultiAttributeSeriesData load.
+2018-08-27 16:52:38,404 - viewer.dlg_ImportSpreadsheetBasic - INFO - MultiAttributeSeriesData load was finished successfully.
+
+
+2018-08-27 16:52:38,437 - viewer.dlg_ImportSpreadsheetBasic - INFO - All load was finished successfully.
