@@ -1,0 +1,1 @@
+The link names are "Start-End" node. Like "C103-D865" is the link between node C103 and D865. So if you parse the first column of the links file by splitting on "-", you'll get what you're looking for.

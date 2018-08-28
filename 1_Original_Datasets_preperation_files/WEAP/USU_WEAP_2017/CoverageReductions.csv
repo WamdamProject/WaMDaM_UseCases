@@ -1,0 +1,54 @@
+Date, Time, Scenario, Year, TimeStep, Allocation Order, Allocation Order Iteration, Type, Reduction Fraction, MinCoverage, ObjID, ObjName, Amount Reduced[CFS], Amount Reduced[m^3], Amount Reduced[AF]
+07/31/2018, 17:34:00, UpdateCacheDemand, 1979, September, 22, 7, CovCon, 0.01, 0, 467, "Reservoir: Devils Creek, Devils Creek", 0, 0, 0
+08/01/2018, 9:32:30, Reference, 1975, May, 22, 2, CovCon, 0.01, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/01/2018, 9:33:02, Reference, 1996, May, 22, 2, CovCon, 0.01, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/01/2018, 9:33:16, Reference, 2005, September, 22, 2, CovCon, 0.08, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/01/2018, 9:33:31, UpdateBearHeadFlowDry, 1975, May, 22, 2, CovCon, 0.01, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/01/2018, 9:34:04, UpdateBearHeadFlowDry, 1996, May, 22, 2, CovCon, 0.01, 0, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 0, 0, 0
+08/23/2018, 11:43:37, Current Accounts, 1965, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:43:37, Current Accounts, 1966, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:43:38, Current Accounts, 1966, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:40, Reference, 1968, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:43:40, Reference, 1968, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:42, Reference, 1969, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:43, Reference, 1970, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:44, Reference, 1971, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:45, Reference, 1971, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:43:45, Reference, 1972, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:43:46, Reference, 1972, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:47, Reference, 1972, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:43:47, Reference, 1973, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:43:47, Reference, 1973, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:48, Reference, 1974, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:43:48, Reference, 1974, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:49, Reference, 1975, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:43:50, Reference, 1975, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:51, Reference, 1976, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:43:51, Reference, 1976, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:52, Reference, 1977, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:43:57, Reference, 1981, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:43:57, Reference, 1981, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:00, Reference, 1982, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:44:00, Reference, 1983, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:44:00, Reference, 1983, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:01, Reference, 1983, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:44:01, Reference, 1984, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:44:02, Reference, 1984, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:03, Reference, 1984, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:44:03, Reference, 1985, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:44:03, Reference, 1985, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:04, Reference, 1986, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:44:04, Reference, 1986, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:05, Reference, 1986, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:44:05, Reference, 1987, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:44:05, Reference, 1987, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:19, Reference, 1997, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:20, Reference, 1997, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:44:20, Reference, 1998, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:44:20, Reference, 1998, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:21, Reference, 1998, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:44:21, Reference, 1999, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:44:21, Reference, 1999, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189
+08/23/2018, 11:44:22, Reference, 1999, November, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 210.225760769342, 15429996.3826012, 12509.3202829403
+08/23/2018, 11:44:23, Reference, 2000, January, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 185.071017944344, 14036497.2297093, 11379.5904511701
+08/23/2018, 11:44:23, Reference, 2000, March, 4, 1, MinCov, 0.01, 0.99, 406, "Reservoir: Rainbow Canal and Outlet, Bear Lake", 166.830395912322, 12653058.3560028, 10258.0166326189

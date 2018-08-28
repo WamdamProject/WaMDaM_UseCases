@@ -21,7 +21,7 @@ The following presented use cases help users identify and compare two fundamenta
 ## Use Cases in the Bear River Watershed, Utah 
 
 Pease refer to this updated page
-http://docs.wamdam.org/QuerySelect/UseCases/
+
 
 
 ### Licensing  
