@@ -79,7 +79,7 @@ AND AttributeNameCV in ('Demand')
 -- narrow the search to instances with the category of agriculture
 AND InstanceCategory='Agriculture'
 
-AND ScenarioName=='USU WEAP Model 2017'
+AND ScenarioName=='Bear River WEAP Model 2017'
 
 AND AttributeDataTypeCV IN ('SeasonalNumericValues')
 
