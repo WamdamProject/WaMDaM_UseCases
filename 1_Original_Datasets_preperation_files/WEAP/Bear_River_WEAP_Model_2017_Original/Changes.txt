@@ -5516,3 +5516,4 @@ Date, UserID, Scenario, Branch, Variable, Action, NewValue, OldValue, ChangeID, 
 2018/08/23 11:44:53,AMA,,,,Area saved,,,   4,0,0,0,,
 2018/08/29 22:01:35,AMA,,,[General]ComputerName,Area-wide setting changed,LAPTOP-PT9U0SMQ,LOCALADMIN-PC,   15,0,0,0,LAPTOP-PT9U0SMQ,LOCALADMIN-PC
 2018/08/29 22:02:14,AMA,,,[General]WEAPVersion,Area-wide setting changed,2018.1,2018.0109,   15,0,0,0,2018.1,2018.0109
+2018/09/12 18:56:24,AMA,,,,Area directory changed,Bear_River_WEAP_Model_2017,USU_WEAP_2017,   3,0,0,0,Bear_River_WEAP_Model_2017,USU_WEAP_2017
