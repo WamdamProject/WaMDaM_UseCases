@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/108681198.svg)](https://zenodo.org/badge/latestdoi/108681198)
+
 # WaMDaM_UseCases
 Demonstrate how WaMDaM enables systematic data query and comparisons across multiple different models and datasets. 
 
