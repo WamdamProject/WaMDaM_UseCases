@@ -45,8 +45,8 @@ End CalenderYear,
 --covert the cfs/month to cumulative acre-ft per month 
 -- Divide by 43560 square feet then multiply by 60*60*24 (and 30) to convert
 Case 
-         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='day' AND AggregationStatisticCV='Cumulative' AND count(Datavalue)>=27)   THEN SUM(DataValue)/43560*60*60
-         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='day' AND AggregationStatisticCV='Average' AND count(DataValue)>=27)   THEN SUM(DataValue)/43560*60*60*24
+         WHEN (UnitNameCV='cubic foot per second' AND  IntervalTimeUnitCV='day' AND AggregationStatisticCV='Cumulative' AND count(Datavalue)>=27)   THEN SUM(DataValue)/43560*60*60
+         WHEN (UnitNameCV='cubic foot per second' AND  IntervalTimeUnitCV='day' AND AggregationStatisticCV='Average' AND count(DataValue)>=27)   THEN SUM(DataValue)/43560*60*60*24
          Else null
 END As CumulativeMonthly
 
@@ -134,8 +134,8 @@ End As CalenderYear,
 --covert the cfs/month to cumulative acre-ft per month 
 -- Divide by 43559.9 square feet then multiply by 60*60*24
 Case 
-         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative') THEN DataValue/43560
-         WHEN (UnitNameCV='cubic feet per second' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Average' )   THEN DataValue/43560*60*60*24*30
+         WHEN (UnitNameCV='cubic foot per second' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative') THEN DataValue/43560
+         WHEN (UnitNameCV='cubic foot per second' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Average' )   THEN DataValue/43560*60*60*24*30
          Else DataValue
 END As CumulativeMonthly
 
