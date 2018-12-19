@@ -31,9 +31,9 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
          End WaterYearDate,
 
          Case 
-                  WHEN (UnitNameCV='acre foot' AND  IntervalTimeUnitCV='Year' AND AggregationStatisticCV='Cumulative' )                                                                                               THEN DataValue
-                  WHEN (UnitNameCV='acre foot' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative'  )                                                                                          THEN      SUM(DataValue)
-                  WHEN (UnitNameCV='Million cubic meter per month' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative'  AND count(DataValue)>=60 )         THEN      SUM(DataValue)*810.714402 --convert mcm to Acre-ft  --60 is 12 months * 5 instances in WASH
+                  WHEN (UnitNameCV='acre-foot' AND  IntervalTimeUnitCV='year' AND AggregationStatisticCV='Cumulative' )                                                                                               THEN DataValue
+                  WHEN (UnitNameCV='acre-foot' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative'  )                                                                                          THEN      SUM(DataValue)
+                  WHEN (UnitNameCV='cubic metre' AND  IntervalTimeUnitCV='month' AND AggregationStatisticCV='Cumulative'  AND count(DataValue)>=60 )         THEN      SUM(DataValue)*810.714402 --convert mcm to Acre-ft  --60 is 12 months * 5 instances in WASH
                   Else null  
          END As CumulativeAnnual
 
@@ -118,4 +118,3 @@ strftime('%Y', WaterYearDate) As WaterYear,CumulativeAnnual,NumDemandSites,Count
 
 -- exclude the years that have less than 12 months (which will have a null value here because of the case above)
 WHERE CumulativeAnnual is not null AND WaterYear >'2004'
-
